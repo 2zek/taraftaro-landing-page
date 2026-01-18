@@ -1,0 +1,17 @@
+[
+  {
+    "id": "fans",
+    "value": "1K+",
+    "labelKey": "hero.stats.fans"
+  },
+  {
+    "id": "rating",
+    "value": "4.9",
+    "labelKey": "hero.stats.appStore"
+  },
+  {
+    "id": "leagues",
+    "value": "50+",
+    "labelKey": "hero.stats.leagues"
+  }
+]

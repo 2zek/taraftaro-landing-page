@@ -2,6 +2,7 @@ import './style.css'
 import i18n from './i18n.js';
 
 import socialLinks from './data/social.json';
+import stats from './data/stats.json';
 
 // Translation helper
 const t = (key) => i18n.t(key);
@@ -20,7 +21,7 @@ function updateTranslations() {
     });
 }
 
-// Render dynamic elements (Year, Social Links)
+// Render dynamic elements (Year, Social Links, Stats)
 function renderDynamicElements() {
     // 1. Dynamic Year
     const yearEl = document.getElementById('copyright-year');
@@ -37,6 +38,17 @@ function renderDynamicElements() {
                aria-label="${link.label}">
                 <i class="${link.icon} text-xl"></i>
             </a>
+        `).join('');
+    }
+
+    // 3. Stats from JSON
+    const statsContainer = document.getElementById('hero-stats');
+    if (statsContainer) {
+        statsContainer.innerHTML = stats.map(stat => `
+            <div class="text-center lg:text-left">
+                <div class="text-4xl font-black text-mode mb-1">${stat.value}</div>
+                <div class="text-sm font-bold text-mode-muted" data-i18n="${stat.labelKey}">${t(stat.labelKey)}</div>
+            </div>
         `).join('');
     }
 }
