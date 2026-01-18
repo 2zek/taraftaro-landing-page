@@ -1,11 +1,14 @@
 import './style.css'
 import i18n from './i18n.js';
 
+import socialLinks from './data/social.json';
+
 // Translation helper
 const t = (key) => i18n.t(key);
 
 // Update all translations on page
 function updateTranslations() {
+    document.documentElement.lang = i18n.language;
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         el.textContent = t(key);
@@ -17,6 +20,27 @@ function updateTranslations() {
     });
 }
 
+// Render dynamic elements (Year, Social Links)
+function renderDynamicElements() {
+    // 1. Dynamic Year
+    const yearEl = document.getElementById('copyright-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    // 2. Social Links from JSON
+    const socialContainer = document.getElementById('social-links');
+    if (socialContainer) {
+        socialContainer.innerHTML = socialLinks.map(link => `
+            <a href="${link.url}" target="_blank" rel="noopener noreferrer" 
+               class="w-12 h-12 rounded-2xl glass flex items-center justify-center text-mode-secondary hover:text-primary hover:scale-110 transition-all border border-primary/5 hover:border-primary/20"
+               aria-label="${link.label}">
+                <i class="${link.icon} text-xl"></i>
+            </a>
+        `).join('');
+    }
+}
+
 // Update language button text
 function updateLangButton() {
     const langBtn = document.getElementById('lang-toggle');
@@ -26,9 +50,10 @@ function updateLangButton() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initial translations
+    // Initial renders
     updateTranslations();
     updateLangButton();
+    renderDynamicElements();
 
     // Theme Toggle Logic
     const themeToggleBtn = document.getElementById('theme-toggle');
@@ -147,4 +172,55 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
+
+    // Showcase Slider Logic
+    const slider = document.getElementById('showcase-slider');
+    const dotsContainer = document.getElementById('slider-dots');
+    
+    if (slider && dotsContainer) {
+        let currentSlide = 0;
+        const slides = slider.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let sliderInterval;
+
+        // Create Dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+                resetInterval();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll('.dot');
+
+        function updateSlider() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function resetInterval() {
+            clearInterval(sliderInterval);
+            sliderInterval = setInterval(nextSlide, 4000);
+        }
+
+        sliderInterval = setInterval(nextSlide, 4000);
+    }
 });

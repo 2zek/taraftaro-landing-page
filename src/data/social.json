@@ -1,0 +1,26 @@
+[
+  {
+    "id": "instagram",
+    "icon": "fa-brands fa-instagram",
+    "url": "https://instagram.com/taraftaro",
+    "label": "Instagram"
+  },
+  {
+    "id": "youtube",
+    "icon": "fa-brands fa-youtube",
+    "url": "https://youtube.com/@taraftaro",
+    "label": "YouTube"
+  },
+  {
+    "id": "tiktok",
+    "icon": "fa-brands fa-tiktok",
+    "url": "https://tiktok.com/@taraftaro",
+    "label": "TikTok"
+  },
+  {
+    "id": "x-twitter",
+    "icon": "fa-brands fa-x-twitter",
+    "url": "https://x.com/taraftaro",
+    "label": "X (Twitter)"
+  }
+]

@@ -10,13 +10,13 @@ export default {
       badge: "10,000+ active fans",
       title1: "The Strongest Digital",
       title2: "Bridge to Your Club",
-      description: "Don't just watch, be part of your team. Make your voice heard, live matches together and turn your passion into rewards.",
+      description: "The strongest digital bridge to your club. Be part of your team, live the excitement together, and turn your passion into rewards.",
       downloadBtn: "Free Download",
       howItWorks: "How It Works?",
       stats: {
-        fans: "Fans",
-        appStore: "App Store",
-        leagues: "Leagues"
+        fans: "Active Fans",
+        appStore: "User Rating",
+        leagues: "Supported Leagues"
       }
     },
     phone: {
@@ -88,10 +88,10 @@ export default {
       privacy: "Privacy",
       terms: "Terms of Use",
       contact: "Contact",
-      copyright: "© 2026 Taraftaro. All rights reserved.",
+      copyright: "All rights reserved.",
       slogan: "The strongest digital bridge between you and your club.",
       linksTitle: "Quick Links",
-      socialTitle: "Join the Community"
+      socialTitle: "Follow Us"
     }
   }
 };

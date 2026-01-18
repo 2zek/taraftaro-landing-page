@@ -178,10 +178,10 @@ html.dark .feature-card:hover {
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0px) rotate(-6deg);
+    transform: translateY(0px) rotate(8deg);
   }
   50% {
-    transform: translateY(-20px) rotate(-6deg);
+    transform: translateY(-20px) rotate(8deg);
   }
 }
 
@@ -247,20 +247,127 @@ html.dark .feature-card:hover {
 }
 
 /* ============================================
-   PHONE MOCKUP
+   IPHONE 17 PRO (ULTRA-SLIM / PREMIUM)
    ============================================ */
-.phone-mockup {
-  background: linear-gradient(145deg, #1a1a1f 0%, #0d0d10 100%);
-  border-radius: 3rem;
-  box-shadow:
-    0 50px 100px -20px rgba(0, 0, 0, 0.5),
-    0 30px 60px -30px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+.iphone-frame {
+    position: relative;
+    width: 310px;
+    height: 670px;
+    background: #080808;
+    border-radius: 56px; 
+    box-shadow: 
+        0 0 0 1px #111111, /* Subtle Outer Rim */
+        0 0 0 2px #040404, /* Thinner Metal Body */
+        0 40px 100px rgba(0,0,0,0.8),
+        inset 0 0 10px rgba(255,255,255,0.03);
+    padding: 2.5px; /* Zero-Bezel Experience */
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.phone-screen {
-  background: linear-gradient(180deg, #0f0f12 0%, #1a1a1f 100%);
-  border-radius: 2.5rem;
+/* Centralized Dynamic Island Logic */
+.iphone-frame::before {
+    content: '';
+    position: absolute;
+    top: 13px; /* Perfect positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 82px; /* Standard pill width */
+    height: 24px; /* Standard island height */
+    background: #000;
+    border-radius: 20px;
+    z-index: 30;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+}
+/* Slider Pagination Dots */
+
+/* Slider Pagination Dots */
+.slider-dots {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 107, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #ff6b00;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+}
+
+.iphone-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 53.5px; /* Optimized for 2.5px ultra-thin bezel */
+    overflow: hidden;
+    z-index: 10;
+}
+
+.iphone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider inside iPhone */
+.iphone-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.iphone-slider .slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.iphone-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+  /* Media Queries for consistency */
+
+@media (max-width: 640px) {
+    .iphone-frame {
+        width: 280px;
+        height: 570px;
+        border-radius: 48px;
+    }
+    .iphone-frame.large {
+        width: 300px;
+        height: 610px;
+        border-radius: 52px;
+    }
+}
+
+/* ============================================
+   ANIMATIONS (UPRIGHT)
+   ============================================ */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* ============================================

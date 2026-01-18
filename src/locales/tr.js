@@ -10,13 +10,13 @@ export default {
       badge: "10.000+ aktif taraftar",
       title1: "Kulübünle Arandaki",
       title2: "En Güçlü Dijital Köprü",
-      description: "Sadece izleme, takımının bir parçası ol. Sesini duyur, maçları birlikte yaşa ve tutkunu ödüllere dönüştür.",
+      description: "Kulübünle arandaki en güçlü dijital köprü. Takımının bir parçası ol, heyecanı birlikte yaşa ve tutkunu ödüllere dönüştür.",
       downloadBtn: "Ücretsiz İndir",
       howItWorks: "Nasıl Çalışır?",
       stats: {
-        fans: "Taraftar",
-        appStore: "App Store",
-        leagues: "Lig"
+        fans: "Aktif Taraftar",
+        appStore: "Kullanıcı Puanı",
+        leagues: "Desteklenen Lig"
       }
     },
     phone: {
@@ -88,10 +88,10 @@ export default {
       privacy: "Gizlilik",
       terms: "Kullanım Şartları",
       contact: "İletişim",
-      copyright: "© 2026 Taraftaro. Tüm hakları saklıdır.",
+      copyright: "Tüm hakları saklıdır.",
       slogan: "Kulübünle arandaki en güçlü dijital köprü.",
       linksTitle: "Bağlantılar",
-      socialTitle: "Topluluğa Katıl"
+      socialTitle: "Bizi Takip Edin"
     }
   }
 };
