@@ -2,7 +2,7 @@ export default {
   translation: {
     nav: {
       features: "Features",
-      community: "Community",
+      faq: "FAQ",
       download: "Download",
       downloadBtn: "Free Download"
     },
@@ -64,11 +64,34 @@ export default {
       googlePlay: "From Google Play",
       download: "Download"
     },
+    showcase: {
+      title: "One App, Infinite Passion",
+      description: "Match days are now more exciting with Taraftaro. Everything is at your fingertips.",
+      features: {
+        chat: "Live Match Chat",
+        scores: "Instant Scores",
+        leaderboard: "Rankings & Rewards"
+      }
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      items: {
+        q1: "Is Taraftaro free?",
+        a1: "No, downloading Taraftaro and using its core features is completely free.",
+        q2: "How do I win rewards?",
+        a2: "You can collect points by making match predictions, completing tasks, and being active in the community. You can win jerseys and match tickets with these points.",
+        q3: "Which leagues are available?",
+        a3: "You can follow all major European leagues and international tournaments, specialized in Super Lig."
+      }
+    },
     footer: {
       privacy: "Privacy",
       terms: "Terms of Use",
       contact: "Contact",
-      copyright: "© 2024 Taraftaro. All rights reserved."
+      copyright: "© 2026 Taraftaro. All rights reserved.",
+      slogan: "The strongest digital bridge between you and your club.",
+      linksTitle: "Quick Links",
+      socialTitle: "Join the Community"
     }
   }
 };

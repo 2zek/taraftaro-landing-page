@@ -2,7 +2,7 @@ export default {
   translation: {
     nav: {
       features: "Özellikler",
-      community: "Topluluk",
+      faq: "S.S.S.",
       download: "İndir",
       downloadBtn: "Ücretsiz İndir"
     },
@@ -64,11 +64,34 @@ export default {
       googlePlay: "Google Play'den",
       download: "İndir"
     },
+    showcase: {
+      title: "Tek Uygulama, Sonsuz Tutku",
+      description: "Taraftaro ile maç günleri artık daha heyecanlı. Her şey elinin altında.",
+      features: {
+        chat: "Canlı Maç Sohbeti",
+        scores: "Anlık Skorlar",
+        leaderboard: "Sıralama ve Ödüller"
+      }
+    },
+    faq: {
+      title: "Sıkça Sorulan Sorular",
+      items: {
+        q1: "Taraftaro ücretli mi?",
+        a1: "Hayır, Taraftaro'yu indirmek ve temel özelliklerini kullanmak tamamen ücretsizdir.",
+        q2: "Ödülleri nasıl kazanırım?",
+        a2: "Maç tahminleri yaparak, görevleri tamamlayarak ve toplulukta aktif olarak puan toplayabilir, bu puanlarla forma ve maç biletleri kazanabilirsiniz.",
+        q3: "Hangi ligler mevcut?",
+        a3: "Süper Lig başta olmak üzere, Avrupa'nın tüm majör liglerini ve uluslararası turnuvaları takip edebilirsiniz."
+      }
+    },
     footer: {
       privacy: "Gizlilik",
       terms: "Kullanım Şartları",
       contact: "İletişim",
-      copyright: "© 2024 Taraftaro. Tüm hakları saklıdır."
+      copyright: "© 2026 Taraftaro. Tüm hakları saklıdır.",
+      slogan: "Kulübünle arandaki en güçlü dijital köprü.",
+      linksTitle: "Bağlantılar",
+      socialTitle: "Topluluğa Katıl"
     }
   }
 };

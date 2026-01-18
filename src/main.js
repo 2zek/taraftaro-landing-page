@@ -1,5 +1,4 @@
 import './style.css'
-import { createIcons, icons } from 'lucide';
 import i18n from './i18n.js';
 
 // Translation helper
@@ -27,9 +26,6 @@ function updateLangButton() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide Icons
-    createIcons({ icons });
-    
     // Initial translations
     updateTranslations();
     updateLangButton();
@@ -122,13 +118,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar scroll effect
     const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('#navbar a[href^="#"]');
+    const sections = document.querySelectorAll('section[id]');
     
     const handleScroll = () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('glass-dark', 'shadow-lg');
-        } else {
-            navbar.classList.remove('glass-dark', 'shadow-lg');
-        }
+        // Root navbar stays transparent as requested
+        // Only internal elements like .glass-dark handle their own background
+        
+        // Active Link Tracking
+        let currentSectionId = '';
+        const scrollPosition = window.scrollY + 100; // Offset for better detection
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('nav-active');
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
+                link.classList.add('nav-active');
+            }
+        });
     };
     
     window.addEventListener('scroll', handleScroll);
