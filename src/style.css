@@ -256,15 +256,26 @@ html.dark .feature-card:hover {
     background: #080808;
     border-radius: 56px; 
     box-shadow: 
-        0 0 0 1px #111111, /* Subtle Outer Rim */
-        0 0 0 2px #040404, /* Thinner Metal Body */
+        0 0 0 1px rgba(255,255,255,0.08), /* Subtle light edge for dark mode */
+        0 0 0 2px #040404,
         0 40px 100px rgba(0,0,0,0.8),
         inset 0 0 10px rgba(255,255,255,0.03);
-    padding: 2.5px; /* Zero-Bezel Experience */
+    padding: 2.5px;
     overflow: hidden;
     margin: 0 auto;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1); /* Visible edge in dark mode */
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode enhanced edge glow */
+html.dark .iphone-frame {
+    box-shadow: 
+        0 0 0 1px rgba(255,255,255,0.12), /* Brighter edge glow */
+        0 0 15px rgba(255,255,255,0.05), /* Ambient light effect */
+        0 0 0 3px rgba(50,50,50,0.8),
+        0 40px 100px rgba(0,0,0,0.9),
+        inset 0 0 10px rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 /* Centralized Dynamic Island Logic */
@@ -281,29 +292,39 @@ html.dark .feature-card:hover {
     z-index: 30;
     box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
 }
-/* Slider Pagination Dots */
-
-/* Slider Pagination Dots */
+/* Slider Pagination Dots - Vertical & Pill Style */
 .slider-dots {
     display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 24px;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    left: -45px; /* Comfortable distance from phone */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: rgba(255, 107, 0, 0.2);
+    background: rgba(255, 107, 0, 0.35); /* More visible */
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.2);
+}
+
+.dot:hover {
+    background: rgba(255, 107, 0, 0.6);
+    transform: scale(1.1);
 }
 
 .dot.active {
     background: #ff6b00;
-    transform: scale(1.2);
-    box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+    width: 12px;
+    height: 36px; /* Elongated pill shape */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.5);
 }
 
 .iphone-screen {
@@ -346,14 +367,16 @@ html.dark .feature-card:hover {
 
 @media (max-width: 640px) {
     .iphone-frame {
-        width: 280px;
-        height: 570px;
+        width: 260px;
+        height: 540px;
+        border-radius: 50px;
+        padding: 2px;
+    }
+    .iphone-frame .iphone-screen {
         border-radius: 48px;
     }
-    .iphone-frame.large {
-        width: 300px;
-        height: 610px;
-        border-radius: 52px;
+    .slider-dots {
+        left: -36px;
     }
 }
 

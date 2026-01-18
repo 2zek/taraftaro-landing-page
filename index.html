@@ -137,27 +137,33 @@
         <section id="showcase" class="py-32 relative overflow-hidden bg-mode-secondary">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-20 items-center">
-                    <!-- Left: Slider Mockup -->
-                    <div class="relative reveal order-2 lg:order-1">
+                    <!-- Left: Slider Mockup with Vertical Dots -->
+                    <div class="relative reveal order-2 lg:order-1 flex items-center justify-center">
                         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 animate-pulse-glow"></div>
-                        <div class="iphone-frame mx-auto">
-                            <div class="iphone-screen">
-                                <div id="showcase-slider" class="iphone-slider">
-                                    <div class="slide active">
-                                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/77626e105556111.5f7c32b95c083.png" alt="App Screen 1">
-                                    </div>
-                                    <div class="slide">
-                                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/8c7e6e105556111.5f7c32b95b871.png" alt="App Screen 2">
-                                    </div>
-                                    <div class="slide">
-                                        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/77626e105556111.5f7c32b95c083.png" alt="App Screen 3">
+                        
+                        <!-- Phone + Dots Wrapper -->
+                        <div class="relative">
+                            <!-- Vertical Slider Dots (positioned by CSS) -->
+                            <div id="slider-dots" class="slider-dots">
+                                <!-- JS will inject dots here -->
+                            </div>
+                            
+                            <!-- Phone Mockup -->
+                            <div class="iphone-frame">
+                                <div class="iphone-screen">
+                                    <div id="showcase-slider" class="iphone-slider">
+                                        <div class="slide active">
+                                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/77626e105556111.5f7c32b95c083.png" alt="App Screen 1">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/8c7e6e105556111.5f7c32b95b871.png" alt="App Screen 2">
+                                        </div>
+                                        <div class="slide">
+                                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/77626e105556111.5f7c32b95c083.png" alt="App Screen 3">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Slider Dots -->
-                        <div id="slider-dots" class="slider-dots">
-                            <!-- JS will inject dots here -->
                         </div>
                     </div>
                     <div class="order-1 lg:order-2 reveal delay-200">
