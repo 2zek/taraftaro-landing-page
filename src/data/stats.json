@@ -11,7 +11,7 @@
   },
   {
     "id": "leagues",
-    "value": "50+",
+    "value": "10+",
     "labelKey": "hero.stats.leagues"
   }
 ]
