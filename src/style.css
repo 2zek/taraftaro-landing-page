@@ -2,17 +2,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 @theme {
-  --color-primary: #FF6B00;
-  --color-primary-light: #FF8C42;
-  --color-secondary: #FF4D00;
-  --color-accent: #FFB347;
-  --color-dark: #0A0A0B;
+  --color-primary: #ff6b00;
+  --color-primary-light: #ff8c42;
+  --color-secondary: #ff4d00;
+  --color-accent: #ffb347;
+  --color-dark: #0a0a0b;
   --color-dark-lighter: #121214;
-  --color-light-bg: #F7F7F7;
+  --color-light-bg: #f7f7f7;
   --font-sans: "Outfit", "Plus Jakarta Sans", "Inter", sans-serif;
   --radius-xl: 1.5rem;
   --radius-2xl: 2rem;
   --radius-3xl: 2.5rem;
+  --font-brand: "LINE Seed JP", sans-serif;
+}
+
+.font-brand {
+  font-family: var(--font-brand);
 }
 
 /* Base Styles */
@@ -41,7 +46,7 @@ body {
 }
 
 .dark {
-  --bg-primary: #0A0A0B;
+  --bg-primary: #0a0a0b;
   --bg-secondary: #121214;
   --text-primary: #ffffff;
   --text-secondary: #a1a1aa;
@@ -54,15 +59,29 @@ body {
   color: var(--text-primary);
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
-.text-mode { color: var(--text-primary) !important; }
-.text-mode-secondary { color: var(--text-secondary) !important; }
-.text-mode-muted { color: var(--text-muted) !important; }
-.bg-mode { background-color: var(--bg-primary) !important; }
-.bg-mode-secondary { background-color: var(--bg-secondary) !important; }
-.border-mode { border-color: var(--border-color) !important; }
+.text-mode {
+  color: var(--text-primary) !important;
+}
+.text-mode-secondary {
+  color: var(--text-secondary) !important;
+}
+.text-mode-muted {
+  color: var(--text-muted) !important;
+}
+.bg-mode {
+  background-color: var(--bg-primary) !important;
+}
+.bg-mode-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+.border-mode {
+  border-color: var(--border-color) !important;
+}
 
 /* Target hidden icons within buttons specifically to avoid breaking Tailwind's hidden/flex system */
 button i.hidden {
@@ -72,7 +91,7 @@ button i.hidden {
 /* Gradient Text - works in both modes */
 .gradient-text {
   display: inline-block;
-  background: linear-gradient(135deg, #FF6B00 0%, #FF8C42 50%, #FFB347 100%);
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8c42 50%, #ffb347 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -250,134 +269,134 @@ html.dark .feature-card:hover {
    IPHONE 17 PRO (ULTRA-SLIM / PREMIUM)
    ============================================ */
 .iphone-frame {
-    position: relative;
-    width: 310px;
-    height: 670px;
-    background: #080808;
-    border-radius: 56px; 
-    box-shadow: 
-        0 0 0 1px rgba(255,255,255,0.08), /* Subtle light edge for dark mode */
-        0 0 0 2px #040404,
-        0 40px 100px rgba(0,0,0,0.8),
-        inset 0 0 10px rgba(255,255,255,0.03);
-    padding: 2.5px;
-    overflow: hidden;
-    margin: 0 auto;
-    border: 1px solid rgba(255,255,255,0.1); /* Visible edge in dark mode */
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  width: 310px;
+  height: 670px;
+  background: #080808;
+  border-radius: 56px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    /* Subtle light edge for dark mode */ 0 0 0 2px #040404,
+    0 40px 100px rgba(0, 0, 0, 0.8),
+    inset 0 0 10px rgba(255, 255, 255, 0.03);
+  padding: 2.5px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Visible edge in dark mode */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Dark mode enhanced edge glow */
 html.dark .iphone-frame {
-    box-shadow: 
-        0 0 0 1px rgba(255,255,255,0.12), /* Brighter edge glow */
-        0 0 15px rgba(255,255,255,0.05), /* Ambient light effect */
-        0 0 0 3px rgba(50,50,50,0.8),
-        0 40px 100px rgba(0,0,0,0.9),
-        inset 0 0 10px rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    /* Brighter edge glow */ 0 0 15px rgba(255, 255, 255, 0.05),
+    /* Ambient light effect */ 0 0 0 3px rgba(50, 50, 50, 0.8),
+    0 40px 100px rgba(0, 0, 0, 0.9),
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Centralized Dynamic Island Logic */
 .iphone-frame::before {
-    content: '';
-    position: absolute;
-    top: 13px; /* Perfect positioning */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 82px; /* Standard pill width */
-    height: 24px; /* Standard island height */
-    background: #000;
-    border-radius: 20px;
-    z-index: 30;
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+  content: "";
+  position: absolute;
+  top: 13px; /* Perfect positioning */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 82px; /* Standard pill width */
+  height: 24px; /* Standard island height */
+  background: #000;
+  border-radius: 20px;
+  z-index: 30;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 /* Slider Pagination Dots - Vertical & Pill Style */
 .slider-dots {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    position: absolute;
-    left: -45px; /* Comfortable distance from phone */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: absolute;
+  left: -45px; /* Comfortable distance from phone */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 107, 0, 0.35); /* More visible */
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 8px rgba(255, 107, 0, 0.2);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 107, 0, 0.35); /* More visible */
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.2);
 }
 
 .dot:hover {
-    background: rgba(255, 107, 0, 0.6);
-    transform: scale(1.1);
+  background: rgba(255, 107, 0, 0.6);
+  transform: scale(1.1);
 }
 
 .dot.active {
-    background: #ff6b00;
-    width: 12px;
-    height: 36px; /* Elongated pill shape */
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.5);
+  background: #ff6b00;
+  width: 12px;
+  height: 36px; /* Elongated pill shape */
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.5);
 }
 
 .iphone-screen {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    border-radius: 53.5px; /* Optimized for 2.5px ultra-thin bezel */
-    overflow: hidden;
-    z-index: 10;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 53.5px; /* Optimized for 2.5px ultra-thin bezel */
+  overflow: hidden;
+  z-index: 10;
 }
 
 .iphone-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Slider inside iPhone */
 .iphone-slider {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .iphone-slider .slide {
-    min-width: 100%;
-    height: 100%;
+  min-width: 100%;
+  height: 100%;
 }
 
 .iphone-slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-  /* Media Queries for consistency */
+/* Media Queries for consistency */
 
 @media (max-width: 640px) {
-    .iphone-frame {
-        width: 260px;
-        height: 540px;
-        border-radius: 50px;
-        padding: 2px;
-    }
-    .iphone-frame .iphone-screen {
-        border-radius: 48px;
-    }
-    .slider-dots {
-        left: -36px;
-    }
+  .iphone-frame {
+    width: 260px;
+    height: 540px;
+    border-radius: 50px;
+    padding: 2px;
+  }
+  .iphone-frame .iphone-screen {
+    border-radius: 48px;
+  }
+  .slider-dots {
+    left: -36px;
+  }
 }
 
 /* ============================================
@@ -397,7 +416,7 @@ html.dark .iphone-frame {
    BUTTONS
    ============================================ */
 .btn-primary {
-  background: linear-gradient(135deg, #FF6B00 0%, #FF8C42 100%);
+  background: linear-gradient(135deg, #ff6b00 0%, #ff8c42 100%);
   color: #ffffff !important;
   font-weight: 700;
   transition: all 0.3s ease;
@@ -427,8 +446,15 @@ html.dark .iphone-frame {
 }
 
 @keyframes nav-indicator-pulse {
-  0%, 100% { opacity: 0.8; transform: translateX(-50%) scaleX(1); }
-  50% { opacity: 1; transform: translateX(-50%) scaleX(1.5); }
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: translateX(-50%) scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scaleX(1.5);
+  }
 }
 
 .btn-primary::before {
