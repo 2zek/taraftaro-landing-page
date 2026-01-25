@@ -37,9 +37,9 @@ function renderDynamicElements() {
     if (socialContainer) {
         socialContainer.innerHTML = socialLinks.map(link => `
             <a href="${link.url}" target="_blank" rel="noopener noreferrer" 
-               class="w-12 h-12 rounded-2xl glass flex items-center justify-center text-mode-secondary hover:text-primary hover:scale-110 transition-all border border-primary/5 hover:border-primary/20"
+               class="text-mode-secondary hover:text-primary hover:scale-120 transition-all"
                aria-label="${link.label}">
-                <i class="${link.icon} text-xl"></i>
+                <i class="${link.icon} text-2xl"></i>
             </a>
         `).join('');
     }
@@ -162,8 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     
     const handleScroll = () => {
-        // Root navbar stays transparent as requested
-        // Only internal elements like .glass-dark handle their own background
+        // Toggle background classes based on scroll
+        if (window.scrollY > 20) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
         
         // Active Link Tracking
         let currentSectionId = '';

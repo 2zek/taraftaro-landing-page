@@ -22,18 +22,36 @@
 }
 
 html:not(.dark) .logo-brand {
-  filter: saturate(1.8) contrast(1.5) brightness(0.8);
   mix-blend-mode: multiply;
 }
 
-.dark .logo-brand, 
-.glass-dark .logo-brand {
+.dark .logo-brand {
   filter: invert(1) hue-rotate(180deg) brightness(1.5) contrast(1.2);
   mix-blend-mode: screen;
 }
 
+.navbar-scrolled {
+  background: rgba(10, 10, 15, 0.4) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+html:not(.dark) .navbar-scrolled {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.bg-glass-dark {
+  background: rgba(10, 10, 15, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+html:not(.dark) .bg-glass-dark {
+  background: rgba(255, 255, 255, 0.4);
+}
+
 .font-brand {
-  display: none; /* Metin bazlı marka kaldırıldı */
+  display: block; /* Tekrar görünür yapabiliriz ama img kullandığımız için etkisiz kalır, temizlik amaçlı */
 }
 
 /* Base Styles */
