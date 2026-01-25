@@ -1,5 +1,6 @@
 export default {
   translation: {
+    metaTitle: "Taraftaro | Sports & Fans Community",
     nav: {
       features: "Features",
       faq: "FAQ",

@@ -1,5 +1,6 @@
 export default {
   translation: {
+    metaTitle: "Taraftaro | Spor & Taraftar Topluluğu",
     nav: {
       features: "Özellikler",
       faq: "S.S.S.",
