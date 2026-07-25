@@ -95,7 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
       slides.forEach((slide, i) => {
         slide.className = 'showcase-slide'; // Reset all classes
 
-        const diff = (i - activeIndex + total) % total;
+        // Shortest signed circular distance on 3D turntable
+        let diff = i - activeIndex;
+        if (diff > total / 2) diff -= total;
+        if (diff < -total / 2) diff += total;
 
         if (diff === 0) {
           slide.classList.add('active');
@@ -103,9 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
           slide.classList.add('next');
         } else if (diff === 2) {
           slide.classList.add('far-next');
-        } else if (diff === total - 1) {
+        } else if (diff === -1) {
           slide.classList.add('prev');
-        } else if (diff === total - 2) {
+        } else if (diff === -2) {
           slide.classList.add('far-prev');
         } else {
           slide.classList.add('hidden');
@@ -134,16 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Slide Clicks (Click side screenshot to slide into center phone)
-    slides.forEach((slide, i) => {
-      slide.addEventListener('click', () => {
-        if (i !== activeIndex) {
-          updateShowcase(i);
-          restartTimer();
-        }
-      });
-    });
-
     // Prev / Next buttons
     btnPrev?.addEventListener('click', () => {
       updateShowcase(activeIndex - 1);
@@ -155,47 +148,98 @@ document.addEventListener('DOMContentLoaded', () => {
       restartTimer();
     });
 
-    // Prevent native browser image drag
-    showcaseTrack.querySelectorAll('img').forEach(img => {
-      img.addEventListener('dragstart', (e) => e.preventDefault());
-    });
-
-    // Mouse Drag + Touch Swipe Support
+    // Real-Time Live Drag & Touch Physics Engine
     let startX = 0;
+    let dragOffset = 0;
     let isDragging = false;
+    let isDragThreshold = false;
+
+    function setTrackDragTransform(offsetPx) {
+      const rotateDeg = offsetPx * 0.08;
+      const translatePx = offsetPx * 0.55;
+      showcaseTrack.style.transition = 'none';
+      showcaseTrack.style.transform = `rotateY(${rotateDeg}deg) translateX(${translatePx}px)`;
+    }
+
+    function resetTrackTransform() {
+      showcaseTrack.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+      showcaseTrack.style.transform = 'rotateY(0deg) translateX(0px)';
+    }
+
+    // Slide Clicks
+    slides.forEach((slide, i) => {
+      slide.addEventListener('click', (e) => {
+        if (isDragThreshold) return;
+        if (i !== activeIndex) {
+          updateShowcase(i);
+          restartTimer();
+        }
+      });
+    });
 
     // Mouse Drag Events (Desktop)
     showcaseTrack.addEventListener('mousedown', (e) => {
       isDragging = true;
+      isDragThreshold = false;
       startX = e.clientX;
+      dragOffset = 0;
       showcaseTrack.style.cursor = 'grabbing';
+      stopTimer();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      dragOffset = e.clientX - startX;
+      if (Math.abs(dragOffset) > 6) {
+        isDragThreshold = true;
+      }
+      setTrackDragTransform(dragOffset);
     });
 
     window.addEventListener('mouseup', (e) => {
       if (!isDragging) return;
       isDragging = false;
       showcaseTrack.style.cursor = 'grab';
-      const diffX = e.clientX - startX;
-      if (Math.abs(diffX) > 40) {
-        if (diffX > 0) updateShowcase(activeIndex - 1);
+
+      resetTrackTransform();
+
+      if (Math.abs(dragOffset) > 40) {
+        if (dragOffset > 0) updateShowcase(activeIndex - 1);
         else updateShowcase(activeIndex + 1);
-        restartTimer();
       }
+      restartTimer();
     });
 
-    // Touch Swipe Events (Mobile)
+    // Touch Swipe Events (Mobile Live Drag)
     showcaseTrack.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      isDragThreshold = false;
       startX = e.touches[0].clientX;
+      dragOffset = 0;
+      stopTimer();
     }, { passive: true });
 
-    showcaseTrack.addEventListener('touchend', (e) => {
-      const diffX = e.changedTouches[0].clientX - startX;
-      if (Math.abs(diffX) > 40) {
-        if (diffX > 0) updateShowcase(activeIndex - 1);
-        else updateShowcase(activeIndex + 1);
-        restartTimer();
+    showcaseTrack.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      dragOffset = e.touches[0].clientX - startX;
+      if (Math.abs(dragOffset) > 6) {
+        isDragThreshold = true;
       }
+      setTrackDragTransform(dragOffset);
     }, { passive: true });
+
+    showcaseTrack.addEventListener('touchend', () => {
+      if (!isDragging) return;
+      isDragging = false;
+
+      resetTrackTransform();
+
+      if (Math.abs(dragOffset) > 40) {
+        if (dragOffset > 0) updateShowcase(activeIndex - 1);
+        else updateShowcase(activeIndex + 1);
+      }
+      restartTimer();
+    });
 
     // Auto Play
     function startTimer() {
