@@ -1,424 +1,587 @@
 <!doctype html>
-<html lang="tr" class="scroll-smooth dark">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="metaTitle">Taraftaro | Kulübünle Arandaki En Güçlü Dijital Köprü</title>
-    <meta name="description" content="Kulübünle arandaki en güçlü dijital köprü. Taraftarın 11'ini kur, maçları birlikte yaşa, ödüller kazan.">
-    <meta name="theme-color" content="#0A0A0F">
-    
-    <!-- SEO & Social Media -->
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Taraftaro - Mobil Futbol Topluluğu">
-    <meta property="og:description" content="Kulübünle arandaki en güçlü dijital köprü. Taraftarın 11'ini kur, maçları birlikte yaşa, ödüller kazan.">
-    <meta property="og:image" content="/og-image.png">
-    <meta property="og:url" content="https://taraftaro.com">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Taraftaro - Mobil Futbol Topluluğu">
-    <meta name="twitter:description" content="Kulübünle arandaki en güçlü dijital köprü. Taraftarın 11'ini kur, maçları birlikte yaşa, ödüller kazan.">
-    
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- Google Fonts: LINE Seed JP -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@100..900&display=swap" rel="stylesheet">
-  </head>
-  <body class="min-h-screen transition-colors duration-300">
-    <div id="app" class="min-h-screen flex flex-col">
-        
-        <!-- Navbar -->
-        <nav id="navbar" class="fixed w-full z-50 top-0 transition-all duration-300 pointer-events-auto">
-            <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-                    <!-- Brand (Left) -->
-                    <div class="w-auto md:w-1/4 flex-shrink-0">
-                        <a href="#" class="flex items-center group">
-                            <img src="/logo-brand.png" alt="Taraftaro Logo" class="h-12 w-auto object-contain logo-brand">
-                        </a>
-                    </div>
-                    
-                    <!-- Center Menu (Middle) -->
-                    <div class="hidden md:flex flex-1 justify-center items-center space-x-10">
-                        <a href="#features" class="text-sm font-bold text-mode-secondary hover:text-primary transition-colors" data-i18n="nav.features">Özellikler</a>
-                        <a href="#faq" class="text-sm font-bold text-mode-secondary hover:text-primary transition-colors" data-i18n="nav.faq">S.S.S.</a>
-                        <a href="#download" class="text-sm font-bold text-mode-secondary hover:text-primary transition-colors" data-i18n="nav.download">İndir</a>
-                    </div>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Taraftaro | Dijital Tribünde Yerini Al</title>
+  <meta name="description" content="Toksisiteden arındırılmış, kulübüne özel kabile ekosistemi. Canlı maçları binlerce gerçek taraftarla birlikte yaşa, tahminler yap, ödüller kazan." />
+  <meta name="theme-color" content="#09090b" />
 
-                    <!-- Actions (Right) -->
-                    <div class="w-auto md:w-1/4 flex items-center justify-end gap-4">
-                        <a href="#download" class="hidden md:inline-flex items-center justify-center btn-primary rounded-2xl px-6 py-2.5 text-sm font-black" data-i18n="nav.downloadBtn">
-                            İndir
-                        </a>
-                        
-                        <button id="menu-btn" type="button" class="md:hidden p-2 text-mode-secondary rounded-lg hover:text-primary cursor-pointer text-xl">
-                            <i id="menu-icon" class="fa-solid fa-bars"></i>
-                            <i id="close-icon" class="fa-solid fa-xmark hidden"></i>
-                        </button>
-                    </div>
-                </div>
-            <!-- Mobile Menu -->
-            <div class="hidden md:hidden bg-glass-dark border-t border-primary/5 overflow-hidden pointer-events-auto" id="mobile-menu">
-                <div class="space-y-1 px-4 py-6">
-                    <a href="#features" class="block rounded-2xl px-6 py-4 text-base font-bold text-mode hover:bg-primary/10 hover:text-primary transition-colors" data-i18n="nav.features">Özellikler</a>
-                    <a href="#faq" class="block rounded-2xl px-6 py-4 text-base font-bold text-mode hover:bg-primary/10 hover:text-primary transition-colors" data-i18n="nav.faq">S.S.S.</a>
-                    <a href="#download" class="block rounded-2xl px-6 py-4 text-base font-bold text-mode hover:bg-primary/10 hover:text-primary transition-colors" data-i18n="nav.download">İndir</a>
-                </div>
-            </div>
-        </nav>
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://taraftaro.com" />
+  <meta property="og:title"       content="Taraftaro — Dijital Tribünde Yerini Al" />
+  <meta property="og:description" content="Toksisiteden arındırılmış kabile ekosistemi. Canlı maçları birlikte yaşa." />
+  <meta property="og:image"       content="https://taraftaro.com/public/og-image.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
 
-        <!-- Hero Section -->
-        <section id="hero" class="pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden relative">
-            <!-- Background Effects -->
-            <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <div class="absolute -top-[10%] -right-[5%] w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] animate-pulse-glow"></div>
-                <div class="absolute bottom-1/4 -left-[10%] w-[500px] h-[500px] bg-primary-light/10 rounded-full blur-[100px] animate-pulse-glow" style="animation-delay: 2s;"></div>
-            </div>
-            
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid lg:grid-cols-12 gap-16 lg:gap-8 items-center">
-                    <!-- Left Content -->
-                    <div class="lg:col-span-8 text-center lg:text-left">
+  <!-- Favicon -->
+  <link rel="icon"             type="image/png" sizes="32x32" href="public/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180"                href="public/apple-touch-icon.png" />
 
-                        
-                        <h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-[0.95] mb-8">
-                            <span class="text-mode" data-i18n="hero.title1">Kulübünle Arandaki</span><br>
-                            <span class="gradient-text" data-i18n="hero.title2">En Güçlü Köprü</span>
-                        </h1>
-                        
-                        <p class="mt-8 text-lg lg:text-xl text-mode-secondary max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium" data-i18n="hero.description">
-                            Kulübünle arandaki en güçlü dijital köprü. Takımının bir parçası ol, heyecanı birlikte yaşa ve tutkunu ödüllere dönüştür.
-                        </p>
-                        
-                        <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="#download" class="inline-flex items-center justify-center btn-primary rounded-full px-10 py-5 font-bold gap-3 text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
-                                <i class="fa-solid fa-download"></i>
-                                <span data-i18n="hero.downloadBtn">Ücretsiz İndir</span>
-                            </a>
-                            <a href="#features" class="inline-flex items-center justify-center btn-secondary rounded-full px-10 py-5 font-bold gap-3 text-lg border-2 border-mode-secondary/10 hover:bg-mode-secondary/5 transition-all">
-                                <i class="fa-solid fa-play"></i>
-                                <span data-i18n="hero.howItWorks">Nasıl Çalışır?</span>
-                            </a>
-                        </div>
-                        
-                        <!-- Stats (rendered from JSON) -->
-                        <div id="hero-stats" class="mt-20 flex flex-wrap justify-center lg:justify-start gap-12">
-                            <!-- Stats will be rendered dynamically from stats.json -->
-                        </div>
-                    </div>
-                    
-                    <!-- Right: Premium Phone Mockup -->
-                    <div class="lg:col-span-4 relative lg:ml-auto reveal delay-200">
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/30 rounded-full blur-[150px] animate-pulse-glow -z-10"></div>
-                        <div class="iphone-frame animate-float">
-                            <div class="iphone-screen flex flex-col items-center justify-center relative" style="background: #ffffff !important;">
-                                <!-- Splash Screen Content -->
-                                <span class="text-4xl text-gray-900 font-brand">taraftar<span class="text-primary">o</span></span>
-                                <span class="absolute bottom-8 text-xs font-medium text-gray-400">v1.0.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=LINE+Seed+JP:wght@400;700&display=swap" rel="stylesheet" />
 
-        <!-- App Showcase Section -->
-        <section id="showcase" class="py-32 relative overflow-hidden bg-mode-secondary">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-20 items-center">
-                    <!-- Left: Slider Mockup with Vertical Dots -->
-                    <div class="relative reveal order-2 lg:order-1 flex items-center justify-center">
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] -z-10 animate-pulse-glow"></div>
-                        
-                        <!-- Phone + Dots Wrapper -->
-                        <div class="relative">
-                            <!-- Vertical Slider Dots (positioned by CSS) -->
-                            <div id="slider-dots" class="slider-dots">
-                                <!-- JS will inject dots here -->
-                            </div>
-                            
-                            <!-- Phone Mockup -->
-                            <div class="iphone-frame">
-                                <div class="iphone-screen">
-                                    <div id="showcase-slider" class="iphone-slider">
-                                        <div class="slide active">
-                                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/77626e105556111.5f7c32b95c083.png" alt="App Screen 1">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/8c7e6e105556111.5f7c32b95b871.png" alt="App Screen 2">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/77626e105556111.5f7c32b95c083.png" alt="App Screen 3">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-1 lg:order-2 reveal delay-200">
-                        <h2 class="text-4xl lg:text-5xl xl:text-6xl font-black text-mode mb-8 tracking-tight" data-i18n="showcase.title">
-                            Tek Uygulama,<br><span class="gradient-text">Sonsuz Tutku</span>
-                        </h2>
-                        <p class="text-xl text-mode-secondary mb-12 font-medium leading-relaxed" data-i18n="showcase.description">
-                            Taraftaro ile maç günleri artık daha heyecanlı. Her şey elinin altında.
-                        </p>
-                        
-                        <div class="space-y-6">
-                            <div class="group flex items-start gap-6 p-6 rounded-3xl glass border-primary/10 hover:bg-primary/5 transition-colors">
-                                <div class="p-4 rounded-2xl bg-primary/10 text-primary shadow-lg shadow-primary/10">
-                                    <i class="fa-solid fa-comments text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-black text-mode mb-1 tracking-tight" data-i18n="showcase.features.chat">Canlı Maç Sohbeti</h4>
-                                    <p class="text-mode-secondary font-medium">Binlerce taraftarla aynı heyecanı paylaşın.</p>
-                                </div>
-                            </div>
-                            <div class="group flex items-start gap-6 p-6 rounded-3xl glass border-primary/10 hover:bg-secondary/5 transition-colors">
-                                <div class="p-4 rounded-2xl bg-secondary/10 text-secondary shadow-lg shadow-secondary/10">
-                                    <i class="fa-solid fa-bolt text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-black text-mode mb-1 tracking-tight" data-i18n="showcase.features.scores">Anlık Skorlar</h4>
-                                    <p class="text-mode-secondary font-medium">Saniyeler içinde gol bildirimleri cebinizde.</p>
-                                </div>
-                            </div>
-                            <div class="group flex items-start gap-6 p-6 rounded-3xl glass border-primary/10 hover:bg-accent/5 transition-colors">
-                                <div class="p-4 rounded-2xl bg-accent/10 text-accent shadow-lg shadow-accent/10">
-                                    <i class="fa-solid fa-trophy text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-xl font-black text-mode mb-1 tracking-tight" data-i18n="showcase.features.leaderboard">Sıralama ve Ödüller</h4>
-                                    <p class="text-mode-secondary font-medium">Bilgini yarıştır, muhteşem ödüller kazan.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Features Section (Bento Grid) -->
-        <section id="features" class="py-32 sm:py-40 relative">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto reveal mb-20">
-                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-mode mb-8 tracking-tight">
-                        <span data-i18n="features.title">Neden</span> <span class="gradient-text" data-i18n="features.titleHighlight">Taraftaro</span>?
-                    </h2>
-                    <p class="text-xl text-mode-secondary font-medium leading-relaxed" data-i18n="features.description">
-                        Sadece izlemek yetmez. Takımının bir parçası ol, kararları etkile ve tutkunu yaşa.
-                    </p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6 auto-rows-[250px] lg:auto-rows-[300px]">
-                    <!-- Bento Card 1: Large (2x2) -->
-                    <div class="md:col-span-2 md:row-span-2 feature-card reveal delay-100 flex flex-col justify-end p-10 bg-gradient-mesh border-primary/10 relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-12 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <i class="fa-solid fa-users text-9xl text-primary"></i>
-                        </div>
-                        <div class="relative z-10 mt-auto">
-                            <div class="w-16 h-16 rounded-3xl bg-primary/10 flex items-center justify-center mb-8 glow-primary-sm">
-                                <i class="fa-solid fa-users text-2xl text-primary"></i>
-                            </div>
-                            <h3 class="text-3xl font-black text-mode mb-4 tracking-tight" data-i18n="features.items.fans11.title">Taraftarın 11'i</h3>
-                            <p class="text-lg text-mode-secondary leading-relaxed font-medium" data-i18n="features.items.fans11.desc">
-                                Senin takımın, senin kararın. Maç öncesi ideal kadronu kur ve toplulukla paylaş.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Bento Card 2: Wide (2x1) -->
-                    <div class="md:col-span-2 feature-card reveal delay-200 flex items-center gap-8 bg-gradient-to-br from-orange-500/10 to-transparent border-primary/10 overflow-hidden group">
-                        <div class="w-20 h-20 shrink-0 rounded-3xl bg-yellow-500/10 flex items-center justify-center glow-primary-sm">
-                            <i class="fa-solid fa-trophy text-3xl text-yellow-500"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-black text-mode mb-2 tracking-tight" data-i18n="features.items.playWin.title">Oyna & Kazan</h3>
-                            <p class="text-mode-secondary leading-relaxed font-medium" data-i18n="features.items.playWin.desc">
-                                Skor tahminleri yap, günlük görevleri tamamla. Puanları topla, forma kazan.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Bento Card 3: Standard (1x1) -->
-                    <div class="feature-card reveal delay-300 flex flex-col justify-between bg-mode-secondary/5 border-mode-secondary/10 group">
-                        <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
-                            <i class="fa-solid fa-comment-dots text-2xl text-blue-500"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-black text-mode mb-2 tracking-tight" data-i18n="features.items.liveChat.title">Canlı Tartışma</h3>
-                            <p class="text-sm text-mode-secondary font-medium leading-relaxed" data-i18n="features.items.liveChat.desc">
-                                Maç anında binlerce taraftarla aynı duyguyu paylaş. Anlık yorumla.
-                            </p>
-                        </div>
-                    </div>
+  <!-- Styles -->
+  <link rel="stylesheet" href="public/css/tokens.css" />
+  <link rel="stylesheet" href="public/css/components.css" />
+  <link rel="stylesheet" href="public/css/main.css" />
+</head>
+<body>
 
-                    <!-- Bento Card 4: Standard (1x1) -->
-                    <div class="feature-card reveal delay-100 flex flex-col justify-between bg-mode-secondary/5 border-mode-secondary/10 group">
-                        <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
-                            <i class="fa-solid fa-hand-holding-heart text-2xl text-purple-500"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-black text-mode mb-2 tracking-tight" data-i18n="features.items.community.title">Topluluk</h3>
-                            <p class="text-sm text-mode-secondary font-medium leading-relaxed" data-i18n="features.items.community.desc">
-                                Deplasman organizasyonlarından buluşmalara kadar her şey burada.
-                            </p>
-                        </div>
-                    </div>
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Ana navigasyon">
+    <div class="navbar-inner">
 
-                    <!-- Bento Card 5: Wide (2x1) -->
-                    <div class="md:col-span-2 feature-card reveal delay-200 flex items-center gap-8 bg-gradient-to-br from-green-500/10 to-transparent border-primary/10 group">
-                         <div class="w-20 h-20 shrink-0 rounded-3xl bg-green-500/10 flex items-center justify-center">
-                            <i class="fa-solid fa-chart-simple text-3xl text-green-500"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-black text-mode mb-2 tracking-tight" data-i18n="features.items.stats.title">Detaylı İstatistik</h3>
-                            <p class="text-mode-secondary leading-relaxed font-medium" data-i18n="features.items.stats.desc">
-                                Canlı verilere anında eriş. Oyuncu performanslarını analiz et.
-                            </p>
-                        </div>
-                    </div>
+      <!-- Logo -->
+      <a href="#" class="navbar-logo" aria-label="Taraftaro ana sayfa">
+        <img src="public/logo-brand.png" alt="Taraftaro" />
+      </a>
 
-                    <!-- Bento Card 6: Standard (2x1 on mobile, 2x1 on large too for symmetry) -->
-                     <div class="md:col-span-2 feature-card reveal delay-300 flex items-center gap-8 bg-gradient-to-br from-red-500/10 to-transparent border-primary/10 group">
-                         <div class="w-20 h-20 shrink-0 rounded-3xl bg-red-500/10 flex items-center justify-center">
-                            <i class="fa-solid fa-bell text-3xl text-red-500"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-black text-mode mb-2 tracking-tight" data-i18n="features.items.notifications.title">Anlık Bildirimler</h3>
-                            <p class="text-mode-secondary leading-relaxed font-medium" data-i18n="features.items.notifications.desc">
-                                Gol anları, transfer haberleri ve önemli dakikalar için anında bilgilendiril.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Desktop links -->
+      <ul class="navbar-links" role="list">
+        <li><a href="#features">Özellikler</a></li>
+        <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
+        <li><a href="#faq">S.S.S.</a></li>
+      </ul>
 
-        <!-- FAQ Section -->
-        <section id="faq" class="py-32 relative bg-mode">
-            <div class="max-w-4xl mx-auto px-6 lg:px-8">
-                <div class="text-center reveal mb-20">
-                    <h2 class="text-4xl lg:text-5xl font-black text-mode tracking-tight" data-i18n="faq.title">Sıkça Sorulan Sorular</h2>
-                </div>
-                
-                <div class="grid gap-6">
-                    <div class="reveal delay-100 p-8 rounded-3xl glass border-primary/5 hover:border-primary/20 transition-all">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">1</div>
-                            <h4 class="text-xl font-black text-mode tracking-tight" data-i18n="faq.items.q1">Taraftaro ücretli mi?</h4>
-                        </div>
-                        <p class="text-mode-secondary text-lg font-medium leading-relaxed pl-14" data-i18n="faq.items.a1">Hayır, Taraftaro'yu indirmek ve temel özelliklerini kullanmak tamamen ücretsizdir.</p>
-                    </div>
-                    <div class="reveal delay-200 p-8 rounded-3xl glass border-primary/5 hover:border-primary/20 transition-all">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">2</div>
-                            <h4 class="text-xl font-black text-mode tracking-tight" data-i18n="faq.items.q2">Ödülleri nasıl kazanırım?</h4>
-                        </div>
-                        <p class="text-mode-secondary text-lg font-medium leading-relaxed pl-14" data-i18n="faq.items.a2">Maç tahminleri yaparak, görevleri tamamlayarak ve toplulukta aktif olarak puan toplayabilir, bu puanlarla forma ve maç biletleri kazanabilirsiniz.</p>
-                    </div>
-                    <div class="reveal delay-300 p-8 rounded-3xl glass border-primary/5 hover:border-primary/20 transition-all">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">3</div>
-                            <h4 class="text-xl font-black text-mode tracking-tight" data-i18n="faq.items.q3">Hangi ligler mevcut?</h4>
-                        </div>
-                        <p class="text-mode-secondary text-lg font-medium leading-relaxed pl-14" data-i18n="faq.items.a3">Süper Lig başta olmak üzere, Avrupa'nın tüm majör liglerini ve uluslararası turnuvaları takip edebilirsiniz.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Desktop CTA -->
+      <div class="navbar-cta">
+        <a href="#download" class="btn btn-primary">Ücretsiz İndir</a>
+      </div>
 
-        <!-- CTA / Download Section -->
-        <section id="download" class="py-32 sm:py-44 relative overflow-hidden bg-mode-secondary">
-            <!-- Background Decorations -->
-            <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px]"></div>
-                <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-light/5 rounded-full blur-[100px]"></div>
-            </div>
-            
-            <div class="mx-auto max-w-5xl px-6 lg:px-8 text-center relative z-10 reveal">
-                <h2 class="text-5xl sm:text-6xl lg:text-7xl font-black text-mode mb-8 tracking-tight" data-i18n="cta.title">
-                    Tribündeki yerini al.
-                </h2>
-                <p class="text-xl lg:text-2xl text-mode-secondary mb-16 max-w-2xl mx-auto font-medium leading-relaxed" data-i18n="cta.description">
-                    Hemen indir, 11'ini kur ve binlerce taraftarla birlikte maçları yaşa.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="#" class="inline-flex items-center justify-center bg-black text-white dark:glass rounded-3xl px-10 py-6 font-bold gap-6 hover:scale-105 transition-all group shadow-2xl shadow-black/10">
-                        <i class="fa-brands fa-apple text-4xl"></i>
-                        <span class="text-left">
-                            <span class="block text-xs text-gray-400 mb-1" data-i18n="cta.appStore">App Store'dan</span>
-                            <span class="block text-2xl" data-i18n="cta.download">İndir</span>
-                        </span>
-                    </a>
-                    <a href="#" class="inline-flex items-center justify-center bg-primary text-white rounded-3xl px-10 py-6 font-bold gap-6 hover:scale-105 transition-all group shadow-2xl shadow-primary/20">
-                        <i class="fa-brands fa-google-play text-4xl"></i>
-                        <span class="text-left">
-                            <span class="block text-xs text-orange-200 mb-1" data-i18n="cta.googlePlay">Google Play'den</span>
-                            <span class="block text-2xl" data-i18n="cta.download">İndir</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="py-24 border-t border-primary/5 bg-mode relative overflow-hidden">
-            <!-- Footer Glow -->
-            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
-            
-            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8">
-                    <!-- Brand Section -->
-                    <div class="md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left">
-                        <a href="#" class="flex items-center gap-3 mb-6 group">
-                            <img src="/logo-brand.png" alt="Taraftaro Logo" class="h-16 w-auto object-contain logo-brand">
-                        </a>
-                        <p class="text-lg text-mode-secondary font-medium mb-4 max-w-sm" data-i18n="footer.slogan">Kulübünle arandaki en güçlü dijital köprü.</p>
-                        <div class="text-sm font-medium text-mode-muted">
-                            © <span id="copyright-year"></span> <a href="https://2zek.com">2zek.</a> <span data-i18n="footer.copyright">Tüm hakları saklıdır.</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Links Section -->
-                    <div class="md:col-span-4 flex flex-col items-center md:items-start">
-                        <h4 class="text-mode font-black text-lg mb-8 tracking-tight" data-i18n="footer.linksTitle">Bağlantılar</h4>
-                        <div class="grid grid-cols-2 gap-x-12 gap-y-4 text-sm font-bold text-mode-secondary">
-                            <a href="#features" class="hover:text-primary transition-colors" data-i18n="nav.features">Özellikler</a>
-                            <a href="/privacy.html" class="hover:text-primary transition-colors" data-i18n="footer.privacy">Gizlilik</a>
-                            <a href="#faq" class="hover:text-primary transition-colors" data-i18n="nav.faq">S.S.S.</a>
-                            <a href="/terms.html" class="hover:text-primary transition-colors" data-i18n="footer.terms">Şartlar</a>
-                            <a href="#download" class="hover:text-primary transition-colors" data-i18n="nav.download">İndir</a>
-                            <a href="mailto:info@taraftaro.com" class="hover:text-primary transition-colors" data-i18n="footer.contact">İletişim</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Social & Toggles Section -->
-                    <div class="md:col-span-3 flex flex-col items-center md:items-end">
-                        <h4 class="text-mode font-black text-lg mb-8 tracking-tight" data-i18n="footer.socialTitle">Bizi Takip Edin</h4>
-                        <div id="social-links" class="flex gap-4 mb-10">
-                            <!-- Social links will be rendered dynamically from social.json -->
-                        </div>
-
-                        <!-- Utility Toggles -->
-                        <div class="flex items-center gap-3">
-                            <button id="lang-toggle" type="button" class="px-5 h-12 flex items-center justify-center text-xs font-black text-mode-secondary hover:text-primary rounded-2xl glass transition-all border border-primary/5 hover:border-primary/20 cursor-pointer group">
-                                <span class="group-hover:scale-110 transition-transform">EN</span>
-                            </button>
-                            <button id="theme-toggle" type="button" class="w-12 h-12 flex items-center justify-center text-mode-secondary hover:text-primary rounded-2xl glass hover:bg-primary/5 transition-all border border-primary/5 hover:border-primary/20 cursor-pointer group">
-                                <i id="theme-sun" class="fa-solid fa-sun text-xl group-hover:rotate-45 transition-transform"></i>
-                                <i id="theme-moon" class="fa-solid fa-moon text-xl group-hover:-rotate-12 transition-transform hidden"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+      <!-- Hamburger -->
+      <button id="hamburger" class="navbar-hamburger" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobil menü">
+      <ul>
+        <li><a href="#features">Özellikler</a></li>
+        <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
+        <li><a href="#faq">S.S.S.</a></li>
+      </ul>
+      <a href="#download" class="btn btn-primary">Ücretsiz İndir</a>
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════ -->
+    <section id="hero">
+
+      <!-- Background glows -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="glow-orb glow-orb-brand hero-bg-orb-1 animate-pulse-glow"></div>
+        <div class="glow-orb glow-orb-dim   hero-bg-orb-2 animate-pulse-glow" style="animation-delay:2s"></div>
+      </div>
+
+      <div class="hero-inner">
+
+        <!-- Left: Content -->
+        <div>
+          <div class="hero-badge reveal">
+            <i class="fa-solid fa-fire"></i>
+            Beta Aşamasında — İlk Taraftarlar Aramızda
+          </div>
+
+          <h1 class="hero-title reveal delay-1">
+            Dijital Tribünde<br />
+            <span class="gradient-text">Yerini Al.</span>
+          </h1>
+
+          <p class="hero-desc reveal delay-2">
+            Toksisiteden arındırılmış, kulübüne özel bir ekosistem. Binlerce gerçek taraftarla
+            canlı maç enerjisini hisset, tahminler yap ve ödüller kazan.
+          </p>
+
+          <div class="hero-actions reveal delay-3">
+            <a href="#download" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-download"></i>
+              Ücretsiz İndir
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary btn-lg">
+              <i class="fa-regular fa-circle-play"></i>
+              Nasıl Çalışır?
+            </a>
+          </div>
+
+          <div class="hero-stats reveal delay-4">
+            <div>
+              <div class="hero-stat-value">10+</div>
+              <div class="hero-stat-label">Lig</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">Canlı</div>
+              <div class="hero-stat-label">Maç Takibi</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">4.9</div>
+              <div class="hero-stat-label">Beta Puanı</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Phone Mockup -->
+        <div class="hero-visual reveal delay-2">
+          <div class="hero-phone-glow animate-pulse-glow" aria-hidden="true"></div>
+          <div class="hero-iphone animate-float">
+            <div class="iphone-frame">
+              <div class="iphone-screen">
+                <img src="public/hero-mockup.png" alt="Taraftaro uygulama ekranı" loading="eager" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         HOW IT WORKS
+    ══════════════════════════════════════════ -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">Nasıl Çalışır?</span>
+          <h2 class="section-title">3 Adımda<br /><span class="gradient-text">Kabilene Katıl</span></h2>
+          <p class="section-desc">Kayıt ol, kulübünü seç ve binlerce taraftarla birlikte maçları yaşamaya başla.</p>
+        </div>
+
+        <div class="how-grid">
+          <!-- Connector line (hidden on mobile via CSS) -->
+          <div class="how-connector" aria-hidden="true"></div>
+
+          <!-- Step 1 -->
+          <div class="step-card reveal delay-1">
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-shirt" style="color: var(--c-brand);"></i>
+            </div>
+            <div class="step-number">1</div>
+            <h3 class="step-title">Kulübünü Seç</h3>
+            <p class="step-desc">Taraftarı olduğun kulübü belirle. Kabilene gir, renklerini giyin.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card reveal delay-2">
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-users" style="color: var(--c-brand);"></i>
+            </div>
+            <div class="step-number">2</div>
+            <h3 class="step-title">Tribünde Yerini Al</h3>
+            <p class="step-desc">Doğrulanmış taraftarlarla Dijital Tribün'de buluş. Toksik değil, gerçek taraftar enerjisi.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card reveal delay-3">
+            <div class="step-icon-wrap">
+              <i class="fa-solid fa-trophy" style="color: var(--c-brand);"></i>
+            </div>
+            <div class="step-number">3</div>
+            <h3 class="step-title">Maçı Birlikte Yaşa</h3>
+            <p class="step-desc">Canlı tahminler yap, anlık reaksiyonlar ver, sıralamada yüksel ve ödüller kazan.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         FEATURES — BENTO GRID
+    ══════════════════════════════════════════ -->
+    <section id="features" class="section">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">Neden Taraftaro?</span>
+          <h2 class="section-title">Taraftarlığı<br /><span class="gradient-text">Yeniden Tanımla</span></h2>
+          <p class="section-desc">Pasif içerik tüketmek artık yetmiyor. Taraftaro ile maçın tam ortasındasın.</p>
+        </div>
+
+        <div class="bento-grid">
+
+          <!-- 1. Dijital Tribün — 2×2 Large -->
+          <div class="feature-card bento-large reveal delay-1">
+            <div class="bento-large-bg" aria-hidden="true"></div>
+            <div class="feature-icon feature-icon-brand">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="feature-title">Dijital Tribün</h3>
+            <p class="feature-desc">
+              Stadyum atmosferini evinize taşıyın. Canlı maçlarda binlerce taraftarla
+              aynı anda reaksiyon verin, tribün sesini hissedin.
+              Her gol, her kart, her kritik an — birlikte.
+            </p>
+          </div>
+
+          <!-- 2. Taraftarın 11'i — 1×1 -->
+          <div class="feature-card bento-std reveal delay-2">
+            <div class="feature-icon feature-icon-blue">
+              <i class="fa-solid fa-futbol"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Taraftarın 11'i</h3>
+              <p class="feature-desc">Maç öncesi ideal kadronuzu kurun ve topluluğunuzla paylaşın.</p>
+            </div>
+          </div>
+
+          <!-- 3. Akıllı Anketler — 1×1 -->
+          <div class="feature-card bento-std reveal delay-3">
+            <div class="feature-icon feature-icon-purple">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Akıllı Anketler</h3>
+              <p class="feature-desc">Yapay zeka destekli anketlerle kolektif taraftar görüşünü keşfedin.</p>
+            </div>
+          </div>
+
+          <!-- 4. Taraftar İndeksi — 2×1 Wide -->
+          <div class="feature-card bento-wide reveal delay-2">
+            <div class="feature-icon feature-icon-yellow" style="width:4.5rem;height:4.5rem;font-size:1.5rem;flex-shrink:0;">
+              <i class="fa-solid fa-ranking-star"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Taraftar İndeksi</h3>
+              <p class="feature-desc">Her yorumun, her tahminin puan kazandırdığı bir sıralama sistemi. Kulübünün en değerli taraftarı sen ol.</p>
+            </div>
+          </div>
+
+          <!-- 5. Kabile Yalıtımı — 2×1 Wide -->
+          <div class="feature-card bento-wide reveal delay-3">
+            <div class="feature-icon feature-icon-green" style="width:4.5rem;height:4.5rem;font-size:1.5rem;flex-shrink:0;">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Kabile Yalıtımı</h3>
+              <p class="feature-desc">Yalnızca takımının taraftarları. Sosyal medyanın toksik tartışmaları yok. Saf taraftar enerjisi.</p>
+            </div>
+          </div>
+
+          <!-- 6. Canlı Veriler — 2×1 Wide -->
+          <div class="feature-card bento-wide reveal delay-1">
+            <div class="feature-icon feature-icon-red" style="width:4.5rem;height:4.5rem;font-size:1.5rem;flex-shrink:0;">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div>
+              <h3 class="feature-title">Canlı Maç Verileri</h3>
+              <p class="feature-desc">Anlık skor, oyuncu istatistikleri ve taktiksel analizler — hepsi tek uygulamada.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         SHOWCASE — APP SLIDER
+    ══════════════════════════════════════════ -->
+    <section id="showcase" class="section">
+      <div class="container">
+        <div class="showcase-inner">
+
+          <!-- Left: Phone slider -->
+          <div class="showcase-phone-wrap reveal">
+            <div class="showcase-phone-glow animate-pulse-glow" aria-hidden="true"></div>
+            <div class="showcase-dots-wrap">
+              <!-- Slider dots (left side) -->
+              <div id="slider-dots" class="slider-dots" role="tablist" aria-label="Ekran seçimi"></div>
+
+              <!-- Phone -->
+              <div class="iphone-frame">
+                <div class="iphone-screen">
+                  <div id="slider-track" class="iphone-slider" role="region" aria-label="Uygulama ekranları">
+                    <div class="slide">
+                      <img src="public/hero-mockup.png"     alt="Ana ekran — maç listesi" loading="lazy" />
+                    </div>
+                    <div class="slide">
+                      <img src="public/showcase-mockup.png" alt="Maç detay ekranı"        loading="lazy" />
+                    </div>
+                    <div class="slide">
+                      <img src="public/app-screen.png"      alt="Taraftar İndeksi ekranı" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Feature list -->
+          <div class="reveal delay-2">
+            <span class="section-label">Uygulama İçi</span>
+            <h2 class="showcase-title">
+              Tek Uygulama,<br />
+              <span class="gradient-text">Sonsuz Tutku</span>
+            </h2>
+            <p class="showcase-desc">
+              Taraftaro ile maç günleri artık farklı. Skoru takip et, kabilenle reaksiyon ver,
+              sıralamada yüksel.
+            </p>
+
+            <div class="showcase-features">
+
+              <div class="showcase-feature">
+                <div class="showcase-feature-icon feature-icon-brand">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+                <div>
+                  <div class="showcase-feature-title">Canlı Maç Sohbeti</div>
+                  <div class="showcase-feature-desc">Binlerce taraftarla aynı tribün enerjisini paylaş.</div>
+                </div>
+              </div>
+
+              <div class="showcase-feature">
+                <div class="showcase-feature-icon feature-icon-yellow">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                  <div class="showcase-feature-title">Anlık Skor & Bildirimler</div>
+                  <div class="showcase-feature-desc">Gol dakikasında cebinde bildirim, sahada gibi hisset.</div>
+                </div>
+              </div>
+
+              <div class="showcase-feature">
+                <div class="showcase-feature-icon feature-icon-green">
+                  <i class="fa-solid fa-ranking-star"></i>
+                </div>
+                <div>
+                  <div class="showcase-feature-title">Sıralama & Ödüller</div>
+                  <div class="showcase-feature-desc">Tahminlerin ve katılımın puana dönüşür, ödüller kazanırsın.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         FAQ
+    ══════════════════════════════════════════ -->
+    <section id="faq" class="section">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">Merak Edilenler</span>
+          <h2 class="section-title">Sıkça Sorulan<br /><span class="gradient-text">Sorular</span></h2>
+        </div>
+
+        <div class="faq-grid" role="list">
+
+          <div class="faq-item reveal delay-1" role="listitem">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              <span class="faq-question">Taraftaro ücretli mi?</span>
+              <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <p class="faq-answer-inner">
+                Hayır. Taraftaro'yu indirmek ve temel özelliklerini kullanmak tamamen ücretsizdir.
+                İleride özel içerik ve ayrıcalıklar sunan premium bir plan sunulabilir, ancak
+                topluluğun tamamına açık özellikler her zaman ücretsiz kalacak.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal delay-2" role="listitem">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              <span class="faq-question">Uygulama ne zaman çıkıyor?</span>
+              <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <p class="faq-answer-inner">
+                Şu anda aktif beta aşamasındayız. App Store ve Google Play lansmanı için çalışmalar
+                devam ediyor. İlk taraftarlar arasında olmak için aşağıdaki indirme bağlantısını
+                takip et.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal delay-3" role="listitem">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              <span class="faq-question">Hangi kulüpler ve ligler destekleniyor?</span>
+              <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <p class="faq-answer-inner">
+                Süper Lig'deki tüm kulüpler öncelikli desteğimizde. Bunun yanı sıra Premier Lig,
+                La Liga, Serie A, Bundesliga ve UEFA kulüp turnuvalarını takip edebiliyorsun.
+                Topluluğun talebiyle kapsam sürekli genişliyor.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal delay-1" role="listitem">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              <span class="faq-question">Diğer futbol uygulamalarından farkı ne?</span>
+              <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <p class="faq-answer-inner">
+                Mackolik veya SofaScore maç verisini pasif olarak sunar. Twitter toksik tartışmalarla
+                dolu. Taraftaro ise kulübe özel yalıtılmış bir kabile ekosistemi kurar — yalnızca
+                takımının taraftarları, yalnızca gerçek maç enerjisi. Dijital Tribün ve Taraftar
+                İndeksi bu deneyimi benzersiz kılan özellikler.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal delay-2" role="listitem">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              <span class="faq-question">iOS ve Android'de çalışıyor mu?</span>
+              <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <p class="faq-answer-inner">
+                Evet, Taraftaro hem iPhone (iOS 15+) hem de Android (8.0+) cihazlar için
+                geliştirilmektedir. Her iki platform da eş zamanlı desteklenecek.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal delay-3" role="listitem">
+            <button class="faq-btn" type="button" aria-expanded="false">
+              <span class="faq-question">Ödülleri nasıl kazanırım?</span>
+              <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
+            </button>
+            <div class="faq-answer" role="region">
+              <p class="faq-answer-inner">
+                Maç tahminleri yaparak, Dijital Tribün'de reaksiyon vererek, günlük görevleri
+                tamamlayarak ve ankettlere katılarak puan kazanırsın. Biriken puanlarla forma,
+                maç bileti ve kulübe özel sürpriz ödüller edinebilirsin.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         CTA / DOWNLOAD
+    ══════════════════════════════════════════ -->
+    <section id="download" class="section">
+      <div class="container" style="position:relative;z-index:1;text-align:center;">
+
+        <!-- Background glows -->
+        <div class="glow-orb glow-orb-brand cta-bg-orb-1 animate-pulse-glow" aria-hidden="true" style="position:absolute;width:600px;height:600px;top:-30%;right:-10%;opacity:0.15;border-radius:50%;filter:blur(100px);background:var(--c-brand-glow);"></div>
+        <div class="glow-orb glow-orb-dim   cta-bg-orb-2 animate-pulse-glow" aria-hidden="true" style="position:absolute;width:450px;height:450px;bottom:-20%;left:-8%;opacity:0.1;border-radius:50%;filter:blur(100px);animation-delay:2s;background:var(--c-brand-glow);"></div>
+
+        <div class="reveal">
+          <span class="section-label">Hazır mısın?</span>
+          <h2 class="cta-title">
+            Kabilene Katıl.
+          </h2>
+          <p class="cta-desc">
+            Hemen indir, kulübünü seç ve binlerce taraftarla birlikte maçları yaşa.
+          </p>
+
+          <div class="cta-stores">
+            <a href="#" class="store-btn" aria-label="App Store'dan indir">
+              <span class="store-btn-icon"><i class="fa-brands fa-apple"></i></span>
+              <span>
+                <span class="store-btn-sub">App Store'dan</span>
+                <span class="store-btn-name">İndir</span>
+              </span>
+            </a>
+            <a href="#" class="store-btn" aria-label="Google Play'den indir" style="background:var(--c-brand);border-color:transparent;box-shadow:0 8px 30px rgba(255,107,0,0.35);">
+              <span class="store-btn-icon"><i class="fa-brands fa-google-play"></i></span>
+              <span>
+                <span class="store-btn-sub" style="color:rgba(255,255,255,0.7)">Google Play'den</span>
+                <span class="store-btn-name">İndir</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <!-- Brand -->
+      <div class="footer-logo">
+        <a href="#" aria-label="Taraftaro ana sayfa">
+          <img src="public/logo-brand.png" alt="Taraftaro" />
+        </a>
+        <p class="footer-slogan">
+          Toksisiteden arındırılmış, kulübüne özel kabile ekosistemi.
+          Dijital tribünde yerini al.
+        </p>
+        <p class="footer-copy">
+          &copy; <span id="year"></span> <a href="https://2zek.com" target="_blank" rel="noopener">2zek.</a>
+          Tüm hakları saklıdır.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <p class="footer-col-title">Bağlantılar</p>
+        <ul class="footer-links">
+          <li><a href="#features">Özellikler</a></li>
+          <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
+          <li><a href="#faq">S.S.S.</a></li>
+          <li><a href="#download">İndir</a></li>
+          <li><a href="privacy.html">Gizlilik Politikası</a></li>
+          <li><a href="terms.html">Kullanım Şartları</a></li>
+          <li><a href="mailto:info@taraftaro.com">İletişim</a></li>
+        </ul>
+      </div>
+
+      <!-- Socials -->
+      <div>
+        <p class="footer-col-title">Bizi Takip Edin</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://youtube.com/@taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://tiktok.com/@taraftaro" class="footer-social-link" target="_blank" rel="noopener" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://x.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="public/js/main.js" defer></script>
+
+</body>
 </html>
