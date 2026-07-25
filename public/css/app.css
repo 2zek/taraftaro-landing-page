@@ -1369,7 +1369,7 @@ a { color: inherit; }
 .showcase-stage-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1100px;
+  max-width: var(--container);
   margin-inline: auto;
   height: 540px;
   display: flex;
@@ -1384,8 +1384,8 @@ a { color: inherit; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 380px;
-  height: 480px;
+  width: 420px;
+  height: 500px;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.05) 50%, transparent 75%);
   filter: blur(50px);
   pointer-events: none;
@@ -1452,8 +1452,8 @@ a { color: inherit; }
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
-.coverflow-btn-prev { left: 0.5rem; }
-.coverflow-btn-next { right: 0.5rem; }
+.coverflow-btn-prev { left: 0; }
+.coverflow-btn-next { right: 0; }
 
 /* Track & Slides */
 .showcase-track {
@@ -1511,7 +1511,7 @@ a { color: inherit; }
 
 /* NEXT: Floating flat screenshot card on the right */
 .showcase-slide.next {
-  transform: translate(-50%, -50%) translateX(230px) scale(0.78) rotateY(-20deg);
+  transform: translate(-50%, -50%) translateX(270px) scale(0.8) rotateY(-20deg);
   z-index: 6;
   opacity: 0.75;
 }
@@ -1524,7 +1524,7 @@ a { color: inherit; }
 
 /* PREV: Floating flat screenshot card on the left */
 .showcase-slide.prev {
-  transform: translate(-50%, -50%) translateX(-230px) scale(0.78) rotateY(20deg);
+  transform: translate(-50%, -50%) translateX(-270px) scale(0.8) rotateY(20deg);
   z-index: 6;
   opacity: 0.75;
 }
@@ -1537,7 +1537,20 @@ a { color: inherit; }
 
 /* FAR NEXT: Far right slide */
 .showcase-slide.far-next {
-  transform: translate(-50%, -50%) translateX(390px) scale(0.62) rotateY(-32deg);
+  transform: translate(-50%, -50%) translateX(460px) scale(0.64) rotateY(-32deg);
+  z-index: 3;
+  opacity: 0.4;
+  filter: blur(1px);
+}
+
+.showcase-slide.far-next .screenshot-card {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* FAR PREV: Far left slide */
+.showcase-slide.far-prev {
+  transform: translate(-50%, -50%) translateX(-460px) scale(0.64) rotateY(32deg);
   z-index: 3;
   opacity: 0.4;
   filter: blur(1px);
