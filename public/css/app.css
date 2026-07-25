@@ -1739,9 +1739,7 @@ a { color: inherit; }
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(255,255,255,0.06);
-  background:
-    linear-gradient(to bottom, rgba(9,9,11,0.72) 0%, rgba(9,9,11,0.94) 100%),
-    url('../hero-bg.png') center top / cover no-repeat;
+  background: var(--c-bg);
 }
 
 /* Glow overlay */
@@ -1821,31 +1819,23 @@ a { color: inherit; }
 
 .footer-socials {
   display: flex;
-  gap: 0.625rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .footer-social-link {
-  width: 3rem;
-  height: 3rem;
-  border-radius: var(--r-lg);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--c-border);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--c-text-secondary);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: var(--ease-spring);
 }
 .footer-social-link:hover {
   color: var(--c-brand);
-  border-color: var(--c-brand-border);
-  background: var(--c-brand-dim);
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255,107,0,0.18);
   text-decoration: none;
 }
 
