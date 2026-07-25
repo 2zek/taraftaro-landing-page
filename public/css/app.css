@@ -579,7 +579,7 @@ a { color: inherit; }
   max-width: var(--container);
   margin-inline: auto;
   padding-inline: var(--container-px);
-  height: 4.5rem;
+  height: 7.875rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -593,10 +593,17 @@ a { color: inherit; }
   text-decoration: none;
 }
 
-.navbar-logo img {
-  height: 2.5rem;
-  width: auto;
-  filter: invert(1) hue-rotate(180deg) brightness(1.5) contrast(1.2);
+.navbar-brand-text {
+  font-family: var(--font-brand);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--c-text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.navbar-brand-o {
+  color: var(--c-brand);
 }
 
 .navbar-links {
@@ -662,7 +669,7 @@ a { color: inherit; }
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 4.5rem;
+  top: 7.875rem;
   left: 0;
   right: 0;
   background: rgba(9, 9, 11, 0.95);
@@ -703,7 +710,7 @@ a { color: inherit; }
    HERO
    ============================================= */
 #hero {
-  padding-top: calc(4.5rem + 5rem);
+  padding-top: calc(7.875rem + 5rem);
   padding-bottom: 6rem;
   position: relative;
   overflow: hidden;
