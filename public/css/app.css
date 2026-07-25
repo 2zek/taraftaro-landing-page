@@ -2224,9 +2224,7 @@ a.footer-contact-item:hover {
     gap: 0.75rem;
   }
 
-  .comparison-card {
-    padding: 1.25rem 0.75rem;
-  }
+
 }
 
 /* =============================================
@@ -2398,27 +2396,33 @@ a.footer-contact-item:hover {
   border-top: 1px solid var(--c-border);
 }
 
-.comparison-card {
-  background: var(--c-surface-2);
-  border: 1px solid var(--c-border);
-  border-radius: var(--r-2xl);
-  padding: 2.5rem;
-  overflow-x: auto;
-}
-
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  min-width: 600px;
 }
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Dış kenarları sil */
+.comparison-table th:first-child,
+.comparison-table td:first-child { border-left: none; }
+
+.comparison-table th:last-child,
+.comparison-table td:last-child  { border-right: none; }
+
+.comparison-table thead tr th { border-top: none; }
+
+.comparison-table tbody tr:last-child td { border-bottom: none; }
 
 .comparison-table th {
   padding: 1.25rem 1rem;
   font-size: 0.9375rem;
   font-weight: 800;
   color: var(--c-text);
-  border-bottom: 1px solid var(--c-border);
 }
 
 .comparison-table th.brand-col {
@@ -2430,11 +2434,6 @@ a.footer-contact-item:hover {
   padding: 1.125rem 1rem;
   font-size: 0.9rem;
   color: var(--c-text-secondary);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.comparison-table tr:last-child td {
-  border-bottom: none;
 }
 
 .comparison-table td.feature-name {
@@ -2472,7 +2471,7 @@ a.footer-contact-item:hover {
 }
 
 @media (max-width: 768px) {
-  .comparison-card {
+  .comparison-table {
     display: none;
   }
 
