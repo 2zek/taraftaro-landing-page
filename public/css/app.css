@@ -80,7 +80,6 @@ a.btn:hover,
 .navbar-cta:hover,
 .footer-brand-name:hover,
 .footer-social-link:hover,
-.footer-bottom a:hover,
 .store-btn:hover,
 [class*="badge"]:hover {
   text-decoration: none;
@@ -1923,7 +1922,11 @@ a { color: inherit; }
   transition: color 0.2s;
 }
 
-.footer-bottom a:hover { color: var(--c-brand); }
+.footer-bottom a:hover {
+  color: var(--c-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* Responsive footer */
 @media (max-width: 480px) {
@@ -2511,6 +2514,56 @@ a { color: inherit; }
 /* ─────────────────────────────────────────────
    FOOTER LANGUAGE SWITCHER
 ───────────────────────────────────────────── */
+/* ─── Footer Contact Row ─── */
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--c-border);
+  width: 100%;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--c-text-secondary);
+  text-decoration: none;
+  padding: 0.3rem 0.625rem;
+  border-radius: var(--r-full);
+  transition: var(--ease);
+}
+
+.footer-contact-item i {
+  font-size: 0.875rem;
+  color: var(--c-brand);
+  flex-shrink: 0;
+}
+
+a.footer-contact-item:hover {
+  color: var(--c-text);
+  background: rgba(255, 255, 255, 0.05);
+  text-decoration: none;
+}
+
+.footer-contact-static {
+  cursor: default;
+}
+
+.footer-contact-sep {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--c-border-hover);
+  flex-shrink: 0;
+  margin: 0 0.125rem;
+}
+
+/* ─── */
 .footer-lang-row {
   display: flex;
   align-items: center;
