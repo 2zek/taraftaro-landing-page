@@ -793,82 +793,81 @@
 
     <div class="footer-body">
       <div class="container">
-        <div class="footer-center">
+        <div class="footer-grid">
 
-          <!-- Logo + Slogan -->
-          <div class="footer-identity">
-            <a href="#" class="footer-brand-name" data-i18n-aria="ft.logo_aria" aria-label="Taraftaro ana sayfa">
+          <!-- ── Kolon 1: Marka ── -->
+          <div class="footer-col footer-col-brand">
+            <a href="#" class="footer-brand-name" aria-label="Taraftaro">
               TARAFTAR<span>O</span>
             </a>
             <p class="footer-slogan">Sports &amp; Fans Community</p>
+            <p class="footer-tagline" data-i18n="ft.tagline">
+              Kulüp ve taraftar arasındaki dijital köprü.<br />Dijital tribünde yerini al.
+            </p>
+            <div class="footer-socials">
+              <a href="https://instagram.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://youtube.com/@taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://tiktok.com/@taraftaro" class="footer-social-link" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="https://x.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
           </div>
 
-          <!-- Tagline -->
-          <p class="footer-tagline" data-i18n="ft.tagline">
-            Kulüp ve taraftar arasındaki dijital köprü.<br />Dijital tribünde yerini al.
-          </p>
-
-          <!-- Sosyal medya -->
-          <div class="footer-socials">
-            <a href="https://instagram.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://youtube.com/@taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https://tiktok.com/@taraftaro" class="footer-social-link" target="_blank" rel="noopener" aria-label="TikTok">
-              <i class="fa-brands fa-tiktok"></i>
-            </a>
-            <a href="https://x.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="X">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-          </div>
-
-          <!-- Nav linkleri: inline tek satır -->
-          <nav class="footer-nav-inline" data-i18n-aria="ft.nav_aria" aria-label="Footer navigasyonu">
-            <a href="#comparison" data-i18n="ft.app_why">Neden Biz?</a>
-            <span class="fnav-sep" aria-hidden="true"></span>
-            <a href="#how-it-works" data-i18n="ft.app_how">Nasıl Çalışır?</a>
-            <span class="fnav-sep" aria-hidden="true"></span>
-            <a href="#features" data-i18n="ft.app_feat">Özellikler</a>
-            <span class="fnav-sep" aria-hidden="true"></span>
-            <a href="#showcase" data-i18n="ft.app_screens">Ekranlar</a>
-            <span class="fnav-sep" aria-hidden="true"></span>
-            <a href="#download" data-i18n="ft.app_dl">İndir</a>
-            <span class="fnav-sep" aria-hidden="true"></span>
-            <a href="#faq" data-i18n="ft.sup_faq">S.S.S.</a>
-            <span class="fnav-sep" aria-hidden="true"></span>
-            <a href="#contact" data-i18n="ft.sup_contact">İletişim</a>
+          <!-- ── Kolon 2: Navigasyon ── -->
+          <nav class="footer-col footer-col-nav" aria-label="Footer navigasyonu">
+            <div class="footer-nav-group">
+              <p class="footer-nav-heading" data-i18n="ft.col_app">Uygulama</p>
+              <ul>
+                <li><a href="#comparison" data-i18n="ft.app_why">Neden Biz?</a></li>
+                <li><a href="#how-it-works" data-i18n="ft.app_how">Nasıl Çalışır?</a></li>
+                <li><a href="#features" data-i18n="ft.app_feat">Özellikler</a></li>
+                <li><a href="#showcase" data-i18n="ft.app_screens">Ekranlar</a></li>
+                <li><a href="#download" data-i18n="ft.app_dl">İndir</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav-group">
+              <p class="footer-nav-heading" data-i18n="ft.col_support">Destek</p>
+              <ul>
+                <li><a href="#faq" data-i18n="ft.sup_faq">S.S.S.</a></li>
+                <li><a href="#contact" data-i18n="ft.sup_contact">İletişim</a></li>
+                <li><a href="mailto:info@taraftaro.com" data-i18n="ft.sup_email">E-posta</a></li>
+              </ul>
+            </div>
           </nav>
 
-          <!-- İletişim Bilgileri -->
-          <div class="footer-contact-row">
-            <a href="mailto:info@taraftaro.com" class="footer-contact-item">
-              <i class="fa-regular fa-envelope"></i>
-              <span>info@taraftaro.com</span>
-            </a>
-            <span class="footer-contact-sep" aria-hidden="true"></span>
-            <a href="tel:+905000000000" class="footer-contact-item">
-              <i class="fa-regular fa-phone"></i>
-              <span data-i18n="ft.phone">+90 500 000 00 00</span>
-            </a>
-            <span class="footer-contact-sep" aria-hidden="true"></span>
-            <span class="footer-contact-item footer-contact-static">
-              <i class="fa-regular fa-location-dot"></i>
-              <span data-i18n="ft.address">İstanbul, Türkiye</span>
-            </span>
-          </div>
+          <!-- ── Kolon 3: İletişim + Dil ── -->
+          <div class="footer-col footer-col-contact">
+            <p class="footer-nav-heading" data-i18n="ft.col_contact">İletişim</p>
+            <ul class="footer-contact-list">
+              <li>
+                <a href="mailto:info@taraftaro.com" class="footer-contact-item">
+                  <i class="fa-regular fa-envelope"></i>
+                  <span>info@taraftaro.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+905000000000" class="footer-contact-item">
+                  <i class="fa-regular fa-phone"></i>
+                  <span data-i18n="ft.phone">+90 500 000 00 00</span>
+                </a>
+              </li>
+              <li>
+                <span class="footer-contact-item footer-contact-static">
+                  <i class="fa-regular fa-location-dot"></i>
+                  <span data-i18n="ft.address">İstanbul, Türkiye</span>
+                </span>
+              </li>
+            </ul>
 
-          <!-- Dil Seçici -->
-          <div class="lang-switcher" role="group" aria-label="Language / Dil">
-            <button class="lang-btn active" data-lang="tr" aria-pressed="true">
-              <span class="lang-flag">🇹🇷</span>
-              <span data-i18n="lang.tr">Türkçe</span>
-            </button>
-            <button class="lang-btn" data-lang="en" aria-pressed="false">
-              <span class="lang-flag">🇬🇧</span>
-              <span data-i18n="lang.en">English</span>
-            </button>
+            <div class="lang-switcher" role="group" aria-label="Language / Dil">
+              <button class="lang-btn active" data-lang="tr" aria-pressed="true">
+                <span class="lang-flag">🇹🇷</span>
+                <span data-i18n="lang.tr">Türkçe</span>
+              </button>
+              <button class="lang-btn" data-lang="en" aria-pressed="false">
+                <span class="lang-flag">🇬🇧</span>
+                <span data-i18n="lang.en">English</span>
+              </button>
+            </div>
           </div>
 
         </div>
@@ -897,6 +896,7 @@
         </div>
       </div>
     </div>
+
 
   </footer>
 

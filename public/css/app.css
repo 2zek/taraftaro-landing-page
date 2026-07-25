@@ -1710,25 +1710,30 @@ a { color: inherit; }
 /* =============================================
    FOOTER
    ============================================= */
+/* ── Site Footer ── */
 .site-footer {
   position: relative;
   overflow: hidden;
-  border-top: 1px solid var(--c-border);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background:
+    linear-gradient(to bottom, rgba(9,9,11,0.88) 0%, rgba(9,9,11,0.96) 100%),
+    url('../stadium_fans_bg.png') center top / cover no-repeat;
 }
 
-/* Ambient glow */
+/* Glow overlay */
 .footer-glow {
   position: absolute;
-  width: 800px;
-  height: 400px;
-  bottom: -60%;
+  width: 900px;
+  height: 350px;
+  bottom: -30%;
   left: 50%;
   transform: translateX(-50%);
-  background: radial-gradient(ellipse, rgba(255,107,0,0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(255,107,0,0.07) 0%, transparent 70%);
   filter: blur(60px);
   pointer-events: none;
 }
 
+/* ── Footer Body ── */
 .footer-body {
   position: relative;
   z-index: 1;
@@ -1736,29 +1741,18 @@ a { color: inherit; }
   padding-bottom: 4rem;
 }
 
-/* Center layout — tek dikey sütun, tamamen ortalı */
-.footer-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-  padding-block: 1rem;
+/* 3 kolon grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
 }
 
-/* Logo + Slogan grubu */
-.footer-identity {
+/* ── Kolon 1: Marka ── */
+.footer-col-brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.375rem;
-}
-
-/* Brand column (artık kullanılmıyor ama diger yerlerde olabilir) */
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 1rem;
 }
 
@@ -1772,16 +1766,14 @@ a { color: inherit; }
   line-height: 1;
   display: inline-block;
 }
-
 .footer-brand-name:hover { text-decoration: none; }
-
 .footer-brand-name span {
   color: var(--c-brand);
   text-shadow: 0 0 30px rgba(255,107,0,0.5);
 }
 
 .footer-slogan {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1790,61 +1782,24 @@ a { color: inherit; }
 }
 
 .footer-tagline {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: var(--c-text-secondary);
-  line-height: 1.75;
-  max-width: 28rem;
+  line-height: 1.7;
+  max-width: 22rem;
 }
 
-/* Nav — flat inline, tek satır, ortalı */
-.footer-nav-inline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0;
-  width: 100%;
-}
-
-.footer-nav-inline a {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--c-text-secondary);
-  text-decoration: none;
-  padding: 0.2rem 0.4rem;
-  border-radius: var(--r-full);
-  transition: color 0.2s;
-  white-space: nowrap;
-}
-
-.footer-nav-inline a:hover {
-  color: var(--c-text);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.fnav-sep {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--c-border-hover);
-  flex-shrink: 0;
-  margin: 0 0.4rem;
-}
-
-/* Social links */
 .footer-socials {
   display: flex;
-  justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-top: 0.25rem;
 }
 
 .footer-social-link {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--r-lg);
-  background: var(--c-surface-2);
+  background: rgba(255,255,255,0.05);
   border: 1px solid var(--c-border);
   display: flex;
   align-items: center;
@@ -1854,23 +1809,99 @@ a { color: inherit; }
   font-size: 1rem;
   transition: var(--ease-spring);
 }
-
 .footer-social-link:hover {
   color: var(--c-brand);
   border-color: var(--c-brand-border);
   background: var(--c-brand-dim);
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(255,107,0,0.15);
+  box-shadow: 0 6px 16px rgba(255,107,0,0.18);
   text-decoration: none;
 }
 
-/* Bottom copyright */
+/* ── Kolon 2: Navigasyon ── */
+.footer-col-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 2rem;
+  align-items: start;
+}
+
+.footer-nav-group ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav-heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.footer-col-nav a,
+.footer-col-nav li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--c-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+}
+.footer-col-nav a:hover {
+  color: var(--c-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Kolon 3: İletişim + Dil ── */
+.footer-col-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.9rem;
+  color: var(--c-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-contact-item i {
+  font-size: 0.875rem;
+  color: var(--c-brand);
+  flex-shrink: 0;
+  width: 1rem;
+  text-align: center;
+}
+a.footer-contact-item:hover {
+  color: var(--c-text);
+  text-decoration: none;
+}
+.footer-contact-static { cursor: default; }
+
+/* ── Bottom Bar ── */
 .footer-bottom {
   position: relative;
   z-index: 1;
-  border-top: 1px solid var(--c-border);
-  padding-block: 2.4rem;
-  background: rgba(9, 9, 11, 0.4);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-block: 2rem;
+  background: rgba(5, 5, 7, 0.6);
+  backdrop-filter: blur(4px);
 }
 
 .footer-bottom-inner {
@@ -1882,7 +1913,7 @@ a { color: inherit; }
 }
 
 .footer-bottom-copy {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--c-text-muted);
   line-height: 1.6;
 }
@@ -1893,7 +1924,6 @@ a { color: inherit; }
   gap: 0;
   flex-wrap: wrap;
 }
-
 .footer-bottom-legal a {
   font-size: 0.875rem;
   color: var(--c-text-secondary);
@@ -1902,13 +1932,11 @@ a { color: inherit; }
   padding: 0.2rem 0.4rem;
   transition: var(--ease);
 }
-
 .footer-bottom-legal a:hover {
   color: var(--c-text);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-
 .footer-bottom-legal .legal-sep {
   width: 3px;
   height: 3px;
