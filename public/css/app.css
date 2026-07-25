@@ -584,6 +584,11 @@ a { color: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar.scrolled .navbar-inner {
+  height: 4.5rem;
 }
 
 .navbar-logo {
@@ -677,7 +682,11 @@ a { color: inherit; }
   border-bottom: 1px solid var(--c-border);
   padding: 1.5rem;
   z-index: 99;
+  transition: top 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.navbar.scrolled ~ .mobile-menu,
+.navbar.scrolled + * .mobile-menu { top: 4.5rem; }
 
 .mobile-menu.open { display: block; }
 

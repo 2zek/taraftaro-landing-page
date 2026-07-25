@@ -9,13 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ────────────────────────────────────────────
      1. NAVBAR — scroll + active link
   ──────────────────────────────────────────── */
-  const navbar  = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('.navbar-links a[href^="#"]');
-  const sections = document.querySelectorAll('section[id]');
+  const navbar     = document.getElementById('navbar');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks   = document.querySelectorAll('.navbar-links a[href^="#"]');
+  const sections   = document.querySelectorAll('section[id]');
 
   const onScroll = () => {
-    // Glassmorphism on scroll
-    navbar.classList.toggle('scrolled', window.scrollY > 30);
+    const scrolled = window.scrollY > 30;
+    navbar.classList.toggle('scrolled', scrolled);
+
+    // Mobile menu top senkronizasyonu
+    if (mobileMenu) {
+      mobileMenu.style.top = scrolled ? '4.5rem' : '7.875rem';
+    }
 
     // Active section highlight
     let current = '';
@@ -34,8 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ────────────────────────────────────────────
      2. MOBILE MENU
   ──────────────────────────────────────────── */
-  const hamburger  = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger');
 
   hamburger?.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
