@@ -2127,12 +2127,17 @@ a.footer-contact-item:hover {
     font-size: 0.7rem;
   }
 
-  .hero-visual { order: -1; }
+  .hero-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-  .hero-iphone { width: 240px !important; height: 520px !important; }
-  .hero-iphone .iphone-frame { width: 240px; height: 520px; border-radius: 44px; }
-  .hero-iphone .iphone-screen { border-radius: 41px; }
-  .hero-phone-glow { width: 280px; height: 280px; }
+  .hero-iphone { width: 200px !important; height: 430px !important; }
+  .hero-iphone .iphone-frame { width: 200px; height: 430px; border-radius: 38px; }
+  .hero-iphone .iphone-screen { border-radius: 35px; }
+  .hero-phone-glow { width: 220px; height: 220px; }
 
   .section-header {
     margin-bottom: 2.5rem;
@@ -2215,9 +2220,8 @@ a.footer-contact-item:hover {
   .hero-actions { flex-direction: column; width: 100%; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 
-  .iphone-frame { width: 220px; height: 475px; border-radius: 40px; }
-  .iphone-frame::before { width: 70px; height: 20px; top: 11px; }
-  .iphone-screen { border-radius: 37px; }
+  /* Çok küçük ekranda telefon görselini gizle — yazı nefes alsın */
+  .hero-visual { display: none; }
 
   .hero-stats {
     grid-template-columns: 1fr;
