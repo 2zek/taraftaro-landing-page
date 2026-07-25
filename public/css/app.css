@@ -1976,6 +1976,7 @@ a.footer-contact-item:hover {
   font-size: 0.8rem;
   color: var(--c-text-muted);
   line-height: 1.5;
+  text-align: center;
 }
 
 .footer-bottom-legal-note {
