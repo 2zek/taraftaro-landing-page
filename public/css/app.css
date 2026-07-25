@@ -1166,7 +1166,7 @@ a { color: inherit; }
   position: relative;
   z-index: 1;
   padding-top: 5rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 4rem;
 }
 
 /* Top row: brand + nav */
@@ -1174,7 +1174,6 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 5rem;
-  padding-bottom: 4rem;
 }
 
 /* Brand column */
@@ -1270,16 +1269,14 @@ a { color: inherit; }
   box-shadow: 0 8px 20px rgba(255,107,0,0.15);
 }
 
-/* Divider */
-.footer-divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--c-border) 20%, var(--c-border) 80%, transparent);
-  margin-bottom: 2rem;
-}
-
-/* Bottom copyright */
+/* Bottom copyright (Full Width) */
 .footer-bottom {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--c-border);
+  padding-block: 1.5rem;
   text-align: center;
+  background: rgba(9, 9, 11, 0.4);
 }
 
 .footer-bottom p {
