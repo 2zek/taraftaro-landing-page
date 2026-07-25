@@ -254,6 +254,7 @@ const I18N = (() => {
       'ft.col_legal':   'Yasal',
       'ft.privacy':     'Gizlilik Politikası',
       'ft.terms':       'Kullanım Şartları',
+      'ft.user_agreement': 'Kullanıcı Sözleşmesi',
       'ft.copyright':   'tarafından geliştirildi. Tüm hakları saklıdır.',
 
       /* ── Lang switcher ── */
@@ -503,6 +504,7 @@ const I18N = (() => {
       'ft.col_legal':   'Legal',
       'ft.privacy':     'Privacy Policy',
       'ft.terms':       'Terms of Use',
+      'ft.user_agreement': 'User Agreement',
       'ft.copyright':   'developed by. All rights reserved.',
 
       /* ── Lang switcher ── */
