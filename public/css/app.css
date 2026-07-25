@@ -1765,7 +1765,7 @@ a { color: inherit; }
 
 .footer-brand-name {
   font-family: var(--font);
-  font-size: 2.75rem;
+  font-size: 2.25rem;
   font-weight: 900;
   color: var(--c-text);
   text-decoration: none;
@@ -1782,7 +1782,7 @@ a { color: inherit; }
 }
 
 .footer-slogan {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1791,7 +1791,7 @@ a { color: inherit; }
 }
 
 .footer-tagline {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--c-text-secondary);
   line-height: 1.75;
   max-width: 28rem;
@@ -1808,7 +1808,7 @@ a { color: inherit; }
 }
 
 .footer-nav-inline a {
-  font-size: 1.75rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--c-text-secondary);
   text-decoration: none;
@@ -2546,7 +2546,7 @@ a { color: inherit; }
   background: transparent;
   color: var(--c-text-secondary);
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
   transition: var(--ease);
