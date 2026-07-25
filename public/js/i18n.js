@@ -143,6 +143,17 @@ const I18N = (() => {
       'hiw.step3_title': 'Spor Zekanı Göster',
       'hiw.step3_desc':  'Maç içi mikro-tahminleri bil, oyuncuları notla. Futbol ve spor zekası karneni Instagram\'da arkadaşlarına paylaşarak rozetler kazan.',
 
+      /* ── Manifesto / Hakkımızda ── */
+      'mf.badge':        'Biz Neden Yola Çıktık?',
+      'mf.title':        'Spor Sadece 90 Dakikadan İbaret Değildir',
+      'mf.desc':         'Pasif skor izleyiciliğine ve sosyal medya gürültüsüne son. Taraftaro; kulübüyle nefes alan her renkten taraftara hak ettiği dijital tribün sesini, seviyeli topluluk alanını ve şeffaf kamuoyu gücünü sunmak için doğdu.',
+      'mf.p1_title':     'Tutkulu Topluluk',
+      'mf.p1_desc':      'Trol ve botlardan arındırılmış, seviyeli renktaş alanı.',
+      'mf.p2_title':     'Doğrulanmış Kamuoyu',
+      'mf.p2_desc':      'Spor varlıkları üzerinde manipülesiz taraftar sesi.',
+      'mf.p3_title':     'Katılımcı Maç Günü',
+      'mf.p3_desc':      'Tek bir dijital kimlikle canlı coşku ve anlık etkileşim.',
+
       /* ── Features ── */
       'feat.label':      'Özellikler',
       'feat.title':      'Kulübünün Tüm Branşlarında',
@@ -400,6 +411,17 @@ const I18N = (() => {
 
       'hiw.step3_title': 'Show Your Sports IQ',
       'hiw.step3_desc':  'Nail in-match micro-predictions, rate players. Share your football & sports IQ card with friends on Instagram and earn badges.',
+
+      /* ── Manifesto / About Us ── */
+      'mf.badge':        'Why We Started',
+      'mf.title':        'Sports Is More Than Just 90 Minutes',
+      'mf.desc':         'No more passive score watching or social media noise. Taraftaro was born to give passionate fans of every colour their rightful digital stand voice, a respected community space, and transparent fan power.',
+      'mf.p1_title':     'Passionate Community',
+      'mf.p1_desc':      'A clean space free from trolls and bots for true supporters.',
+      'mf.p2_title':     'Verified Sentiment',
+      'mf.p2_desc':      'Unmanipulated fan voice anchored to sports entities.',
+      'mf.p3_title':     'Interactive Matchday',
+      'mf.p3_desc':      'Live energy and instant engagement under one digital identity.',
 
       /* ── Features ── */
       'feat.label':      'Features',
