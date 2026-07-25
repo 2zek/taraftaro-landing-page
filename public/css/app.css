@@ -58,6 +58,17 @@
    TARAFTARO — REUSABLE COMPONENTS
    ============================================= */
 
+/* ── Global Link Hover ── */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ── Container ── */
 .container {
   max-width: var(--container);
@@ -1844,14 +1855,13 @@ a { color: inherit; }
   color: var(--c-text-secondary);
   text-decoration: none;
   font-weight: 500;
-  padding: 0.25rem 0.625rem;
-  border-radius: var(--r-full);
   transition: var(--ease);
 }
 
 .footer-bottom-legal a:hover {
   color: var(--c-text);
-  background: rgba(255, 255, 255, 0.06);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .footer-bottom-legal .legal-sep {
@@ -1916,6 +1926,7 @@ a { color: inherit; }
 /* =============================================
    RESPONSIVE
    ============================================= */
+
 /* =============================================
    RESPONSIVE (PREMIUM MOBILE & TABLET UX)
    ============================================= */
