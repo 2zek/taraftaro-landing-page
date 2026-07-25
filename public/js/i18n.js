@@ -239,6 +239,7 @@ const I18N = (() => {
 
       /* ── Footer ── */
       'ft.tagline':     'Kulüp ve taraftar arasındaki dijital köprü.\nDijital tribünde yerini al.',
+      'ft.follow_us':   'Bizi Takip Edin',
       'ft.logo_aria':   'Taraftaro ana sayfa',
       'ft.nav_aria':    'Footer navigasyonu',
       'ft.col_app':     'Uygulama',
@@ -491,6 +492,7 @@ const I18N = (() => {
 
       /* ── Footer ── */
       'ft.tagline':     'The digital bridge between clubs and fans.\nTake your place in the digital stand.',
+      'ft.follow_us':   'Follow Us',
       'ft.logo_aria':   'Taraftaro home',
       'ft.nav_aria':    'Footer navigation',
       'ft.col_app':     'App',
