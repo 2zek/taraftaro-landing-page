@@ -1613,11 +1613,19 @@ a { color: inherit; }
 }
 
 .faq-grid {
-  max-width: 50rem;
+  width: 100%;
+  max-width: var(--container);
   margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =============================================
