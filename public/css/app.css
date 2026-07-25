@@ -476,6 +476,21 @@
   box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
+.store-btn-brand {
+  background: var(--c-brand);
+  border-color: transparent;
+  box-shadow: 0 8px 30px rgba(255, 107, 0, 0.35);
+}
+
+.store-btn-brand .store-btn-sub {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
 .store-btn-icon {
   font-size: 2rem;
   line-height: 1;
@@ -941,7 +956,13 @@ a { color: inherit; }
   gap: 1.5rem;
 }
 
-.bento-wide .feature-icon { margin-bottom: 0; }
+.bento-wide .feature-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
 
 /* Standard card (1x1) */
 .bento-std {
