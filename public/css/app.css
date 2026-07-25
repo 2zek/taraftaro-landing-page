@@ -2465,120 +2465,38 @@ a.footer-contact-item:hover {
   font-size: 0.8rem;
 }
 
-/* Mobile comparison list hidden on desktop */
-.comparison-mobile-list {
-  display: none;
+/* Tablo scroll wrapper */
+.comparison-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 768px) {
-  .comparison-table {
-    display: none;
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.6rem;
+    font-size: 0.78rem;
   }
 
-  .comparison-mobile-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .comp-m-card {
-    background: var(--c-surface-2);
-    border: 1px solid var(--c-border);
-    border-radius: var(--r-2xl);
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-    position: relative;
-    overflow: hidden;
-    transition: var(--ease-spring);
-  }
-
-  .comp-m-card:hover {
-    border-color: var(--c-brand-border);
-  }
-
-  .comp-m-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--c-text);
-    line-height: 1.4;
-  }
-
-  .comp-m-winner {
-    background: var(--c-brand-dim);
-    border: 1px solid var(--c-brand-border);
-    border-radius: var(--r-xl);
-    padding: 0.75rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-  }
-
-  .comp-m-badge-brand {
-    font-family: var(--font);
+  .comparison-table th {
     font-size: 0.75rem;
-    font-weight: 900;
-    letter-spacing: 0.05em;
-    color: var(--c-brand);
-    background: rgba(255, 107, 0, 0.2);
-    padding: 0.2rem 0.5rem;
-    border-radius: var(--r-md);
-  }
-
-  .comp-m-val-brand {
-    font-size: 0.875rem;
     font-weight: 700;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
   }
 
-  .comp-m-val-brand i {
-    color: var(--c-brand);
+  .comparison-table th.brand-col {
+    font-size: 0.85rem;
   }
 
-  .comp-m-others {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    padding-top: 0.25rem;
-  }
-
-  .comp-m-other-item {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--c-border);
-    border-radius: var(--r-lg);
-    padding: 0.5rem 0.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .comp-m-label {
+  .comparison-table .badge-yes,
+  .comparison-table .badge-no {
+    padding: 0.25rem 0.5rem;
     font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--c-text-muted);
-  }
-
-  .comp-m-val-no {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #f87171;
-    display: flex;
-    align-items: center;
     gap: 0.25rem;
   }
 
-  .comp-m-val-yes {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #4ade80;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
+  .comparison-table td.feature-name {
+    font-size: 0.8rem;
+    min-width: 130px;
   }
 }
 
