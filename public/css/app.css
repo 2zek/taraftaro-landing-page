@@ -2107,25 +2107,8 @@ a.footer-contact-item:hover {
 
   .hero-actions { justify-content: center; }
 
-  /* Mobile Dashboard Stat Bar */
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--c-border);
-    border-radius: var(--r-xl);
-    padding: 1rem 0.5rem;
-    margin-top: 2rem;
-  }
-
-  .hero-stat-value {
-    font-size: 1.125rem;
-  }
-
-  .hero-stat-label {
-    font-size: 0.7rem;
-  }
+  /* Mobile'da stat bar kaldırıldı */
+  .hero-stats { display: none; }
 
   .hero-visual {
     width: 100%;
