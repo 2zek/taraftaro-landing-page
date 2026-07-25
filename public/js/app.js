@@ -266,4 +266,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ────────────────────────────────────────────
+     8. BACK TO TOP BUTTON
+  ──────────────────────────────────────────── */
+  const backToTopBtn = document.getElementById('back-to-top');
+
+  if (backToTopBtn) {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
 });
+
