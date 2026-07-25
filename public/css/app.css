@@ -1482,40 +1482,27 @@ a { color: inherit; }
 }
 
 /* =============================================
-   SHOWCASE — 3D COVERFLOW SCREENSHOTS (BRAND ORANGE BG)
+   SHOWCASE — 3D COVERFLOW SCREENSHOTS (DARK PREMIUM + SPOTLIGHT GLOW)
    ============================================= */
 #showcase {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #ff5500 0%, #ff6b00 50%, #ff851b 100%);
+  background: var(--c-bg-alt);
   padding-block: var(--section-y);
-  color: #ffffff;
-  box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.2), inset 0 -20px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Header Contrast Adjustments inside Showcase */
-#showcase .section-label {
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 0.35rem 0.85rem;
-  border-radius: var(--r-full);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-}
-
-#showcase .section-title {
-  color: #ffffff;
-}
-
-#showcase .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #fff3e6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-#showcase .section-desc {
-  color: rgba(255, 255, 255, 0.92);
+#showcase::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: 480px;
+  background: radial-gradient(ellipse, rgba(255, 107, 0, 0.14) 0%, rgba(255, 107, 0, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Modern Showcase Pagination Dots */
@@ -1531,8 +1518,8 @@ a { color: inherit; }
   width: 10px;
   height: 10px;
   border-radius: var(--r-full);
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--c-border-hover);
   cursor: pointer;
   transition: var(--ease-spring);
   padding: 0;
@@ -1546,9 +1533,9 @@ a { color: inherit; }
 .showcase-dot.active {
   width: 32px;
   height: 10px;
-  background: #ffffff;
-  border-color: #ffffff;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  background: var(--c-brand);
+  border-color: var(--c-brand);
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.6);
 }
 
 /* 3D Showcase Stage */
