@@ -505,7 +505,9 @@ a.btn:hover,
 
 .store-btn-brand {
   background: var(--c-brand);
-  border-color: transparent;
+  border: none;
+  outline: 2px solid var(--c-brand);
+  outline-offset: 3px;
   box-shadow: 0 8px 30px rgba(255, 107, 0, 0.35);
 }
 
@@ -513,11 +515,20 @@ a.btn:hover,
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* App Store Beyaz Buton Stili */
+.store-btn-brand:hover {
+  transform: translateY(-3px);
+  outline: 2px solid var(--c-brand);
+  outline-offset: 4px;
+  box-shadow: 0 14px 40px rgba(255, 107, 0, 0.5);
+}
+
+/* App Store Beyaz Buton Stili (Çift Halka Borderlı) */
 .store-btn-white {
   background: #ffffff;
-  border-color: #ffffff;
+  border: none;
   color: #000000;
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0.15);
 }
 
@@ -531,10 +542,11 @@ a.btn:hover,
 
 .store-btn-white:hover {
   background: #ffffff;
-  border-color: #ffffff;
   color: #000000;
   transform: translateY(-3px);
-  box-shadow: 0 14px 40px rgba(255, 255, 255, 0.3);
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+  box-shadow: 0 14px 40px rgba(255, 255, 255, 0.35);
 }
 
 /* Outline Buton Stili */
