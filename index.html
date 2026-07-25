@@ -515,17 +515,8 @@
           <p class="section-desc">Tüm branşlarda canlı maç akışı, taraftar indeksi ve mikro-tahmin ekranları parmaklarının ucunda.</p>
         </div>
 
-        <!-- Interactive Screen Category Tabs -->
-        <div class="coverflow-tabs reveal delay-1" role="tablist" aria-label="Ekran sekmeleri">
-          <button class="coverflow-tab active" data-index="0" role="tab" aria-selected="true">⚡️ Canlı Maç Akışı</button>
-          <button class="coverflow-tab" data-index="1" role="tab" aria-selected="false">📊 Taraftar İndeksi</button>
-          <button class="coverflow-tab" data-index="2" role="tab" aria-selected="false">⚽️ Taraftarın 11'i</button>
-          <button class="coverflow-tab" data-index="3" role="tab" aria-selected="false">🔥 Dijital Tribün</button>
-          <button class="coverflow-tab" data-index="4" role="tab" aria-selected="false">🛡️ Safe Space</button>
-        </div>
-
         <!-- 3D Showcase Stage -->
-        <div class="showcase-stage-wrapper reveal delay-2">
+        <div class="showcase-stage-wrapper reveal delay-1">
           
           <!-- Background Glow -->
           <div class="stage-glow animate-pulse-glow" aria-hidden="true"></div>
@@ -585,8 +576,15 @@
 
         </div>
 
-        <!-- Dynamic Caption Box -->
-        <div id="coverflow-caption" class="coverflow-caption-box reveal delay-3">
+        <!-- Dynamic Caption Box & Modern Pagination Dots -->
+        <div id="coverflow-caption" class="coverflow-caption-box reveal delay-2">
+          <div class="showcase-dots" role="tablist" aria-label="Ekran navigasyonu">
+            <button class="showcase-dot active" data-index="0" type="button" aria-label="Canlı Maç Akışı"></button>
+            <button class="showcase-dot" data-index="1" type="button" aria-label="Taraftar İndeksi"></button>
+            <button class="showcase-dot" data-index="2" type="button" aria-label="Taraftarın 11i"></button>
+            <button class="showcase-dot" data-index="3" type="button" aria-label="Dijital Tribün"></button>
+            <button class="showcase-dot" data-index="4" type="button" aria-label="Safe Space"></button>
+          </div>
           <div class="caption-pill"><i class="fa-solid fa-sparkles"></i> <span id="caption-text">Gecikmesiz Canlı Maç Akışı — Canlı skorlar, zaman tüneli olayları ve anlık istatistikler.</span></div>
         </div>
 

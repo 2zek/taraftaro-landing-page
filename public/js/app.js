@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
      4. SINGLE PHONE SLIDING SCREENSHOTS SHOWCASE
   ──────────────────────────────────────────── */
   const showcaseTrack  = document.getElementById('showcase-track');
-  const coverflowTabs  = document.querySelectorAll('.coverflow-tab');
+  const showcaseDots   = document.querySelectorAll('.showcase-dot');
   const btnPrev        = document.getElementById('showcase-prev');
   const btnNext        = document.getElementById('showcase-next');
   const captionText    = document.getElementById('caption-text');
@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Update active tab
-      coverflowTabs.forEach((tab, i) => {
+      // Update active pagination dot
+      showcaseDots.forEach((dot, i) => {
         const isSel = i === activeIndex;
-        tab.classList.toggle('active', isSel);
-        tab.setAttribute('aria-selected', isSel ? 'true' : 'false');
+        dot.classList.toggle('active', isSel);
+        dot.setAttribute('aria-selected', isSel ? 'true' : 'false');
       });
 
       // Update caption
@@ -126,9 +126,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Tab Clicks
-    coverflowTabs.forEach((tab, i) => {
-      tab.addEventListener('click', () => {
+    // Dot Clicks
+    showcaseDots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
         updateShowcase(i);
         restartTimer();
       });
