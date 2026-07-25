@@ -1756,6 +1756,13 @@ a { color: inherit; }
   gap: 1.5rem;
 }
 
+/* Logo + Slogan sıkı birlikte */
+.footer-brand-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 .footer-brand-name {
   font-family: var(--font);
   font-size: 3rem;
