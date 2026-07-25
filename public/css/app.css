@@ -80,7 +80,7 @@ a.btn:hover,
 .navbar-cta:hover,
 .footer-brand-name:hover,
 .footer-social-link:hover,
-.footer-nav-col a:hover,
+.footer-nav-inline a:hover,
 .footer-bottom a:hover,
 .store-btn:hover,
 [class*="badge"]:hover {
@@ -1798,42 +1798,40 @@ a { color: inherit; }
   max-width: 28rem;
 }
 
-/* Nav — full genislik, 2 eşit sütun, ortalı başlıklar+linkler */
-.footer-nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  width: 100%;
-  max-width: 28rem;
-}
-
-.footer-nav-col ul {
-  list-style: none;
+/* Nav — flat inline, tek satır, ortalı */
+.footer-nav-inline {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+  row-gap: 0.625rem;
 }
 
-.footer-nav-title {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--c-text-muted);
-  margin-bottom: 1.25rem;
-}
-
-.footer-nav-col a {
+.footer-nav-inline a {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--c-text-secondary);
   text-decoration: none;
-  transition: color 0.2s;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--r-full);
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
 }
 
-.footer-nav-col a:hover {
-  color: var(--c-brand);
+.footer-nav-inline a:hover {
+  color: var(--c-text);
+  background: rgba(255,255,255,0.06);
   text-decoration: none;
+}
+
+.fnav-sep {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--c-border-hover);
+  flex-shrink: 0;
+  margin: 0 0.125rem;
 }
 
 /* Social links */
