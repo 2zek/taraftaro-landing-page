@@ -75,44 +75,150 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
   /* ────────────────────────────────────────────
-     4. SHOWCASE SLIDER
+     4. SINGLE PHONE SLIDING SCREENSHOTS SHOWCASE
   ──────────────────────────────────────────── */
-  const sliderTrack  = document.getElementById('slider-track');
-  const dotsContainer = document.getElementById('slider-dots');
+  const showcaseTrack  = document.getElementById('showcase-track');
+  const coverflowTabs  = document.querySelectorAll('.coverflow-tab');
+  const btnPrev        = document.getElementById('showcase-prev');
+  const btnNext        = document.getElementById('showcase-next');
+  const captionText    = document.getElementById('caption-text');
 
-  if (sliderTrack && dotsContainer) {
-    const slides = sliderTrack.querySelectorAll('.slide');
+  if (showcaseTrack) {
+    const slides = Array.from(showcaseTrack.querySelectorAll('.showcase-slide'));
     const total  = slides.length;
-    let   current = 0;
-    let   timer;
+    let activeIndex = 0;
+    let autoTimer = null;
 
-    // Create dots
-    slides.forEach((_, i) => {
-      const dot = document.createElement('div');
-      dot.className = 'dot' + (i === 0 ? ' active' : '');
-      dot.addEventListener('click', () => goTo(i));
-      dotsContainer.appendChild(dot);
-    });
+    function updateShowcase(index) {
+      activeIndex = (index + total) % total;
 
-    const dots = dotsContainer.querySelectorAll('.dot');
+      slides.forEach((slide, i) => {
+        slide.className = 'showcase-slide'; // Reset all classes
 
-    function goTo(index) {
-      current = index;
-      sliderTrack.style.transform = `translateX(-${current * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        const diff = (i - activeIndex + total) % total;
+
+        if (diff === 0) {
+          slide.classList.add('active');
+        } else if (diff === 1) {
+          slide.classList.add('next');
+        } else if (diff === 2) {
+          slide.classList.add('far-next');
+        } else if (diff === total - 1) {
+          slide.classList.add('prev');
+        } else if (diff === total - 2) {
+          slide.classList.add('far-prev');
+        } else {
+          slide.classList.add('hidden');
+        }
+      });
+
+      // Update active tab
+      coverflowTabs.forEach((tab, i) => {
+        const isSel = i === activeIndex;
+        tab.classList.toggle('active', isSel);
+        tab.setAttribute('aria-selected', isSel ? 'true' : 'false');
+      });
+
+      // Update caption
+      const activeSlide = slides[activeIndex];
+      if (activeSlide && captionText) {
+        captionText.textContent = activeSlide.getAttribute('data-caption') || '';
+      }
     }
 
-    function next() { goTo((current + 1) % total); }
+    // Tab Clicks
+    coverflowTabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        updateShowcase(i);
+        restartTimer();
+      });
+    });
 
+    // Slide Clicks (Click side screenshot to slide into center phone)
+    slides.forEach((slide, i) => {
+      slide.addEventListener('click', () => {
+        if (i !== activeIndex) {
+          updateShowcase(i);
+          restartTimer();
+        }
+      });
+    });
+
+    // Prev / Next buttons
+    btnPrev?.addEventListener('click', () => {
+      updateShowcase(activeIndex - 1);
+      restartTimer();
+    });
+
+    btnNext?.addEventListener('click', () => {
+      updateShowcase(activeIndex + 1);
+      restartTimer();
+    });
+
+    // Prevent native browser image drag
+    showcaseTrack.querySelectorAll('img').forEach(img => {
+      img.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+
+    // Mouse Drag + Touch Swipe Support
+    let startX = 0;
+    let isDragging = false;
+
+    // Mouse Drag Events (Desktop)
+    showcaseTrack.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      showcaseTrack.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      showcaseTrack.style.cursor = 'grab';
+      const diffX = e.clientX - startX;
+      if (Math.abs(diffX) > 40) {
+        if (diffX > 0) updateShowcase(activeIndex - 1);
+        else updateShowcase(activeIndex + 1);
+        restartTimer();
+      }
+    });
+
+    // Touch Swipe Events (Mobile)
+    showcaseTrack.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
+    showcaseTrack.addEventListener('touchend', (e) => {
+      const diffX = e.changedTouches[0].clientX - startX;
+      if (Math.abs(diffX) > 40) {
+        if (diffX > 0) updateShowcase(activeIndex - 1);
+        else updateShowcase(activeIndex + 1);
+        restartTimer();
+      }
+    }, { passive: true });
+
+    // Auto Play
     function startTimer() {
-      clearInterval(timer);
-      timer = setInterval(next, 4000);
+      stopTimer();
+      autoTimer = setInterval(() => {
+        updateShowcase(activeIndex + 1);
+      }, 4500);
     }
 
-    dotsContainer.querySelectorAll('.dot').forEach(d => {
-      d.addEventListener('click', () => { clearInterval(timer); startTimer(); });
-    });
+    function stopTimer() {
+      if (autoTimer) clearInterval(autoTimer);
+    }
 
+    function restartTimer() {
+      stopTimer();
+      startTimer();
+    }
+
+    showcaseTrack.addEventListener('mouseenter', stopTimer);
+    showcaseTrack.addEventListener('mouseleave', startTimer);
+
+    // Initial trigger
+    updateShowcase(0);
     startTimer();
   }
 

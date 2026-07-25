@@ -503,85 +503,103 @@
 
 
     <!-- ═══════════════════════════════════════
-         SHOWCASE — APP SLIDER
+         SHOWCASE — 3D COVERFLOW SCREENSHOTS
     ══════════════════════════════════════════ -->
     <section id="showcase" class="section">
       <div class="container">
-        <div class="showcase-inner">
 
-          <!-- Left: Phone slider -->
-          <div class="showcase-phone-wrap reveal">
-            <div class="showcase-phone-glow animate-pulse-glow" aria-hidden="true"></div>
-            <div class="showcase-dots-wrap">
-              <!-- Slider dots (left side) -->
-              <div id="slider-dots" class="slider-dots" role="tablist" aria-label="Ekran seçimi"></div>
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <span class="section-label">Uygulama Ekranları</span>
+          <h2 class="section-title">Taraftaro Ekosistemini<br /><span class="gradient-text">Keşfet & Yaşa</span></h2>
+          <p class="section-desc">Tüm branşlarda canlı maç akışı, taraftar indeksi ve mikro-tahmin ekranları parmaklarının ucunda.</p>
+        </div>
 
-              <!-- Phone -->
-              <div class="iphone-frame">
-                <div class="iphone-screen">
-                  <div id="slider-track" class="iphone-slider" role="region" aria-label="Uygulama ekranları">
-                    <div class="slide">
-                      <img src="public/hero-mockup.png"     alt="Ana ekran — maç listesi" loading="lazy" />
-                    </div>
-                    <div class="slide">
-                      <img src="public/showcase-mockup.png" alt="Maç detay ekranı"        loading="lazy" />
-                    </div>
-                    <div class="slide">
-                      <img src="public/app-screen.png"      alt="Taraftar İndeksi ekranı" loading="lazy" />
-                    </div>
-                  </div>
+        <!-- Interactive Screen Category Tabs -->
+        <div class="coverflow-tabs reveal delay-1" role="tablist" aria-label="Ekran sekmeleri">
+          <button class="coverflow-tab active" data-index="0" role="tab" aria-selected="true">⚡️ Canlı Maç Akışı</button>
+          <button class="coverflow-tab" data-index="1" role="tab" aria-selected="false">📊 Taraftar İndeksi</button>
+          <button class="coverflow-tab" data-index="2" role="tab" aria-selected="false">⚽️ Taraftarın 11'i</button>
+          <button class="coverflow-tab" data-index="3" role="tab" aria-selected="false">🔥 Dijital Tribün</button>
+          <button class="coverflow-tab" data-index="4" role="tab" aria-selected="false">🛡️ Safe Space</button>
+        </div>
+
+        <!-- 3D Showcase Stage -->
+        <div class="showcase-stage-wrapper reveal delay-2">
+          
+          <!-- Background Glow -->
+          <div class="stage-glow animate-pulse-glow" aria-hidden="true"></div>
+
+          <!-- Left / Right Nav Buttons -->
+          <button id="showcase-prev" class="coverflow-btn coverflow-btn-prev" type="button" aria-label="Önceki ekran">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="showcase-next" class="coverflow-btn coverflow-btn-next" type="button" aria-label="Sonraki ekran">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Screenshot Track -->
+          <div id="showcase-track" class="showcase-track">
+
+            <!-- Slide 0 -->
+            <div class="showcase-slide active" data-index="0" data-caption="Gecikmesiz Canlı Maç Akışı — Canlı skorlar, zaman tüneli olayları ve anlık istatistikler.">
+              <div class="showcase-phone">
+                <div class="phone-notch"></div>
+                <div class="showcase-screen">
+                  <img src="public/hero-mockup.png" alt="Canlı Maç Akışı Ekranı" loading="lazy" />
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Right: Feature list -->
-          <div class="reveal delay-2">
-            <span class="section-label">Kulüp & Taraftar Ekosistemi</span>
-            <h2 class="showcase-title">
-              Tüm Branşlarda<br />
-              <span class="gradient-text">Elden Düşmeyen Partner</span>
-            </h2>
-            <p class="showcase-desc">
-              Maç izlerken TV'nin yanında Taraftaro açık. Skor takibini canlı etkileşim ve taraftar topluluğuyla birleştir.
-            </p>
-
-            <div class="showcase-features">
-
-              <div class="showcase-feature">
-                <div class="showcase-feature-icon feature-icon-brand">
-                  <i class="fa-solid fa-users"></i>
-                </div>
-                <div>
-                  <div class="showcase-feature-title">Gecikmesiz Anlık Maç Akışı</div>
-                  <div class="showcase-feature-desc">Skor, anlık olay zaman tüneli ve taktiksel kıyaslama barları.</div>
+            <!-- Slide 1 -->
+            <div class="showcase-slide next" data-index="1" data-caption="Taraftar İndeksi & Notlama Karnesi — Maç sonu oyuncuları ve teknik heyeti değerlendir.">
+              <div class="showcase-phone">
+                <div class="phone-notch"></div>
+                <div class="showcase-screen">
+                  <img src="public/app-screen.png" alt="Taraftar İndeksi Ekranı" loading="lazy" />
                 </div>
               </div>
-
-              <div class="showcase-feature">
-                <div class="showcase-feature-icon feature-icon-yellow">
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <div>
-                  <div class="showcase-feature-title">Oyuncu & Hoca Notlama Karnesi</div>
-                  <div class="showcase-feature-desc">Maç sonlarında kadroyu notla, teknik heyetin kararlarını oyla.</div>
-                </div>
-              </div>
-
-              <div class="showcase-feature">
-                <div class="showcase-feature-icon feature-icon-green">
-                  <i class="fa-solid fa-share-nodes"></i>
-                </div>
-                <div>
-                  <div class="showcase-feature-title">Sosyal Medyada Hava At (IQ Kartı)</div>
-                  <div class="showcase-feature-desc">Tahmin başarılarını Instagram hikayelerinde gururla paylaş.</div>
-                </div>
-              </div>
-
             </div>
+
+            <!-- Slide 2 -->
+            <div class="showcase-slide far-next" data-index="2" data-caption="Taraftarın 11'i & Taktik Diziliş — Saha ve salon üzerinde kendi kadronu kur ve paylaş.">
+              <div class="showcase-phone">
+                <div class="phone-notch"></div>
+                <div class="showcase-screen">
+                  <img src="public/showcase-mockup.png" alt="Taraftarın 11i Ekranı" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="showcase-slide far-prev" data-index="3" data-caption="Dijital Tribün Coşkusu — Gol, smaç ve kritik anlarda binlerce taraftarla eş zamanlı alkışla.">
+              <div class="showcase-phone">
+                <div class="phone-notch"></div>
+                <div class="showcase-screen">
+                  <img src="public/hero-mockup.png" alt="Dijital Tribün Ekranı" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="showcase-slide prev" data-index="4" data-caption="Safe Space & Doğrulanmış Anketler — Bot ve trollerden arındırılmış kulübe özel alan.">
+              <div class="showcase-phone">
+                <div class="phone-notch"></div>
+                <div class="showcase-screen">
+                  <img src="public/showcase-mockup.png" alt="Safe Space Ekranı" loading="lazy" />
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
+
+        <!-- Dynamic Caption Box -->
+        <div id="coverflow-caption" class="coverflow-caption-box reveal delay-3">
+          <div class="caption-pill"><i class="fa-solid fa-sparkles"></i> <span id="caption-text">Gecikmesiz Canlı Maç Akışı — Canlı skorlar, zaman tüneli olayları ve anlık istatistikler.</span></div>
+        </div>
+
       </div>
     </section>
 
