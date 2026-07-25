@@ -641,58 +641,87 @@
   <!-- ═══════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════ -->
-  <footer>
-    <div class="footer-inner">
+  <footer class="site-footer">
 
-      <!-- Brand -->
-      <div class="footer-logo">
-        <a href="#" aria-label="Taraftaro ana sayfa">
-          <img src="public/logo-brand.png" alt="Taraftaro" />
-        </a>
-        <p class="footer-slogan">
-          Toksisiteden arındırılmış, kulübüne özel kabile ekosistemi.
-          Dijital tribünde yerini al.
-        </p>
-        <p class="footer-copy">
-          &copy; <span id="year"></span> <a href="https://2zek.com" target="_blank" rel="noopener">2zek.</a>
-          Tüm hakları saklıdır.
-        </p>
-      </div>
+    <!-- Glow bg -->
+    <div class="footer-glow" aria-hidden="true"></div>
 
-      <!-- Links -->
-      <div>
-        <p class="footer-col-title">Bağlantılar</p>
-        <ul class="footer-links">
-          <li><a href="#features">Özellikler</a></li>
-          <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
-          <li><a href="#faq">S.S.S.</a></li>
-          <li><a href="#download">İndir</a></li>
-          <li><a href="privacy.html">Gizlilik Politikası</a></li>
-          <li><a href="terms.html">Kullanım Şartları</a></li>
-          <li><a href="mailto:info@taraftaro.com">İletişim</a></li>
-        </ul>
-      </div>
+    <div class="footer-body">
+      <div class="container">
 
-      <!-- Socials -->
-      <div>
-        <p class="footer-col-title">Bizi Takip Edin</p>
-        <div class="footer-socials">
-          <a href="https://instagram.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="https://youtube.com/@taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a href="https://tiktok.com/@taraftaro" class="footer-social-link" target="_blank" rel="noopener" aria-label="TikTok">
-            <i class="fa-brands fa-tiktok"></i>
-          </a>
-          <a href="https://x.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="X (Twitter)">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
+        <!-- Top: Brand + Tagline + Socials -->
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="footer-brand-name" aria-label="Taraftaro ana sayfa">
+              taraftar<span>o</span>
+            </a>
+            <p class="footer-tagline">
+              Toksisiteden arındırılmış,<br />kulübüne özel kabile ekosistemi.
+            </p>
+            <div class="footer-socials">
+              <a href="https://instagram.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com/@taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="https://tiktok.com/@taraftaro" class="footer-social-link" target="_blank" rel="noopener" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+              <a href="https://x.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Nav columns -->
+          <nav class="footer-nav" aria-label="Footer navigasyonu">
+
+            <div class="footer-nav-col">
+              <p class="footer-nav-title">Uygulama</p>
+              <ul>
+                <li><a href="#features">Özellikler</a></li>
+                <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
+                <li><a href="#showcase">Ekranlar</a></li>
+                <li><a href="#download">İndir</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-nav-col">
+              <p class="footer-nav-title">Destek</p>
+              <ul>
+                <li><a href="#faq">S.S.S.</a></li>
+                <li><a href="#contact">İletişim</a></li>
+                <li><a href="mailto:info@taraftaro.com">E-posta</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-nav-col">
+              <p class="footer-nav-title">Yasal</p>
+              <ul>
+                <li><a href="privacy.html">Gizlilik Politikası</a></li>
+                <li><a href="terms.html">Kullanım Şartları</a></li>
+                <li><a href="https://2zek.com" target="_blank" rel="noopener">2zek</a></li>
+              </ul>
+            </div>
+
+          </nav>
         </div>
-      </div>
 
+        <!-- Divider -->
+        <div class="footer-divider"></div>
+
+        <!-- Bottom: Copyright centered -->
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="year"></span> <a href="https://2zek.com" target="_blank" rel="noopener">2zek</a> tarafından geliştirildi.
+            Tüm hakları saklıdır.
+          </p>
+        </div>
+
+      </div>
     </div>
+
   </footer>
 
   <!-- JS -->
