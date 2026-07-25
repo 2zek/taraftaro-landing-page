@@ -856,11 +856,9 @@ a { color: inherit; }
    HOW IT WORKS
    ============================================= */
 #how-it-works {
-  background: var(--c-surface);
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
   position: relative;
   overflow: hidden;
+  border-top: 1px solid var(--c-border);
 }
 
 .how-grid {
@@ -956,11 +954,9 @@ a { color: inherit; }
    SHOWCASE
    ============================================= */
 #showcase {
-  background: var(--c-surface);
-  border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
   position: relative;
   overflow: hidden;
+  border-top: 1px solid var(--c-border);
 }
 
 .showcase-inner {
@@ -1421,7 +1417,6 @@ a { color: inherit; }
    CONTACT
    ============================================= */
 #contact {
-  background: var(--c-surface);
   border-top: 1px solid var(--c-border);
 }
 
@@ -1573,9 +1568,7 @@ a { color: inherit; }
    COMPARISON SECTION
    ============================================= */
 #comparison {
-  background: var(--c-surface);
   border-top: 1px solid var(--c-border);
-  border-bottom: 1px solid var(--c-border);
 }
 
 .comparison-card {
