@@ -1763,12 +1763,13 @@ a { color: inherit; }
   padding-bottom: 6rem;
 }
 
-/* 3 kolon grid */
+/* Flex ana düzen — içerik genişliğine göre esnek dağılım */
 .footer-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 5.5rem;
-  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 /* ── Kolon 1: Marka ── */
@@ -1851,10 +1852,10 @@ a { color: inherit; }
 
 /* ── Kolon 2: Navigasyon ── */
 .footer-col-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 2rem;
-  align-items: start;
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+  flex: 0 0 auto;
 }
 
 .footer-nav-group {
@@ -1887,6 +1888,7 @@ a { color: inherit; }
   text-decoration: none;
   transition: color 0.2s;
   display: inline-block;
+  white-space: nowrap;
 }
 .footer-col-nav a:hover {
   color: var(--c-text);
@@ -1896,6 +1898,7 @@ a { color: inherit; }
 
 /* ── Kolon 3: İletişim + Dil ── */
 .footer-col-contact {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -2034,25 +2037,27 @@ a { color: inherit; }
 /* Responsive footer */
 @media (max-width: 1024px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
+    gap: 3rem;
   }
-  .footer-col-brand { grid-column: 1 / -1; }
+  .footer-col-brand {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
   .footer-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 2.5rem;
   }
-  .footer-col-nav { grid-template-columns: 1fr 1fr; }
+  .footer-col-nav {
+    flex-direction: row;
+    gap: 2.5rem;
+    width: 100%;
+    justify-content: space-between;
+  }
   .footer-body { padding-top: 5rem; padding-bottom: 4rem; }
   .footer-brand-name { font-size: 2.5rem; }
-  .footer-bottom-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
 }
 
 /* =============================================
