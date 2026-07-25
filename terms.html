@@ -3,110 +3,167 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Kullanım Şartları - Taraftaro</title>
-    <link rel="stylesheet" href="/src/style.css" />
+    <title>Kullanım Şartları — Taraftaro</title>
+    <meta name="description" content="Taraftaro Kullanım Şartları ve Hizmet Koşulları." />
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playpen+Sans:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="public/css/app.css" />
     <style>
-      /* Mobile WebView optimizations */
       body {
-        padding: 24px;
-        max-width: 100%;
-        line-height: 1.7;
+        background-color: var(--c-bg);
+        color: var(--c-text);
+        font-family: var(--font);
+        line-height: 1.75;
+        padding-block: 3rem;
       }
-      h1 { font-size: 1.75rem; margin-bottom: 1.5rem; }
-      h2 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 1rem; }
-      p, li { margin-bottom: 1rem; }
-      ul, ol { padding-left: 1.5rem; }
-      .last-updated { font-size: 0.875rem; opacity: 0.7; margin-bottom: 2rem; }
+      .legal-container {
+        max-width: 52rem;
+        margin-inline: auto;
+        padding-inline: 1.5rem;
+      }
+      .legal-header {
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--c-border);
+      }
+      .legal-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--c-brand);
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+        transition: var(--ease-spring);
+      }
+      .legal-back-btn:hover {
+        transform: translateX(-4px);
+      }
+      .legal-title {
+        font-size: 2.25rem;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+      }
+      .legal-updated {
+        font-size: 0.85rem;
+        color: var(--c-text-muted);
+      }
+      .legal-content h2 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--c-text);
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.01em;
+      }
+      .legal-content p, .legal-content ul {
+        color: var(--c-text-secondary);
+        font-size: 0.975rem;
+        margin-bottom: 1rem;
+      }
+      .legal-content ul {
+        padding-left: 1.5rem;
+        list-style-type: disc;
+      }
+      .legal-content li {
+        margin-bottom: 0.5rem;
+      }
+      .legal-content strong {
+        color: var(--c-text);
+      }
+      .legal-footer {
+        margin-top: 3.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--c-border);
+        font-size: 0.85rem;
+        color: var(--c-text-muted);
+        text-align: center;
+      }
+      /* Hide navigation header in webview mode */
+      body.is-webview .legal-back-btn {
+        display: none;
+      }
     </style>
   </head>
-  <body class="text-mode">
-    <article class="max-w-2xl mx-auto">
-      <h1 class="font-bold text-mode">Kullanım Şartları</h1>
-      <p class="last-updated text-mode-muted">Son güncelleme: 15 Aralık 2024</p>
+  <body>
+    <main class="legal-container">
+      <header class="legal-header">
+        <a href="index.html" class="legal-back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Ana Sayfaya Dön</span>
+        </a>
+        <h1 class="legal-title">Kullanım Şartları</h1>
+        <p class="legal-updated">Son Güncelleme: 26 Temmuz 2026</p>
+      </header>
 
-      <h2 class="font-bold text-mode">1. Kabul</h2>
-      <p class="text-mode-secondary">
-        Taraftaro uygulamasını kullanarak bu kullanım şartlarını kabul etmiş olursunuz. Bu şartları kabul etmiyorsanız, lütfen uygulamayı kullanmayınız.
-      </p>
+      <article class="legal-content">
+        <h2>1. Şartların Kabulü</h2>
+        <p>
+          Taraftaro mobil uygulamasını veya web sitesini kullanarak bu Kullanım Şartlarını kabul etmiş olursunuz. Şartları kabul etmiyorsanız lütfen platformu kullanmayınız.
+        </p>
 
-      <h2 class="font-bold text-mode">2. Hizmet Tanımı</h2>
-      <p class="text-mode-secondary">
-        Taraftaro, futbol taraftarlarının bir araya geldiği, takım tahminleri yaptığı, maç tartışmalarına katıldığı ve ödüller kazandığı bir mobil platformdur.
-      </p>
+        <h2>2. Hizmet Kapsamı ve Spor Ekosistemi</h2>
+        <p>
+          Taraftaro; tüm spor kulüpleri, branşlar, oyuncular ve hakemler üzerinden taraftarların seviyeli şekilde etkileşime girdiği, canlı tribün coşkusunu yaşadığı ve doğrulanmış kamuoyu oluşturduğu bir sosyal spor platformudur.
+        </p>
 
-      <h2 class="font-bold text-mode">3. Hesap Oluşturma</h2>
-      <ul class="text-mode-secondary">
-        <li>Hesap oluşturmak için 13 yaşından büyük olmanız gerekmektedir</li>
-        <li>Doğru ve güncel bilgiler sağlamakla yükümlüsünüz</li>
-        <li>Hesap güvenliğinizden siz sorumlusunuz</li>
-        <li>Hesabınızı başkalarıyla paylaşamazsınız</li>
-      </ul>
+        <h2>3. Üyelik ve Hesap Güvenliği</h2>
+        <ul>
+          <li>Platformu kullanabilmek için geçerli bilgilere sahip bir hesap oluşturulmalıdır.</li>
+          <li>Kullanıcı, hesap şifresinin ve güvenliğinin muhafazasından tamamen kendisi sorumludur.</li>
+          <li>Hesabın yetkisiz kullanımı durumunda derhal Taraftaro ekibi bilgilendirilmelidir.</li>
+        </ul>
 
-      <h2 class="font-bold text-mode">4. Kullanıcı Davranışları</h2>
-      <p class="text-mode-secondary">Aşağıdaki davranışlar yasaktır:</p>
-      <ul class="text-mode-secondary">
-        <li>Hakaret, küfür ve nefret söylemi içeren içerik paylaşmak</li>
-        <li>Spam veya yanıltıcı içerik paylaşmak</li>
-        <li>Diğer kullanıcıları rahatsız etmek veya taciz etmek</li>
-        <li>Uygulamanın güvenliğini tehlikeye atacak eylemler</li>
-        <li>Sahte hesaplar oluşturmak</li>
-        <li>Puan sistemini manipüle etmeye çalışmak</li>
-      </ul>
+        <h2>4. Topluluk Kuralları ve Yasaklı Davranışlar</h2>
+        <p>Taraftaro platformunda seviyeli renktaş kültürünü korumak adına aşağıdaki davranışlar kesinlikle yasaktır:</p>
+        <ul>
+          <li>Nefret söylemi, ırkçılık, cinsiyetçilik veya sporda şiddeti teşvik eden içerikler.</li>
+          <li>Küfür, hakaret, tehdit veya kişisel hedef alma.</li>
+          <li>Spam, manipülasyon, bot hesap kullanımı ve sahte kamuoyu oluşturma girişimleri.</li>
+          <li>Yasa dışı bahis reklamı veya yönlendirmesi yapmak.</li>
+        </ul>
 
-      <h2 class="font-bold text-mode">5. Puan ve Ödül Sistemi</h2>
-      <ul class="text-mode-secondary">
-        <li>Puanlar uygulama içi aktivitelerle kazanılır</li>
-        <li>Ödüller stok durumuna göre değişebilir</li>
-        <li>Hileli yollarla kazanılan puanlar iptal edilir</li>
-        <li>Ödüller devredilemez ve nakde çevrilemez</li>
-        <li>Taraftaro, ödül sistemini değiştirme hakkını saklı tutar</li>
-      </ul>
+        <h2>5. İçerik ve Fikri Mülkiyet</h2>
+        <p>
+          Taraftaro üzerindeki tüm tasarımlar, kodlar, logolar ve grafikler Taraftaro'nun mülkiyetindedir. Kullanıcıların ürettiği yorumlar ve içerikler üzerinde Taraftaro platform içi yayınlama hakkına sahiptir.
+        </p>
 
-      <h2 class="font-bold text-mode">6. İçerik Hakları</h2>
-      <p class="text-mode-secondary">
-        Paylaştığınız içeriklerin (yorumlar, tahminler vb.) sorumluluğu size aittir. Taraftaro, uygunsuz içerikleri kaldırma ve gerektiğinde hesabınızı askıya alma hakkını saklı tutar.
-      </p>
+        <h2>6. Sorumluluğun Sınırlandırılması</h2>
+        <p>
+          Taraftaro, platform üzerindeki kullanıcı yorumlarından ve üçüncü taraf içeriklerinden doğrudan sorumlu tutulamaz. Kurallara aykırı içerikler tespit edildiğinde derhal kaldırılır.
+        </p>
 
-      <h2 class="font-bold text-mode">7. Fikri Mülkiyet</h2>
-      <p class="text-mode-secondary">
-        Taraftaro markası, logosu ve uygulama içeriği Taraftaro'ya aittir. Bu içerikleri izinsiz kullanmak yasaktır.
-      </p>
+        <h2>7. Değişiklikler</h2>
+        <p>
+          Taraftaro, işbu Kullanım Şartlarını dilediği zaman güncelleme hakkını saklı tutar. Güncellenmiş şartlar web sitesi ve uygulama üzerinden yayınlandığı andan itibaren geçerlilik kazanır.
+        </p>
 
-      <h2 class="font-bold text-mode">8. Sorumluluk Sınırı</h2>
-      <p class="text-mode-secondary">
-        Taraftaro, uygulama kullanımından doğabilecek doğrudan veya dolaylı zararlardan sorumlu tutulamaz. Uygulama "olduğu gibi" sunulmaktadır.
-      </p>
+        <h2>8. İletişim</h2>
+        <p>
+          Kullanım şartları ile ilgili her türlü soru için destek ekibimizle iletişime geçebilirsiniz:
+        </p>
+        <p>
+          <strong>E-posta:</strong> <a href="mailto:support@taraftaro.com" style="color: var(--c-brand);">support@taraftaro.com</a>
+        </p>
+      </article>
 
-      <h2 class="font-bold text-mode">9. Hesap Askıya Alma</h2>
-      <p class="text-mode-secondary">
-        Kullanım şartlarını ihlal eden hesaplar uyarı yapılmaksızın askıya alınabilir veya kalıcı olarak kapatılabilir.
-      </p>
+      <footer class="legal-footer">
+        &copy; 2026 Taraftaro. Tüm hakları saklıdır.
+      </footer>
+    </main>
 
-      <h2 class="font-bold text-mode">10. Değişiklikler</h2>
-      <p class="text-mode-secondary">
-        Bu kullanım şartlarını zaman zaman güncelleyebiliriz. Önemli değişiklikler uygulama içinden duyurulacaktır. Güncelleme sonrası uygulamayı kullanmaya devam etmeniz, yeni şartları kabul ettiğiniz anlamına gelir.
-      </p>
-
-      <h2 class="font-bold text-mode">11. Uygulanacak Hukuk</h2>
-      <p class="text-mode-secondary">
-        Bu şartlar Türkiye Cumhuriyeti kanunlarına tabidir. Uyuşmazlıklarda İstanbul Mahkemeleri yetkilidir.
-      </p>
-
-      <h2 class="font-bold text-mode">12. İletişim</h2>
-      <p class="text-mode-secondary">
-        Sorularınız için: <strong>legal@taraftaro.com</strong>
-      </p>
-    </article>
-
-    <script type="module">
-      import './src/style.css';
-      // Check for theme preference from URL or localStorage
+    <script>
+      // Automatically detect WebView mode via query parameter (?mode=webview)
       const urlParams = new URLSearchParams(window.location.search);
-      const theme = urlParams.get('theme') || localStorage.getItem('theme') || 'dark';
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
+      if (urlParams.get('mode') === 'webview') {
+        document.body.classList.add('is-webview');
       }
     </script>
   </body>
