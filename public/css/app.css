@@ -2077,51 +2077,56 @@ a { color: inherit; }
   border-top: 1px solid var(--c-border);
 }
 
-.contact-wrapper {
-  max-width: 44rem;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 4rem;
   align-items: center;
 }
 
-.contact-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.contact-pills {
+.contact-side-header {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.25rem;
-  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.contact-pill {
+.contact-side-header .section-title {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.contact-side-header .section-desc {
+  text-align: left;
+  margin-inline: 0;
+  margin-bottom: 1.75rem;
+}
+
+.contact-direct-email {
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--c-text-secondary);
   background: var(--c-surface-2);
   border: 1px solid var(--c-border);
   padding: 0.625rem 1.25rem;
   border-radius: var(--r-full);
-  font-size: 0.875rem;
-  color: var(--c-text-secondary);
-  text-decoration: none;
-  transition: var(--ease-spring);
 }
 
-.contact-pill i {
+.contact-direct-email i {
   color: var(--c-brand);
 }
 
-.contact-pill:hover {
-  border-color: var(--c-brand-border);
+.contact-direct-email a {
   color: var(--c-text);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-brand-sm);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-direct-email a:hover {
+  color: var(--c-brand);
 }
 
 .contact-form {
@@ -2198,6 +2203,23 @@ a { color: inherit; }
   border-radius: var(--r-lg);
   padding: 0.875rem 1rem;
   margin-top: 0.25rem;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-side-header {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-side-header .section-title,
+  .contact-side-header .section-desc {
+    text-align: center;
+  }
 }
 
 @media (max-width: 640px) {
