@@ -92,6 +92,11 @@ const I18N = (() => {
       'cmp.f7_social':        'Üyelik Şart',
       'cmp.f7_brand':         'Misafir Olarak Anında Gir',
 
+      'cmp.f8_name':          'Oyuncu, Hakem ve T.D. Odaklı Konular (Topics)',
+      'cmp.f8_classic':       'Yok (Sadece Skor)',
+      'cmp.f8_social':        'Spam & Trol Kaosu',
+      'cmp.f8_brand':         'Doğrulanmış Canlı Trendler',
+
       /* Mobile comparison cards */
       'cmp.m_f1_title':       'Tüm Branşlar (Futbol, Basketbol vb.) Tek Kimlikte',
       'cmp.m_f1_brand':       'Tek Dijital Kimlik',
@@ -161,9 +166,9 @@ const I18N = (() => {
       'feat.f5_tag':   'Safe Space',
       'feat.f5_desc':  'Trol ve botlardan arındırılmış, sadece kendi kulübünün haberleri ve doğrulanmış renktaşlarıyla seviyeli taraftar alanı.',
 
-      'feat.f6_title': 'Doğrulanmış Kulüp Anketleri',
-      'feat.f6_tag':   'Doğrulanmış',
-      'feat.f6_desc':  'Forma, transfer ve yönetim kararlarında rakip taraftarların sabote edemediği, sadece gerçek taraftarların oy hakkı olduğu altyapı.',
+      'feat.f6_title': 'Spor Varlıkları & Odaklı Konular (Topics)',
+      'feat.f6_tag':   'Entity Topics',
+      'feat.f6_desc':  'Kulüpler, oyuncular, hakemler ve teknik direktörler üzerinden doğrulanmış konular (Topics) açın, anketler başlatın ve sporun canlı gündemini keşfedin.',
 
       'feat.phone_alt': 'Taraftaro Uygulama Ekranı',
 
@@ -345,6 +350,11 @@ const I18N = (() => {
       'cmp.f7_social':        'Membership required',
       'cmp.f7_brand':         'Instant Guest Entry',
 
+      'cmp.f8_name':          'Player, Referee & Coach Focused Topics',
+      'cmp.f8_classic':       'None (Scores only)',
+      'cmp.f8_social':        'Spam & Troll Chaos',
+      'cmp.f8_brand':         'Verified Live Trends',
+
       /* Mobile comparison cards */
       'cmp.m_f1_title':   'All Sports Under One Identity',
       'cmp.m_f1_brand':   'One Digital Identity',
@@ -414,9 +424,9 @@ const I18N = (() => {
       'feat.f5_tag':   'Safe Space',
       'feat.f5_desc':  'A clean fan space free from trolls and bots — only your club\'s news and verified supporters of the same colours.',
 
-      'feat.f6_title': 'Verified Club Polls',
-      'feat.f6_tag':   'Verified',
-      'feat.f6_desc':  'Infrastructure that prevents rival fans from sabotaging — only active, verified supporters of the relevant club can vote.',
+      'feat.f6_title': 'Sports Entities & Focused Topics',
+      'feat.f6_tag':   'Entity Topics',
+      'feat.f6_desc':  'Create focused topics and polls anchored to verified clubs, players, referees, and coaches — explore sports trends free from spam.',
 
       'feat.phone_alt': 'Taraftaro App Screen',
 
