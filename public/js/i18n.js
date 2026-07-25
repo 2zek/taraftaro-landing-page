@@ -134,14 +134,14 @@ const I18N = (() => {
       'hiw.title_grad': 'Spor & Kulüp Ekosistemi',
       'hiw.desc':       'Kayıt şartı olmadan gir, kulübünü seç ve maç coşkusunu anında paylaş.',
 
-      'hiw.step1_title': 'Kulübünü Seç (ClubTheme)',
-      'hiw.step1_desc':  'Fenerbahçe, Galatasaray, Beşiktaş, Trabzonspor... Takımını seçtiğinde tüm branş haberleri, renkler ve arayüz doğrudan kulübüne bürünür.',
+      'hiw.step1_title': 'Kulübünü Seç & Kişiselleştir',
+      'hiw.step1_desc':  'Fenerbahçe, Galatasaray, Beşiktaş, Trabzonspor... Takımını seçtiğinde tüm haberler, renkler ve arayüz doğrudan kulübüne bürünür.',
 
       'hiw.step2_title': 'Dijital Tribünde Coş',
-      'hiw.step2_desc':  'Tüm branşlardaki canlı maç anında binlerce taraftarla eş zamanlı alkış, tezahürat ve ıslık butonlarıyla stadyum ve salon enerjisini ekranına taşı.',
+      'hiw.step2_desc':  'Canlı maç anında binlerce taraftarla eş zamanlı alkışla, tezahürat yap ve anlık canlı mikro-tahminlerle puanlar topla.',
 
-      'hiw.step3_title': 'Spor Zekanı Göster',
-      'hiw.step3_desc':  'Maç içi mikro-tahminleri bil, oyuncuları notla. Futbol ve spor zekası karneni Instagram\'da arkadaşlarına paylaşarak rozetler kazan.',
+      'hiw.step3_title': 'Taraftar Kamuoyu & Topics',
+      'hiw.step3_desc':  'Oyuncuları ve hakem kararlarını notla; doğrulanmış spor varlıkları üzerinden konular açarak gündeme yön ver.',
 
       /* ── Manifesto / Hakkımızda ── */
       'mf.badge':        'Biz Neden Yola Çıktık?',
