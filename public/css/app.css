@@ -782,6 +782,19 @@ a { color: inherit; }
   pointer-events: none;
 }
 
+/* Alt kenarda yumuşak geçiş */
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 14rem;
+  background: linear-gradient(to bottom, transparent 0%, var(--c-bg) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero-inner {
   max-width: var(--container);
   margin-inline: auto;
