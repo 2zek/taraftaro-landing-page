@@ -141,7 +141,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ────────────────────────────────────────────
-     6. COPYRIGHT YEAR
+     6. CONTACT FORM
+  ──────────────────────────────────────────── */
+  const contactForm    = document.getElementById('contact-form');
+  const contactSuccess = document.getElementById('contact-success');
+
+  contactForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Buraya backend/API çağrısı eklenebilir
+    contactSuccess.style.display = 'flex';
+    contactForm.reset();
+    setTimeout(() => { contactSuccess.style.display = 'none'; }, 5000);
+  });
+
+  /* ────────────────────────────────────────────
+     7. COPYRIGHT YEAR
   ──────────────────────────────────────────── */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
