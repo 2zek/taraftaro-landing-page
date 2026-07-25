@@ -36,27 +36,27 @@
   <!-- ═══════════════════════════════════════
        NAVBAR
   ══════════════════════════════════════════ -->
-  <nav id="navbar" class="navbar" role="navigation" aria-label="Ana navigasyon">
+  <nav id="navbar" class="navbar" role="navigation" data-i18n-aria="nav.aria" aria-label="Ana navigasyon">
     <div class="navbar-inner">
 
       <!-- Sol: Desktop links -->
       <ul class="navbar-links" role="list">
-        <li><a href="#comparison">Neden Biz?</a></li>
-        <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
-        <li><a href="#features">Özellikler</a></li>
-        <li><a href="#faq">S.S.S.</a></li>
-        <li><a href="#contact">İletişim</a></li>
+        <li><a href="#comparison" data-i18n="nav.why_us">Neden Biz?</a></li>
+        <li><a href="#how-it-works" data-i18n="nav.how_it_works">Nasıl Çalışır?</a></li>
+        <li><a href="#features" data-i18n="nav.features">Özellikler</a></li>
+        <li><a href="#faq" data-i18n="nav.faq">S.S.S.</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">İletişim</a></li>
       </ul>
 
       <!-- Orta: Logo -->
-      <a href="#" class="navbar-logo" aria-label="Taraftaro ana sayfa">
+      <a href="#" class="navbar-logo" data-i18n-aria="nav.logo_aria" aria-label="Taraftaro ana sayfa">
         <span class="navbar-brand-text">TARAFTAR<span class="navbar-brand-o">O</span></span>
       </a>
 
       <!-- Sağ: CTA + Hamburger -->
       <div class="navbar-right">
-        <a href="#download" class="btn btn-primary navbar-cta">Ücretsiz İndir</a>
-        <button id="hamburger" class="navbar-hamburger" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <a href="#download" class="btn btn-primary navbar-cta" data-i18n="nav.download">Ücretsiz İndir</a>
+        <button id="hamburger" class="navbar-hamburger" type="button" data-i18n-aria="nav.menu_aria" aria-label="Menüyü aç/kapat" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -66,15 +66,15 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobil menü">
+    <div id="mobile-menu" class="mobile-menu" role="dialog" data-i18n-aria="nav.mobile_aria" aria-label="Mobil menü">
       <ul>
-        <li><a href="#comparison">Neden Biz?</a></li>
-        <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
-        <li><a href="#features">Özellikler</a></li>
-        <li><a href="#faq">S.S.S.</a></li>
-        <li><a href="#contact">İletişim</a></li>
+        <li><a href="#comparison" data-i18n="nav.why_us">Neden Biz?</a></li>
+        <li><a href="#how-it-works" data-i18n="nav.how_it_works">Nasıl Çalışır?</a></li>
+        <li><a href="#features" data-i18n="nav.features">Özellikler</a></li>
+        <li><a href="#faq" data-i18n="nav.faq">S.S.S.</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">İletişim</a></li>
       </ul>
-      <a href="#download" class="btn btn-primary">Ücretsiz İndir</a>
+      <a href="#download" class="btn btn-primary" data-i18n="nav.download">Ücretsiz İndir</a>
     </div>
   </nav>
 
@@ -97,38 +97,38 @@
         <!-- Left: Content -->
         <div>
           <h1 class="hero-title reveal delay-1">
-          Tek Dijital Kimlik – <span class="gradient-text">Tüm Sporlar, Tek Topluluk</span>
-        </h1>
+            <span data-i18n="hero.title">Tek Dijital Kimlik –</span> <span class="gradient-text" data-i18n="hero.title_gradient">Tüm Sporlar, Tek Topluluk</span>
+          </h1>
 
-        <p class="hero-desc reveal delay-2">
-          Futbol, basketbol, voleybol ve daha fazlası. <strong>Gerçek taraftar sesleri</strong>,
-          <strong>%100 doğrulanmış anketler</strong> ve <strong>canlı tribün</strong> ile
-          maçları anbean yaşa. Dünyanın dört bir yanındaki fanları tek platformda birleştiriyoruz.
-        </p>
+          <p class="hero-desc reveal delay-2" data-i18n="hero.desc" data-i18n-html>
+            Futbol, basketbol, voleybol ve daha fazlası. <strong>Gerçek taraftar sesleri</strong>,
+            <strong>%100 doğrulanmış anketler</strong> ve <strong>canlı tribün</strong> ile
+            maçları anbean yaşa. Dünyanın dört bir yanındaki fanları tek platformda birleştiriyoruz.
+          </p>
 
           <div class="hero-actions reveal delay-3">
             <a href="#download" class="btn btn-primary btn-lg">
               <i class="fa-solid fa-download"></i>
-              Hemen Ücretsiz İndir
+              <span data-i18n="hero.cta_primary">Hemen Ücretsiz İndir</span>
             </a>
             <a href="#how-it-works" class="btn btn-secondary btn-lg">
               <i class="fa-regular fa-circle-play"></i>
-              Nasıl Çalışır?
+              <span data-i18n="hero.cta_secondary">Nasıl Çalışır?</span>
             </a>
           </div>
 
           <div class="hero-stats reveal delay-4">
             <div>
-              <div class="hero-stat-value">Tek Dijital Kimlik</div>
-              <div class="hero-stat-label">Tüm branşlarda kulübünün yanındasın</div>
+              <div class="hero-stat-value" data-i18n="hero.stat1_val">Tek Dijital Kimlik</div>
+              <div class="hero-stat-label" data-i18n="hero.stat1_label">Tüm branşlarda kulübünün yanındasın</div>
             </div>
             <div>
-              <div class="hero-stat-value">%100 Doğrulanmış</div>
-              <div class="hero-stat-label">Gerçek taraftar sesi & resmi anketler</div>
+              <div class="hero-stat-value" data-i18n="hero.stat2_val">%100 Doğrulanmış</div>
+              <div class="hero-stat-label" data-i18n="hero.stat2_label">Gerçek taraftar sesi &amp; resmi anketler</div>
             </div>
             <div>
-              <div class="hero-stat-value">Canlı Tribün</div>
-              <div class="hero-stat-label">Maç anında anlık reaksiyon & etkileşim</div>
+              <div class="hero-stat-value" data-i18n="hero.stat3_val">Canlı Tribün</div>
+              <div class="hero-stat-label" data-i18n="hero.stat3_label">Maç anında anlık reaksiyon &amp; etkileşim</div>
             </div>
           </div>
         </div>
@@ -139,7 +139,7 @@
           <div class="hero-iphone animate-float">
             <div class="iphone-frame">
               <div class="iphone-screen">
-                <img src="public/hero-mockup.png" alt="Taraftaro uygulama ekranı" loading="eager" />
+                <img src="public/hero-mockup.png" data-i18n-alt="hero.mockup_alt" alt="Taraftaro uygulama ekranı" loading="eager" />
               </div>
             </div>
           </div>
@@ -156,63 +156,65 @@
       <div class="container">
 
         <div class="section-header reveal">
-          <span class="section-label">What Sets Us Apart? / <span class="section-label-tr">Farkımız Ne?</span></span>
-          <h2 class="section-title">Classic Score Sites vs.<br /><span class="gradient-text">Taraftaro</span></h2>
-          <p class="section-desc">Don’t be a passive viewer. Experience every match day across all sports with a single digital identity.</p>
+          <span class="section-label" data-i18n="cmp.label">Farkımız Ne?</span>
+          <h2 class="section-title">
+            <span data-i18n="cmp.title">Klasik Skor Siteleri</span> <span data-i18n="cmp.title_vs">vs.</span><br /><span class="gradient-text">Taraftaro</span>
+          </h2>
+          <p class="section-desc" data-i18n="cmp.desc">Pasif izleyici olmayın. Tek bir dijital kimlikle tüm sporlarda her maç gününü yaşayın.</p>
         </div>
 
         <div class="comparison-card reveal delay-1">
           <table class="comparison-table">
             <thead>
               <tr>
-                <th>Deneyim</th>
-                <th>Klasik Skor Siteleri</th>
-                <th>Sosyal Medya (Twitter/X)</th>
-                <th class="brand-col">TARAFTARO</th>
+                <th data-i18n="cmp.th_experience">Deneyim</th>
+                <th data-i18n="cmp.th_classic">Klasik Skor Siteleri</th>
+                <th data-i18n="cmp.th_social">Sosyal Medya (Twitter/X)</th>
+                <th class="brand-col" data-i18n="cmp.th_taraftaro">TARAFTARO</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="feature-name">Tüm Branşlar (Futbol, Basketbol vb.) Tek Kimlikte</td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Dağınık</span></td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Karışık</span></td>
-                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> Tek Dijital Kimlik</span></td>
+                <td class="feature-name" data-i18n="cmp.f1_name">Tüm Branşlar (Futbol, Basketbol vb.) Tek Kimlikte</td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f1_classic">Dağınık</span></span></td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f1_social">Karışık</span></span></td>
+                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> <span data-i18n="cmp.f1_brand">Tek Dijital Kimlik</span></span></td>
               </tr>
               <tr>
-                <td class="feature-name">Maç Anında Canlı Tepki (Alkış / Islık / Coşku)</td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Sadece skora bakarsın</span></td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Kavga ve trol dolu</span></td>
-                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> Dijital Tribün Coşkusu</span></td>
+                <td class="feature-name" data-i18n="cmp.f2_name">Maç Anında Canlı Tepki (Alkış / Islık / Coşku)</td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f2_classic">Sadece skora bakarsın</span></span></td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f2_social">Kavga ve trol dolu</span></span></td>
+                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> <span data-i18n="cmp.f2_brand">Dijital Tribün Coşkusu</span></span></td>
               </tr>
               <tr>
-                <td class="feature-name">Kendi İdeal 11'ini / Kadronu Kurup Paylaşmak</td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Yok</span></td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Zor ve meşakkatli</span></td>
-                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> Saha Üzerinde Tek Tıkla</span></td>
+                <td class="feature-name" data-i18n="cmp.f3_name">Kendi İdeal 11'ini / Kadronu Kurup Paylaşmak</td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f3_classic">Yok</span></span></td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f3_social">Zor ve meşakkatli</span></span></td>
+                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> <span data-i18n="cmp.f3_brand">Saha Üzerinde Tek Tıkla</span></span></td>
               </tr>
               <tr>
-                <td class="feature-name">Maç İçi Anlık Mikro-Tahminler Yapmak</td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Yok</span></td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Yok</span></td>
-                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> Anlık Canlı Görevler</span></td>
+                <td class="feature-name" data-i18n="cmp.f4_name">Maç İçi Anlık Mikro-Tahminler Yapmak</td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f4_classic">Yok</span></span></td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f4_social">Yok</span></span></td>
+                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> <span data-i18n="cmp.f4_brand">Anlık Canlı Görevler</span></span></td>
               </tr>
               <tr>
-                <td class="feature-name">Maç Sonu Oyuncuları ve Teknik Heyeti Notlamak</td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Yok</span></td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Botlar notu bozar</span></td>
-                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> Taraftar İndeksi</span></td>
+                <td class="feature-name" data-i18n="cmp.f5_name">Maç Sonu Oyuncuları ve Teknik Heyeti Notlamak</td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f5_classic">Yok</span></span></td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f5_social">Botlar notu bozar</span></span></td>
+                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> <span data-i18n="cmp.f5_brand">Taraftar İndeksi</span></span></td>
               </tr>
               <tr>
-                <td class="feature-name">Takımının Rengiyle Uygulama Kullanmak (ClubTheme)</td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Herkes aynı soğuk ekranda</span></td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Karışık ve kaotik</span></td>
-                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> Tamamen Senin Takımın</span></td>
+                <td class="feature-name" data-i18n="cmp.f6_name">Takımının Rengiyle Uygulama Kullanmak (ClubTheme)</td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f6_classic">Herkes aynı soğuk ekranda</span></span></td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f6_social">Karışık ve kaotik</span></span></td>
+                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> <span data-i18n="cmp.f6_brand">Tamamen Senin Takımın</span></span></td>
               </tr>
               <tr>
-                <td class="feature-name">Kayıt Olmadan Hemen Maça Katılmak (Misafir Modu)</td>
-                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> Var</span></td>
-                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> Üyelik Şart</span></td>
-                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> Misafir Olarak Anında Gir</span></td>
+                <td class="feature-name" data-i18n="cmp.f7_name">Kayıt Olmadan Hemen Maça Katılmak (Misafir Modu)</td>
+                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> <span data-i18n="cmp.f7_classic">Var</span></span></td>
+                <td><span class="badge-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.f7_social">Üyelik Şart</span></span></td>
+                <td><span class="badge-yes"><i class="fa-solid fa-check"></i> <span data-i18n="cmp.f7_brand">Misafir Olarak Anında Gir</span></span></td>
               </tr>
             </tbody>
           </table>
@@ -222,109 +224,109 @@
         <div class="comparison-mobile-list">
 
           <div class="comp-m-card reveal delay-1">
-            <div class="comp-m-title">Tüm Branşlar (Futbol, Basketbol vb.) Tek Kimlikte</div>
+            <div class="comp-m-title" data-i18n="cmp.m_f1_title">Tüm Branşlar (Futbol, Basketbol vb.) Tek Kimlikte</div>
             <div class="comp-m-winner">
               <span class="comp-m-badge-brand">TARAFTARO</span>
-              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> Tek Dijital Kimlik</span>
+              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> <span data-i18n="cmp.m_f1_brand">Tek Dijital Kimlik</span></span>
             </div>
             <div class="comp-m-others">
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Klasik Skor</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Dağınık</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f1_classic">Dağınık</span></span>
               </div>
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Twitter / X</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Karışık</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f1_social">Karışık</span></span>
               </div>
             </div>
           </div>
 
           <div class="comp-m-card reveal delay-2">
-            <div class="comp-m-title">Maç Anında Canlı Tepki (Alkış / Islık / Coşku)</div>
+            <div class="comp-m-title" data-i18n="cmp.m_f2_title">Maç Anında Canlı Tepki (Alkış / Islık / Coşku)</div>
             <div class="comp-m-winner">
               <span class="comp-m-badge-brand">TARAFTARO</span>
-              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> Dijital Tribün Coşkusu</span>
+              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> <span data-i18n="cmp.m_f2_brand">Dijital Tribün Coşkusu</span></span>
             </div>
             <div class="comp-m-others">
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Klasik Skor</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Sadece Skor</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f2_classic">Sadece Skor</span></span>
               </div>
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Twitter / X</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Kaos ve Trol</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f2_social">Kaos ve Trol</span></span>
               </div>
             </div>
           </div>
 
           <div class="comp-m-card reveal delay-3">
-            <div class="comp-m-title">Kendi İdeal Kadronu Kurup Oylatmak</div>
+            <div class="comp-m-title" data-i18n="cmp.m_f3_title">Kendi İdeal Kadronu Kurup Oylatmak</div>
             <div class="comp-m-winner">
               <span class="comp-m-badge-brand">TARAFTARO</span>
-              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> Saha Üzerinde Tek Tıkla</span>
+              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> <span data-i18n="cmp.m_f3_brand">Saha Üzerinde Tek Tıkla</span></span>
             </div>
             <div class="comp-m-others">
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Klasik Skor</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Yok</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f3_classic">Yok</span></span>
               </div>
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Twitter / X</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Meşakkatli</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f3_social">Meşakkatli</span></span>
               </div>
             </div>
           </div>
 
           <div class="comp-m-card reveal delay-1">
-            <div class="comp-m-title">Maç İçi Anlık Canlı Tahminler</div>
+            <div class="comp-m-title" data-i18n="cmp.m_f4_title">Maç İçi Anlık Canlı Tahminler</div>
             <div class="comp-m-winner">
               <span class="comp-m-badge-brand">TARAFTARO</span>
-              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> Anlık Canlı Görevler</span>
+              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> <span data-i18n="cmp.m_f4_brand">Anlık Canlı Görevler</span></span>
             </div>
             <div class="comp-m-others">
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Klasik Skor</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Yok</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f4_classic">Yok</span></span>
               </div>
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Twitter / X</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Yok</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f4_social">Yok</span></span>
               </div>
             </div>
           </div>
 
           <div class="comp-m-card reveal delay-2">
-            <div class="comp-m-title">Oyuncuları ve Hoca Kararlarını Notlamak</div>
+            <div class="comp-m-title" data-i18n="cmp.m_f5_title">Oyuncuları ve Hoca Kararlarını Notlamak</div>
             <div class="comp-m-winner">
               <span class="comp-m-badge-brand">TARAFTARO</span>
-              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> Taraftar İndeksi</span>
+              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> <span data-i18n="cmp.m_f5_brand">Taraftar İndeksi</span></span>
             </div>
             <div class="comp-m-others">
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Klasik Skor</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Yok</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f5_classic">Yok</span></span>
               </div>
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Twitter / X</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Botlar Bozar</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f5_social">Botlar Bozar</span></span>
               </div>
             </div>
           </div>
 
           <div class="comp-m-card reveal delay-3">
-            <div class="comp-m-title">Takımının Rengi ve Temasıyla Kullanmak</div>
+            <div class="comp-m-title" data-i18n="cmp.m_f6_title">Takımının Rengi ve Temasıyla Kullanmak</div>
             <div class="comp-m-winner">
               <span class="comp-m-badge-brand">TARAFTARO</span>
-              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> Tamamen Senin Takımın</span>
+              <span class="comp-m-val-brand"><i class="fa-solid fa-circle-check"></i> <span data-i18n="cmp.m_f6_brand">Tamamen Senin Takımın</span></span>
             </div>
             <div class="comp-m-others">
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Klasik Skor</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Soğuk Standart</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f6_classic">Soğuk Standart</span></span>
               </div>
               <div class="comp-m-other-item">
                 <span class="comp-m-label">Twitter / X</span>
-                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> Karışık</span>
+                <span class="comp-m-val-no"><i class="fa-solid fa-xmark"></i> <span data-i18n="cmp.m_f6_social">Karışık</span></span>
               </div>
             </div>
           </div>
@@ -342,9 +344,9 @@
       <div class="container">
 
         <div class="section-header reveal">
-          <span class="section-label">Nasıl Çalışır?</span>
-          <h2 class="section-title">3 Adımda<br /><span class="gradient-text">Spor & Kulüp Ekosistemi</span></h2>
-          <p class="section-desc">Kayıt şartı olmadan gir, kulübünü seç ve maç coşkusunu anında paylaş.</p>
+          <span class="section-label" data-i18n="hiw.label">Nasıl Çalışır?</span>
+          <h2 class="section-title"><span data-i18n="hiw.title">3 Adımda</span><br /><span class="gradient-text" data-i18n="hiw.title_grad">Spor &amp; Kulüp Ekosistemi</span></h2>
+          <p class="section-desc" data-i18n="hiw.desc">Kayıt şartı olmadan gir, kulübünü seç ve maç coşkusunu anında paylaş.</p>
         </div>
 
         <div class="how-grid">
@@ -357,8 +359,8 @@
               <i class="fa-solid fa-shirt" style="color: var(--c-brand);"></i>
             </div>
             <div class="step-number">1</div>
-            <h3 class="step-title">Kulübünü Seç (ClubTheme)</h3>
-            <p class="step-desc">Fenerbahçe, Galatasaray, Beşiktaş, Trabzonspor... Takımını seçtiğinde tüm branş haberleri, renkler ve arayüz doğrudan kulübüne bürünür.</p>
+            <h3 class="step-title" data-i18n="hiw.step1_title">Kulübünü Seç (ClubTheme)</h3>
+            <p class="step-desc" data-i18n="hiw.step1_desc">Fenerbahçe, Galatasaray, Beşiktaş, Trabzonspor... Takımını seçtiğinde tüm branş haberleri, renkler ve arayüz doğrudan kulübüne bürünür.</p>
           </div>
 
           <!-- Step 2 -->
@@ -367,8 +369,8 @@
               <i class="fa-solid fa-bullhorn" style="color: var(--c-brand);"></i>
             </div>
             <div class="step-number">2</div>
-            <h3 class="step-title">Dijital Tribünde Coş</h3>
-            <p class="step-desc">Tüm branşlardaki canlı maç anında binlerce taraftarla eş zamanlı alkış, tezahürat ve ıslık butonlarıyla stadyum ve salon enerjisini ekranına taşı.</p>
+            <h3 class="step-title" data-i18n="hiw.step2_title">Dijital Tribünde Coş</h3>
+            <p class="step-desc" data-i18n="hiw.step2_desc">Tüm branşlardaki canlı maç anında binlerce taraftarla eş zamanlı alkış, tezahürat ve ıslık butonlarıyla stadyum ve salon enerjisini ekranına taşı.</p>
           </div>
 
           <!-- Step 3 -->
@@ -377,8 +379,8 @@
               <i class="fa-solid fa-medal" style="color: var(--c-brand);"></i>
             </div>
             <div class="step-number">3</div>
-            <h3 class="step-title">Spor Zekanı Göster</h3>
-            <p class="step-desc">Maç içi mikro-tahminleri bil, oyuncuları notla. Futbol ve spor zekası karneni Instagram'da arkadaşlarına paylaşarak rozetler kazan.</p>
+            <h3 class="step-title" data-i18n="hiw.step3_title">Spor Zekanı Göster</h3>
+            <p class="step-desc" data-i18n="hiw.step3_desc">Maç içi mikro-tahminleri bil, oyuncuları notla. Futbol ve spor zekası karneni Instagram'da arkadaşlarına paylaşarak rozetler kazan.</p>
           </div>
 
         </div>
@@ -393,9 +395,9 @@
       <div class="container">
 
         <div class="section-header reveal">
-          <span class="section-label">Özellikler</span>
-          <h2 class="section-title">Kulübünün Tüm Branşlarında<br /><span class="gradient-text">Etkileşimli Ekosistem</span></h2>
-          <p class="section-desc">Taraftaro sadece skor vermez; seni maça ve kulübüne bağlayan benzersiz interaktif modüller sunar.</p>
+          <span class="section-label" data-i18n="feat.label">Özellikler</span>
+          <h2 class="section-title"><span data-i18n="feat.title">Kulübünün Tüm Branşlarında</span><br /><span class="gradient-text" data-i18n="feat.title_grad">Etkileşimli Ekosistem</span></h2>
+          <p class="section-desc" data-i18n="feat.desc">Taraftaro sadece skor vermez; seni maça ve kulübüne bağlayan benzersiz interaktif modüller sunar.</p>
         </div>
 
         <div class="features-showcase">
@@ -406,10 +408,10 @@
             <div class="feature-item reveal delay-1">
               <div class="feature-content">
                 <div class="feature-header-row">
-                  <h3 class="feature-title">Dijital Tribün</h3>
-                  <span class="identity-tag tag-verified"><i class="fa-solid fa-bolt"></i> Canlı Coşku</span>
+                  <h3 class="feature-title" data-i18n="feat.f1_title">Dijital Tribün</h3>
+                  <span class="identity-tag tag-verified"><i class="fa-solid fa-bolt"></i> <span data-i18n="feat.f1_tag">Canlı Coşku</span></span>
                 </div>
-                <p class="feature-desc">Futboldan basketbola canlı maç esnasında binlerce taraftarla eş zamanlı tezahürat yap, alkışla ve tribün barını yükselt.</p>
+                <p class="feature-desc" data-i18n="feat.f1_desc">Futboldan basketbola canlı maç esnasında binlerce taraftarla eş zamanlı tezahürat yap, alkışla ve tribün barını yükselt.</p>
               </div>
               <div class="feature-icon-circle feature-icon-brand">
                 <i class="fa-solid fa-users"></i>
@@ -419,10 +421,10 @@
             <div class="feature-item reveal delay-2">
               <div class="feature-content">
                 <div class="feature-header-row">
-                  <h3 class="feature-title">Taraftarın 11'i & Kadrolar</h3>
+                  <h3 class="feature-title" data-i18n="feat.f2_title">Taraftarın 11'i &amp; Kadrolar</h3>
                   <span class="pitch-badge">4-3-3 Taktik</span>
                 </div>
-                <p class="feature-desc">Saha ve salon üzerinde ideal kadronu ve taktiğini oluştur, oylamaya sunarak XP ve Sadakat Puanı (SP) kazan.</p>
+                <p class="feature-desc" data-i18n="feat.f2_desc">Saha ve salon üzerinde ideal kadronu ve taktiğini oluştur, oylamaya sunarak XP ve Sadakat Puanı (SP) kazan.</p>
               </div>
               <div class="feature-icon-circle feature-icon-blue">
                 <i class="fa-solid fa-futbol"></i>
@@ -432,9 +434,9 @@
             <div class="feature-item reveal delay-3">
               <div class="feature-content">
                 <div class="feature-header-row">
-                  <h3 class="feature-title">Canlı Mikro-Tahminler</h3>
+                  <h3 class="feature-title" data-i18n="feat.f3_title">Canlı Mikro-Tahminler</h3>
                 </div>
-                <p class="feature-desc">Maç anında ekrana düşen 'Frikik gol olur mu?', 'Üçlük girer mi?' gibi anlık canlı görevleri bildikçe ödülleri topla.</p>
+                <p class="feature-desc" data-i18n="feat.f3_desc">Maç anında ekrana düşen 'Frikik gol olur mu?', 'Üçlük girer mi?' gibi anlık canlı görevleri bildikçe ödülleri topla.</p>
               </div>
               <div class="feature-icon-circle feature-icon-purple">
                 <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -449,7 +451,7 @@
             <div class="phone-frame animate-float">
               <div class="phone-notch"></div>
               <div class="phone-screen">
-                <img src="public/hero-mockup.png" alt="Taraftaro Uygulama Ekranı" loading="lazy" />
+                <img src="public/hero-mockup.png" data-i18n-alt="feat.phone_alt" alt="Taraftaro Uygulama Ekranı" loading="lazy" />
               </div>
             </div>
           </div>
@@ -463,9 +465,9 @@
               </div>
               <div class="feature-content">
                 <div class="feature-header-row">
-                  <h3 class="feature-title">Taraftar İndeksi & Barometre</h3>
+                  <h3 class="feature-title" data-i18n="feat.f4_title">Taraftar İndeksi &amp; Barometre</h3>
                 </div>
-                <p class="feature-desc">Maç sonu oyuncuları ve teknik heyeti 1-10 arası puanla, taraftar kamuoyunu kulübün ve medyanın referansına dönüştür.</p>
+                <p class="feature-desc" data-i18n="feat.f4_desc">Maç sonu oyuncuları ve teknik heyeti 1-10 arası puanla, taraftar kamuoyunu kulübün ve medyanın referansına dönüştür.</p>
               </div>
             </div>
 
@@ -475,10 +477,10 @@
               </div>
               <div class="feature-content">
                 <div class="feature-header-row">
-                  <h3 class="feature-title">Kulübe Özel Güvenli Akış</h3>
-                  <span class="identity-tag tag-clean"><i class="fa-solid fa-shield-cat"></i> Safe Space</span>
+                  <h3 class="feature-title" data-i18n="feat.f5_title">Kulübe Özel Güvenli Akış</h3>
+                  <span class="identity-tag tag-clean"><i class="fa-solid fa-shield-cat"></i> <span data-i18n="feat.f5_tag">Safe Space</span></span>
                 </div>
-                <p class="feature-desc">Trol ve botlardan arındırılmış, sadece kendi kulübünün haberleri ve doğrulanmış renktaşlarıyla seviyeli taraftar alanı.</p>
+                <p class="feature-desc" data-i18n="feat.f5_desc">Trol ve botlardan arındırılmış, sadece kendi kulübünün haberleri ve doğrulanmış renktaşlarıyla seviyeli taraftar alanı.</p>
               </div>
             </div>
 
@@ -488,10 +490,10 @@
               </div>
               <div class="feature-content">
                 <div class="feature-header-row">
-                  <h3 class="feature-title">Doğrulanmış Kulüp Anketleri</h3>
-                  <span class="identity-tag tag-verified"><i class="fa-solid fa-circle-check"></i> Doğrulanmış</span>
+                  <h3 class="feature-title" data-i18n="feat.f6_title">Doğrulanmış Kulüp Anketleri</h3>
+                  <span class="identity-tag tag-verified"><i class="fa-solid fa-circle-check"></i> <span data-i18n="feat.f6_tag">Doğrulanmış</span></span>
                 </div>
-                <p class="feature-desc">Forma, transfer ve yönetim kararlarında rakip taraftarların sabote edemediği, sadece gerçek taraftarların oy hakkı olduğu altyapı.</p>
+                <p class="feature-desc" data-i18n="feat.f6_desc">Forma, transfer ve yönetim kararlarında rakip taraftarların sabote edemediği, sadece gerçek taraftarların oy hakkı olduğu altyapı.</p>
               </div>
             </div>
 
@@ -511,9 +513,9 @@
 
         <!-- Section Header -->
         <div class="section-header reveal">
-          <span class="section-label">Uygulama Ekranları</span>
-          <h2 class="section-title">Taraftaro Ekosistemini<br /><span class="gradient-text">Keşfet & Yaşa</span></h2>
-          <p class="section-desc">Tüm branşlarda canlı maç akışı, taraftar indeksi ve mikro-tahmin ekranları parmaklarının ucunda.</p>
+          <span class="section-label" data-i18n="sc.label">Uygulama Ekranları</span>
+          <h2 class="section-title"><span data-i18n="sc.title">Taraftaro Ekosistemini</span><br /><span class="gradient-text" data-i18n="sc.title_grad">Keşfet &amp; Yaşa</span></h2>
+          <p class="section-desc" data-i18n="sc.desc">Tüm branşlarda canlı maç akışı, taraftar indeksi ve mikro-tahmin ekranları parmaklarının ucunda.</p>
         </div>
 
         <!-- 3D Showcase Stage -->
@@ -528,10 +530,10 @@
           </div>
 
           <!-- Left / Right Nav Buttons -->
-          <button id="showcase-prev" class="coverflow-btn coverflow-btn-prev" type="button" aria-label="Önceki ekran">
+          <button id="showcase-prev" class="coverflow-btn coverflow-btn-prev" type="button" data-i18n-aria="sc.prev_aria" aria-label="Önceki ekran">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
-          <button id="showcase-next" class="coverflow-btn coverflow-btn-next" type="button" aria-label="Sonraki ekran">
+          <button id="showcase-next" class="coverflow-btn coverflow-btn-next" type="button" data-i18n-aria="sc.next_aria" aria-label="Sonraki ekran">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
 
@@ -539,35 +541,35 @@
           <div id="showcase-track" class="showcase-track">
 
             <!-- Slide 0 -->
-            <div class="showcase-slide active" data-index="0" data-caption="Gecikmesiz Canlı Maç Akışı — Canlı skorlar, zaman tüneli olayları ve anlık istatistikler.">
+            <div class="showcase-slide active" data-index="0" data-i18n-caption="sc.slide0_caption" data-caption="Gecikmesiz Canlı Maç Akışı — Canlı skorlar, zaman tüneli olayları ve anlık istatistikler.">
               <div class="screenshot-card">
                 <img src="public/hero-mockup.png" alt="Canlı Maç Akışı Ekranı" loading="lazy" />
               </div>
             </div>
 
             <!-- Slide 1 -->
-            <div class="showcase-slide next" data-index="1" data-caption="Taraftar İndeksi & Notlama Karnesi — Maç sonu oyuncuları ve teknik heyeti değerlendir.">
+            <div class="showcase-slide next" data-index="1" data-i18n-caption="sc.slide1_caption" data-caption="Taraftar İndeksi &amp; Notlama Karnesi — Maç sonu oyuncuları ve teknik heyeti değerlendir.">
               <div class="screenshot-card">
                 <img src="public/app-screen.png" alt="Taraftar İndeksi Ekranı" loading="lazy" />
               </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="showcase-slide far-next" data-index="2" data-caption="Taraftarın 11'i & Taktik Diziliş — Saha ve salon üzerinde kendi kadronu kur ve paylaş.">
+            <div class="showcase-slide far-next" data-index="2" data-i18n-caption="sc.slide2_caption" data-caption="Taraftarın 11'i &amp; Taktik Diziliş — Saha ve salon üzerinde kendi kadronu kur ve paylaş.">
               <div class="screenshot-card">
                 <img src="public/showcase-mockup.png" alt="Taraftarın 11i Ekranı" loading="lazy" />
               </div>
             </div>
 
             <!-- Slide 3 -->
-            <div class="showcase-slide far-prev" data-index="3" data-caption="Dijital Tribün Coşkusu — Gol, smaç ve kritik anlarda binlerce taraftarla eş zamanlı alkışla.">
+            <div class="showcase-slide far-prev" data-index="3" data-i18n-caption="sc.slide3_caption" data-caption="Dijital Tribün Coşkusu — Gol, smaç ve kritik anlarda binlerce taraftarla eş zamanlı alkışla.">
               <div class="screenshot-card">
                 <img src="public/hero-mockup.png" alt="Dijital Tribün Ekranı" loading="lazy" />
               </div>
             </div>
 
             <!-- Slide 4 -->
-            <div class="showcase-slide prev" data-index="4" data-caption="Safe Space & Doğrulanmış Anketler — Bot ve trollerden arındırılmış kulübe özel alan.">
+            <div class="showcase-slide prev" data-index="4" data-i18n-caption="sc.slide4_caption" data-caption="Safe Space &amp; Doğrulanmış Anketler — Bot ve trollerden arındırılmış kulübe özel alan.">
               <div class="screenshot-card">
                 <img src="public/showcase-mockup.png" alt="Safe Space Ekranı" loading="lazy" />
               </div>
@@ -579,12 +581,12 @@
 
         <!-- Dynamic Caption Box & Modern Pagination Dots -->
         <div id="coverflow-caption" class="coverflow-caption-box reveal delay-2">
-          <div class="showcase-dots" role="tablist" aria-label="Ekran navigasyonu">
-            <button class="showcase-dot active" data-index="0" type="button" aria-label="Canlı Maç Akışı"></button>
-            <button class="showcase-dot" data-index="1" type="button" aria-label="Taraftar İndeksi"></button>
-            <button class="showcase-dot" data-index="2" type="button" aria-label="Taraftarın 11i"></button>
-            <button class="showcase-dot" data-index="3" type="button" aria-label="Dijital Tribün"></button>
-            <button class="showcase-dot" data-index="4" type="button" aria-label="Safe Space"></button>
+          <div class="showcase-dots" role="tablist" data-i18n-aria="sc.dots_aria" aria-label="Ekran navigasyonu">
+            <button class="showcase-dot active" data-index="0" type="button" data-i18n-aria="sc.dot0_aria" aria-label="Canlı Maç Akışı"></button>
+            <button class="showcase-dot" data-index="1" type="button" data-i18n-aria="sc.dot1_aria" aria-label="Taraftar İndeksi"></button>
+            <button class="showcase-dot" data-index="2" type="button" data-i18n-aria="sc.dot2_aria" aria-label="Taraftarın 11i"></button>
+            <button class="showcase-dot" data-index="3" type="button" data-i18n-aria="sc.dot3_aria" aria-label="Dijital Tribün"></button>
+            <button class="showcase-dot" data-index="4" type="button" data-i18n-aria="sc.dot4_aria" aria-label="Safe Space"></button>
           </div>
           <div class="caption-pill"><i class="fa-solid fa-sparkles"></i> <span id="caption-text">Gecikmesiz Canlı Maç Akışı — Canlı skorlar, zaman tüneli olayları ve anlık istatistikler.</span></div>
         </div>
@@ -600,19 +602,19 @@
       <div class="container">
 
         <div class="section-header reveal">
-          <span class="section-label">Merak Edilenler</span>
-          <h2 class="section-title">Sıkça Sorulan<br /><span class="gradient-text">Sorular</span></h2>
+          <span class="section-label" data-i18n="faq.label">Merak Edilenler</span>
+          <h2 class="section-title"><span data-i18n="faq.title">Sıkça Sorulan</span><br /><span class="gradient-text" data-i18n="faq.title_grad">Sorular</span></h2>
         </div>
 
         <div class="faq-grid" role="list">
 
           <div class="faq-item reveal delay-1" role="listitem">
             <button class="faq-btn" type="button" aria-expanded="false">
-              <span class="faq-question">Taraftaro sadece futbol için mi?</span>
+              <span class="faq-question" data-i18n="faq.q1">Taraftaro sadece futbol için mi?</span>
               <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
             </button>
             <div class="faq-answer" role="region">
-              <p class="faq-answer-inner">
+              <p class="faq-answer-inner" data-i18n="faq.a1">
                 Hayır! Taraftaro kulüplerin tüm branşlarını (Futbol, Basketbol, Voleybol vb.) ve altyapı akademilerini tek bir dijital taraftar kimliğinde birleştiren bütünsel bir spor platformudur.
               </p>
             </div>
@@ -620,11 +622,11 @@
 
           <div class="faq-item reveal delay-2" role="listitem">
             <button class="faq-btn" type="button" aria-expanded="false">
-              <span class="faq-question">Uygulamayı kullanmak için kayıt şart mı?</span>
+              <span class="faq-question" data-i18n="faq.q2">Uygulamayı kullanmak için kayıt şart mı?</span>
               <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
             </button>
             <div class="faq-answer" role="region">
-              <p class="faq-answer-inner">
+              <p class="faq-answer-inner" data-i18n="faq.a2">
                 Hayır! Kayıtsız Giriş modu sayesinde hiçbir form doldurmadan anında uygulamayı açabilir, maç skoru takip edebilir, canlı sohbete katılabilir ve tahmin yapabilirsin. Puanların cihazına tanımlanır, dilediğinde ücretsiz hesabına aktarılır.
               </p>
             </div>
@@ -632,11 +634,11 @@
 
           <div class="faq-item reveal delay-3" role="listitem">
             <button class="faq-btn" type="button" aria-expanded="false">
-              <span class="faq-question">Dijital Tribün'de canlı tepki nasıl verilir?</span>
+              <span class="faq-question" data-i18n="faq.q3">Dijital Tribün'de canlı tepki nasıl verilir?</span>
               <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
             </button>
             <div class="faq-answer" role="region">
-              <p class="faq-answer-inner">
+              <p class="faq-answer-inner" data-i18n="faq.a3">
                 Canlı maç anında tezahürat, alkış ve ıslık butonlarıyla tüm taraftarlar aynı anda reaksiyon verir. Tribün gücü barı canlı olarak yükselir ve combo patlamaları oluşur.
               </p>
             </div>
@@ -644,11 +646,11 @@
 
           <div class="faq-item reveal delay-1" role="listitem">
             <button class="faq-btn" type="button" aria-expanded="false">
-              <span class="faq-question">Taraftar İndeksi spor medyasında nasıl kullanılıyor?</span>
+              <span class="faq-question" data-i18n="faq.q4">Taraftar İndeksi spor medyasında nasıl kullanılıyor?</span>
               <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
             </button>
             <div class="faq-answer" role="region">
-              <p class="faq-answer-inner">
+              <p class="faq-answer-inner" data-i18n="faq.a4">
                 Maç sonlarında taraftarların verdiği oyuncu puanları ve teknik direktör güven oranları toplanarak kulübün gerçek nabzı ölçülür; spor yorumcuları ve TV yayınları için resmi referans veri oluşturur.
               </p>
             </div>
@@ -656,11 +658,11 @@
 
           <div class="faq-item reveal delay-2" role="listitem">
             <button class="faq-btn" type="button" aria-expanded="false">
-              <span class="faq-question">Rakip troller ve botlar anketleri sabote edebilir mi?</span>
+              <span class="faq-question" data-i18n="faq.q5">Rakip troller ve botlar anketleri sabote edebilir mi?</span>
               <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
             </button>
             <div class="faq-answer" role="region">
-              <p class="faq-answer-inner">
+              <p class="faq-answer-inner" data-i18n="faq.a5">
                 Hayır! Taraftaro'nun doğrulanmış kulüp anket altyapısı sayesinde anketlerde sadece ilgili kulübün aktif ve doğrulanmış taraftarları oy kullanabilir.
               </p>
             </div>
@@ -668,11 +670,11 @@
 
           <div class="faq-item reveal delay-3" role="listitem">
             <button class="faq-btn" type="button" aria-expanded="false">
-              <span class="faq-question">Kazanılan XP ve Sadakat Puanları (SP) ne işe yarar?</span>
+              <span class="faq-question" data-i18n="faq.q6">Kazanılan XP ve Sadakat Puanları (SP) ne işe yarar?</span>
               <div class="faq-icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></div>
             </button>
             <div class="faq-answer" role="region">
-              <p class="faq-answer-inner">
+              <p class="faq-answer-inner" data-i18n="faq.a6">
                 Yaptığın doğru tahminler ve katıldığın anketlerle seviye atlar, profil unvanları ('Maçın Kahini', 'Taktik Dehası') ve kilitli özellik erişimleri (Seviye 5+ Dijital Tribün oda erişimi) kazanırsın.
               </p>
             </div>
@@ -690,27 +692,27 @@
       <div class="container">
 
         <div class="reveal" style="text-align:center;">
-          <span class="section-label">Sıfır Kayıt Zorunluluğu</span>
-          <h2 class="cta-title">
+          <span class="section-label" data-i18n="dl.label">Sıfır Kayıt Zorunluluğu</span>
+          <h2 class="cta-title" data-i18n="dl.title">
             Kulübünün Maç Günlerini Kaçırma.
           </h2>
-          <p class="cta-desc">
+          <p class="cta-desc" data-i18n="dl.desc">
             Misafir girişiyle tek tıkla katılabileceğin kulüp ve taraftar ekosistemi uygulamasını hemen ücretsiz indir.
           </p>
 
           <div class="cta-stores">
-            <a href="#" class="store-btn" aria-label="App Store'dan indir">
+            <a href="#" class="store-btn" data-i18n-aria="dl.appstore_aria" aria-label="App Store'dan indir">
               <span class="store-btn-icon"><i class="fa-brands fa-apple"></i></span>
               <span>
-                <span class="store-btn-sub">App Store'dan</span>
-                <span class="store-btn-name">İndir</span>
+                <span class="store-btn-sub" data-i18n="dl.appstore">App Store'dan</span>
+                <span class="store-btn-name" data-i18n="dl.appstore_btn">İndir</span>
               </span>
             </a>
-            <a href="#" class="store-btn store-btn-brand" aria-label="Google Play'den indir">
+            <a href="#" class="store-btn store-btn-brand" data-i18n-aria="dl.googleplay_aria" aria-label="Google Play'den indir">
               <span class="store-btn-icon"><i class="fa-brands fa-google-play"></i></span>
               <span>
-                <span class="store-btn-sub">Google Play'den</span>
-                <span class="store-btn-name">İndir</span>
+                <span class="store-btn-sub" data-i18n="dl.googleplay">Google Play'den</span>
+                <span class="store-btn-name" data-i18n="dl.googleplay_btn">İndir</span>
               </span>
             </a>
           </div>
@@ -729,8 +731,8 @@
 
           <!-- Left Column: Side Header -->
           <div class="contact-side-header">
-            <h2 class="section-title">Bize <span class="gradient-text">Ulaşın</span></h2>
-            <p class="section-desc">Sorularınız, iş birliği teklifleriniz veya geri bildirimleriniz için doğrudan mesajınızı iletin.</p>
+            <h2 class="section-title"><span data-i18n="ct.title">Bize</span> <span class="gradient-text" data-i18n="ct.title_grad">Ulaşın</span></h2>
+            <p class="section-desc" data-i18n="ct.desc">Sorularınız, iş birliği teklifleriniz veya geri bildirimleriniz için doğrudan mesajınızı iletin.</p>
             <div class="contact-direct-email">
               <i class="fa-solid fa-envelope"></i>
               <a href="mailto:info@taraftaro.com">info@taraftaro.com</a>
@@ -742,33 +744,33 @@
 
             <div class="contact-form-row">
               <div class="contact-field">
-                <label class="contact-label" for="contact-name">Ad Soyad</label>
-                <input class="contact-input" type="text" id="contact-name" name="name" placeholder="Ahmet Yılmaz" required />
+                <label class="contact-label" for="contact-name" data-i18n="ct.label_name">Ad Soyad</label>
+                <input class="contact-input" type="text" id="contact-name" name="name" data-i18n-ph="ct.ph_name" placeholder="Ahmet Yılmaz" required />
               </div>
               <div class="contact-field">
-                <label class="contact-label" for="contact-email">E-posta</label>
-                <input class="contact-input" type="email" id="contact-email" name="email" placeholder="ahmet@email.com" required />
+                <label class="contact-label" for="contact-email" data-i18n="ct.label_email">E-posta</label>
+                <input class="contact-input" type="email" id="contact-email" name="email" data-i18n-ph="ct.ph_email" placeholder="ahmet@email.com" required />
               </div>
             </div>
 
             <div class="contact-field">
-              <label class="contact-label" for="contact-subject">Konu</label>
-              <input class="contact-input" type="text" id="contact-subject" name="subject" placeholder="Nasıl yardımcı olabiliriz?" />
+              <label class="contact-label" for="contact-subject" data-i18n="ct.label_subject">Konu</label>
+              <input class="contact-input" type="text" id="contact-subject" name="subject" data-i18n-ph="ct.ph_subject" placeholder="Nasıl yardımcı olabiliriz?" />
             </div>
 
             <div class="contact-field">
-              <label class="contact-label" for="contact-message">Mesajınız</label>
-              <textarea class="contact-input contact-textarea" id="contact-message" name="message" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
+              <label class="contact-label" for="contact-message" data-i18n="ct.label_msg">Mesajınız</label>
+              <textarea class="contact-input contact-textarea" id="contact-message" name="message" rows="4" data-i18n-ph="ct.ph_msg" placeholder="Mesajınızı buraya yazın..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg btn-full">
               <i class="fa-solid fa-paper-plane"></i>
-              Mesajı Gönder
+              <span data-i18n="ct.submit">Mesajı Gönder</span>
             </button>
 
             <p id="contact-success" class="contact-success" style="display:none;">
               <i class="fa-solid fa-circle-check"></i>
-              Mesajınız alındı, en kısa sürede geri döneceğiz.
+              <span data-i18n="ct.success">Mesajınız alındı, en kısa sürede geri döneceğiz.</span>
             </p>
 
           </form>
@@ -795,10 +797,10 @@
         <!-- Top: Brand + Tagline + Socials -->
         <div class="footer-top">
           <div class="footer-brand">
-            <a href="#" class="footer-brand-name" aria-label="Taraftaro ana sayfa">
+            <a href="#" class="footer-brand-name" data-i18n-aria="ft.logo_aria" aria-label="Taraftaro ana sayfa">
               TARAFTAR<span>O</span>
             </a>
-            <p class="footer-tagline">
+            <p class="footer-tagline" data-i18n="ft.tagline">
               Kulüp ve taraftar arasındaki dijital köprü.<br />Dijital tribünde yerini al.
             </p>
             <div class="footer-socials">
@@ -818,39 +820,54 @@
           </div>
 
           <!-- Nav columns -->
-          <nav class="footer-nav" aria-label="Footer navigasyonu">
+          <nav class="footer-nav" data-i18n-aria="ft.nav_aria" aria-label="Footer navigasyonu">
 
             <div class="footer-nav-col">
-              <p class="footer-nav-title">Uygulama</p>
+              <p class="footer-nav-title" data-i18n="ft.col_app">Uygulama</p>
               <ul>
-                <li><a href="#comparison">Neden Biz?</a></li>
-                <li><a href="#how-it-works">Nasıl Çalışır?</a></li>
-                <li><a href="#features">Özellikler</a></li>
-                <li><a href="#showcase">Ekranlar</a></li>
-                <li><a href="#download">İndir</a></li>
+                <li><a href="#comparison" data-i18n="ft.app_why">Neden Biz?</a></li>
+                <li><a href="#how-it-works" data-i18n="ft.app_how">Nasıl Çalışır?</a></li>
+                <li><a href="#features" data-i18n="ft.app_feat">Özellikler</a></li>
+                <li><a href="#showcase" data-i18n="ft.app_screens">Ekranlar</a></li>
+                <li><a href="#download" data-i18n="ft.app_dl">İndir</a></li>
               </ul>
             </div>
 
             <div class="footer-nav-col">
-              <p class="footer-nav-title">Destek</p>
+              <p class="footer-nav-title" data-i18n="ft.col_support">Destek</p>
               <ul>
-                <li><a href="#faq">S.S.S.</a></li>
-                <li><a href="#contact">İletişim</a></li>
-                <li><a href="mailto:info@taraftaro.com">E-posta</a></li>
+                <li><a href="#faq" data-i18n="ft.sup_faq">S.S.S.</a></li>
+                <li><a href="#contact" data-i18n="ft.sup_contact">İletişim</a></li>
+                <li><a href="mailto:info@taraftaro.com" data-i18n="ft.sup_email">E-posta</a></li>
               </ul>
             </div>
 
             <div class="footer-nav-col">
-              <p class="footer-nav-title">Yasal</p>
+              <p class="footer-nav-title" data-i18n="ft.col_legal">Yasal</p>
               <ul>
-                <li><a href="privacy.html">Gizlilik Politikası</a></li>
-                <li><a href="terms.html">Kullanım Şartları</a></li>
+                <li><a href="privacy.html" data-i18n="ft.privacy">Gizlilik Politikası</a></li>
+                <li><a href="terms.html" data-i18n="ft.terms">Kullanım Şartları</a></li>
                 <li><a href="https://2zek.com" target="_blank" rel="noopener">2zek</a></li>
               </ul>
             </div>
 
           </nav>
         </div>
+
+        <!-- Language Switcher -->
+        <div class="footer-lang-row">
+          <div class="lang-switcher" role="group" aria-label="Language / Dil">
+            <button class="lang-btn active" data-lang="tr" aria-pressed="true">
+              <span class="lang-flag">🇹🇷</span>
+              <span data-i18n="lang.tr">Türkçe</span>
+            </button>
+            <button class="lang-btn" data-lang="en" aria-pressed="false">
+              <span class="lang-flag">🇬🇧</span>
+              <span data-i18n="lang.en">English</span>
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -858,8 +875,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p>
-          &copy; <span id="year"></span> <a href="https://2zek.com" target="_blank" rel="noopener">2zek</a> tarafından geliştirildi.
-          Tüm hakları saklıdır.
+          &copy; <span id="year"></span> <a href="https://2zek.com" target="_blank" rel="noopener">2zek</a> <span data-i18n="ft.copyright">tarafından geliştirildi. Tüm hakları saklıdır.</span>
         </p>
       </div>
     </div>
@@ -867,6 +883,7 @@
   </footer>
 
   <!-- JS -->
+  <script src="public/js/i18n.js" defer></script>
   <script src="public/js/app.js" defer></script>
 
 </body>
