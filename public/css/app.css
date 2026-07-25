@@ -1915,8 +1915,6 @@ a { color: inherit; }
   gap: 0.75rem;
   font-size: 1rem;
   color: var(--c-text-secondary);
-  text-decoration: none;
-  transition: color 0.2s;
 }
 .footer-contact-item i {
   font-size: 1rem;
@@ -1925,9 +1923,15 @@ a { color: inherit; }
   width: 1.25rem;
   text-align: center;
 }
-a.footer-contact-item:hover {
-  color: var(--c-text);
+.footer-contact-item a {
+  color: var(--c-text-secondary);
   text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-contact-item a:hover {
+  color: var(--c-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .footer-contact-static { cursor: default; }
 
@@ -2533,30 +2537,6 @@ a.footer-contact-item:hover {
   padding-top: 1.5rem;
   border-top: 1px solid var(--c-border);
   width: 100%;
-}
-
-.footer-contact-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--c-text-secondary);
-  text-decoration: none;
-  padding: 0.2rem 0.4rem;
-  border-radius: var(--r-full);
-  transition: var(--ease);
-}
-
-.footer-contact-item i {
-  font-size: 0.875rem;
-  color: var(--c-brand);
-  flex-shrink: 0;
-}
-
-a.footer-contact-item:hover {
-  color: var(--c-text);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .footer-contact-static {
