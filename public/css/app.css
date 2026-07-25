@@ -580,10 +580,9 @@ a { color: inherit; }
   margin-inline: auto;
   padding-inline: var(--container-px);
   height: 7.875rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
   transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -592,9 +591,9 @@ a { color: inherit; }
 }
 
 .navbar-logo {
-  flex-shrink: 0;
   display: flex;
   align-items: center;
+  justify-content: center; /* gerçekten ortalanmış */
   text-decoration: none;
 }
 
@@ -643,9 +642,14 @@ a { color: inherit; }
   box-shadow: 0 0 8px var(--c-brand);
 }
 
-.navbar-cta {
-  flex-shrink: 0;
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
 }
+
+.navbar-cta { flex-shrink: 0; }
 
 /* Mobile */
 .navbar-hamburger {
@@ -1347,8 +1351,15 @@ a { color: inherit; }
 @media (max-width: 768px) {
   :root { --section-y: 5rem; }
 
-  .navbar-links,
-  .navbar-cta { display: none; }
+  .navbar-links { display: none; }
+  .navbar-cta   { display: none; }
+
+  /* Mobile'da 2 sütun: logo solda, hamburger sağda */
+  .navbar-inner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .navbar-logo { justify-content: flex-start; }
 
   .navbar-hamburger { display: flex; }
 
