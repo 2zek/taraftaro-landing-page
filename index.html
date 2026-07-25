@@ -724,77 +724,25 @@
     <section id="contact" class="section">
       <div class="container">
 
-        <div class="section-header reveal">
-          <span class="section-label">İletişim</span>
-          <h2 class="section-title">Bize <span class="gradient-text">Ulaşın</span></h2>
-          <p class="section-desc">Sorularınız, iş birliği teklifleriniz veya geri bildirimleriniz için buradayız.</p>
-        </div>
+        <div class="contact-wrapper reveal">
 
-        <div class="contact-grid">
-
-          <!-- Sol: İletişim Bilgileri -->
-          <div class="contact-info reveal delay-1">
-
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div>
-                <div class="contact-info-label">E-posta</div>
-                <a href="mailto:info@taraftaro.com" class="contact-info-value">info@taraftaro.com</a>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fa-solid fa-briefcase"></i>
-              </div>
-              <div>
-                <div class="contact-info-label">İş Birliği</div>
-                <a href="mailto:partners@taraftaro.com" class="contact-info-value">partners@taraftaro.com</a>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fa-solid fa-globe"></i>
-              </div>
-              <div>
-                <div class="contact-info-label">Web</div>
-                <a href="https://taraftaro.com" class="contact-info-value">taraftaro.com</a>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fa-solid fa-building"></i>
-              </div>
-              <div>
-                <div class="contact-info-label">Şirket</div>
-                <span class="contact-info-value">2zek &mdash; İstanbul, Türkiye</span>
-              </div>
-            </div>
-
-            <!-- Sosyal linkler -->
-            <div class="contact-socials">
-              <a href="https://instagram.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a href="https://youtube.com/@taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-              </a>
-              <a href="https://tiktok.com/@taraftaro" class="footer-social-link" target="_blank" rel="noopener" aria-label="TikTok">
-                <i class="fa-brands fa-tiktok"></i>
-              </a>
-              <a href="https://x.com/taraftarocom" class="footer-social-link" target="_blank" rel="noopener" aria-label="X">
-                <i class="fa-brands fa-x-twitter"></i>
-              </a>
-            </div>
-
+          <!-- Section Header -->
+          <div class="contact-header">
+            <span class="section-label">İletişim</span>
+            <h2 class="section-title">Bize <span class="gradient-text">Ulaşın</span></h2>
+            <p class="section-desc">Sorularınız, iş birliği teklifleriniz veya geri bildirimleriniz için doğrudan mesajınızı iletin.</p>
           </div>
 
-          <!-- Sağ: Form -->
-          <form id="contact-form" class="contact-form reveal delay-2" novalidate>
+          <!-- Direct Email Badge -->
+          <div class="contact-pills">
+            <a href="mailto:info@taraftaro.com" class="contact-pill">
+              <i class="fa-solid fa-envelope"></i>
+              <span><strong>info@taraftaro.com</strong></span>
+            </a>
+          </div>
+
+          <!-- Clean Centered Contact Form -->
+          <form id="contact-form" class="contact-form" novalidate>
 
             <div class="contact-form-row">
               <div class="contact-field">
@@ -813,13 +761,13 @@
             </div>
 
             <div class="contact-field">
-              <label class="contact-label" for="contact-message">Mesaj</label>
-              <textarea class="contact-input contact-textarea" id="contact-message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+              <label class="contact-label" for="contact-message">Mesajınız</label>
+              <textarea class="contact-input contact-textarea" id="contact-message" name="message" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary btn-lg btn-full">
               <i class="fa-solid fa-paper-plane"></i>
-              Gönder
+              Mesajı Gönder
             </button>
 
             <p id="contact-success" class="contact-success" style="display:none;">
