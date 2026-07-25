@@ -1833,6 +1833,12 @@ a { color: inherit; }
   align-items: start;
 }
 
+.footer-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .footer-nav-group ul {
   list-style: none;
   display: flex;
@@ -1846,7 +1852,7 @@ a { color: inherit; }
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--c-text-muted);
-  margin-bottom: 1.75rem;
+  margin-bottom: 0;
 }
 
 .footer-col-nav a,
@@ -1868,15 +1874,15 @@ a { color: inherit; }
 .footer-col-contact {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .footer-contact-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
-  margin-bottom: 0.5rem;
+  gap: 0.875rem;
+  margin-bottom: 0;
 }
 
 .footer-contact-item {
@@ -2602,8 +2608,8 @@ a.footer-contact-item:hover {
 
 a.footer-contact-item:hover {
   color: var(--c-text);
-  background: rgba(255, 255, 255, 0.05);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .footer-contact-static {
@@ -2648,8 +2654,10 @@ a.footer-contact-item:hover {
 .lang-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  padding: 0.35rem 0.85rem;
+  padding: 0.4rem 1rem;
+  min-width: 6rem;
   border-radius: var(--r-full);
   border: none;
   background: transparent;
