@@ -1818,20 +1818,20 @@ a { color: inherit; }
 }
 
 .footer-socials-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
   color: var(--c-text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 1.5rem;
-  margin-bottom: 0;
+  letter-spacing: 0.12em;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
 }
 
 .footer-socials {
   display: flex;
   gap: 1.25rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .footer-social-link {
