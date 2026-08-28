@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Kullanıcı Sözleşmesi — Taraftaro</title>
-    <meta name="description" content="Taraftaro Kullanıcı Üyelik ve Hizmet Sözleşmesi." />
+    <title>Kullanıcı Üyelik ve Hizmet Sözleşmesi — Taraftaro</title>
+    <meta name="description" content="Taraftaro Kullanıcı Üyelik ve Hizmet Sözleşmesi, Yer Sağlayıcı Bildirimi ve Topluluk Kuralları." />
     
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,7 @@
         padding-block: 3rem;
       }
       .legal-container {
-        max-width: 52rem;
+        max-width: 54rem;
         margin-inline: auto;
         padding-inline: 1.5rem;
       }
@@ -78,6 +78,18 @@
       .legal-content strong {
         color: var(--c-text);
       }
+      .alert-box {
+        background-color: rgba(249, 115, 22, 0.08);
+        border: 1px solid rgba(249, 115, 22, 0.25);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-block: 1.5rem;
+      }
+      .alert-box p {
+        margin-bottom: 0;
+        color: var(--c-text);
+        font-size: 0.925rem;
+      }
       .legal-footer {
         margin-top: 3.5rem;
         padding-top: 1.5rem;
@@ -86,7 +98,6 @@
         color: var(--c-text-muted);
         text-align: center;
       }
-      /* Hide navigation header in webview mode */
       body.is-webview .legal-back-btn {
         display: none;
       }
@@ -99,43 +110,80 @@
           <i class="fa-solid fa-arrow-left"></i>
           <span>Ana Sayfaya Dön</span>
         </a>
-        <h1 class="legal-title">Kullanıcı Üyelik Sözleşmesi</h1>
-        <p class="legal-updated">Son Güncelleme: 26 Temmuz 2026</p>
+        <h1 class="legal-title">Kullanıcı Üyelik ve Hizmet Sözleşmesi</h1>
+        <p class="legal-updated">Son Güncelleme: 28 Ağustos 2026</p>
       </header>
 
       <article class="legal-content">
-        <h2>1. Taraflar ve Amaç</h2>
+        <h2>1. Taraflar ve Sözleşmenin Kapsamı</h2>
         <p>
-          İşbu Kullanıcı Üyelik Sözleşmesi ("Sözleşme"), Taraftaro dijital platformu ile platforma üye olan veya platform hizmetlerinden yararlanan gerçek kişi kullanıcı arasında akdedilmiştir.
+          İşbu Kullanıcı Üyelik ve Hizmet Sözleşmesi ("Sözleşme"), <strong>Taraftaro</strong> ("Platform", "Şirket") ile mobil uygulama veya web sitesi üzerinden kayıt olan gerçek kişi ("Kullanıcı", "Üye", "Taraftar") arasında akdedilmiştir.
         </p>
 
-        <h2>2. Sözleşmenin Konusu</h2>
-        <p>
-          İşbu Sözleşme, kullanıcının Taraftaro mobil uygulaması ve web platformu üzerinde sunulan dijital tribün, canlı etkileşim, spor varlık odaklı tartışma (Topics) ve puan/rozet hizmetlerinden yararlanma şartlarını ve tarafların karşılıklı hak ve yükümlülüklerini düzenler.
-        </p>
+        <div class="alert-box">
+          <p><strong>🏛️ 5651 Sayılı Kanun Uyarınca Yer Sağlayıcı Bildirimi:</strong> Taraftaro, 5651 sayılı "İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanun" kapsamında <strong>Yer Sağlayıcı (Hosting Provider)</strong> statüsündedir. Kullanıcıların platformda paylaştığı içeriklerin hukuka uygunluğunu önceden denetleme yükümlülüğü bulunmamaktadır. Taraftaro, "Uyar-Kaldır" (Notice and Take Down) prensibiyle çalışmakta olup, telif veya kişilik hakkı ihlali bildirimleri <a href="mailto:info@taraftaro.com" style="color: var(--c-brand); font-weight: 700;">info@taraftaro.com</a> üzerinden derhal işleme alınır.</p>
+        </div>
+
+        <h2>2. Hizmet Tanımı ve Taraftar Deneyimi</h2>
+        <p>Taraftaro, spor severlerin kendi renktaşlarıyla buluştuğu, kulüplerine destek verdiği ve dijital tribün heyecanını yaşadığı sosyal bir spor platformudur. Sunulan temel hizmetler:</p>
+        <ul>
+          <li>Desteklenen spor kulübüne göre kişiselleştirilmiş kulüp temaları (ClubTheme),</li>
+          <li>Canlı maç anında dijital tribün reaksiyonları, tezahüratlar ve taraftar nabzı,</li>
+          <li>Resmi fikstür, canlı skorlar, maç kadroları ve hakem istatistikleri,</li>
+          <li>Taraftar kadro kurma sistemi ve topluluk oylamaları,</li>
+          <li>Doğrulanmış taraftar topluluğu tartışmaları (Topics) ve oyunlaştırılmış mikro-tahminler.</li>
+        </ul>
 
         <h2>3. Kullanıcının Hak ve Yükümlülükleri</h2>
         <ul>
-          <li>Kullanıcı, üyelik oluştururken verdiği bilgilerin doğru ve kendisine ait olduğunu taahhüt eder.</li>
-          <li>Kullanıcı, kulüpler, oyuncular, hakemler ve diğer taraftarlar hakkında paylaşımda bulunurken topluluk kurallarına ve genel ahlak ilkelerine uymayı kabul eder.</li>
-          <li>Kullanıcı hesabının yetkisiz üçüncü kişilerce kullanımından doğan sorumluluk kullanıcıya aittir.</li>
+          <li><strong>Doğru Bilgi Beyanı:</strong> Üye olurken girilen e-posta ve kimlik bilgilerinin doğru ve güncel olması zorunludur.</li>
+          <li><strong>Hesap Güvenliği:</strong> Kullanıcı, şifresinin gizliliğinden ve hesabından yapılan tüm eylemlerden bizzat sorumludur.</li>
+          <li><strong>Kişisel ve Ticari Olmayan Kullanım:</strong> Hesaplar bireysel kullanım içindir; üçüncü kişilere devredilemez, satılamaz veya kiralanamaz.</li>
+          <li><strong>Yaş Sınırı:</strong> Platform 13 yaşından büyük kullanıcılar içindir.</li>
         </ul>
 
-        <h2>4. Platformun Hak ve Yükümlülükleri</h2>
+        <h2>4. Yasaklı Eylemler ve İçerik Standartları</h2>
+        <p>Aşağıdaki faaliyetler kesinlikle yasaktır ve tespit edildiğinde hesabın derhal kalıcı olarak kapatılmasına yol açar:</p>
         <ul>
-          <li>Taraftaro, platformun kesintisiz ve güvenli şekilde çalışması için gerekli teknik tedbirleri alır.</li>
-          <li>Taraftaro, topluluk kurallarını ihlal eden, nefret söyleminde bulunan veya manipülasyon yapan hesapları uyarma, askıya alma veya kalıcı olarak kapatma hakkına sahiptir.</li>
-          <li>Taraftaro, platform hizmetlerini ve arayüz özelliklerini önceden haber vermeksizin geliştirme veya değiştirme hakkını saklı tutar.</li>
+          <li>Spor ahlakına aykırı, şiddeti ve holiganizmi teşvik eden paylaşımlar yapmak,</li>
+          <li>Kulüplere, sporculara, hakemlere veya diğer üyelere yönelik küfür, hakaret, tehdit, taciz ve ayrımcılık içeren ifadeler,</li>
+          <li>Yasa dışı bahis, kumar reklamı veya yönlendirmesi yapmak, kupon satışı vaadinde bulunmak,</li>
+          <li>Telif hakkı içeren maç yayın linkleri (IPTV, kaçak yayın vb.) paylaşmak veya dağıtmak,</li>
+          <li>Platform güvenliğini tehdit eden bot, crawler veya manipülatif scriptler çalıştırmak.</li>
         </ul>
 
-        <h2>5. Uyuşmazlıkların Çözümü</h2>
+        <h2>5. Oyunlaştırma, Ödüller, XP ve TOT Puanları</h2>
         <p>
-          İşbu Sözleşme'den doğabilecek her türlü uyuşmazlığın çözümünde Türk Hukuku uygulanacak olup İstanbul Mahkemeleri ve İcra Daireleri yetkilidir.
+          Platformda kazanılan Deneyim Puanları (XP), Rozetler ve Taraftaro Puanları (TOT); yalnızca platform içi seviye atlama, taraftar liderliği ve dijital koleksiyonlar için kullanılan sanal itibar öğeleridir.
+        </p>
+        <ul>
+          <li>Bu puanların <strong>hiçbir maddi/parasal karşılığı yoktur</strong>.</li>
+          <li>Gerçek paraya dönüştürülemez, satılamaz veya platform dışına transfer edilemez.</li>
+          <li>Taraftaro, oyunlaştırma kurallarını ve puanlama katsayılarını dilediği zaman güncelleme hakkını saklı tutar.</li>
+        </ul>
+
+        <h2>6. Fikri Mülkiyet ve Marka Hakları</h2>
+        <p>
+          Taraftaro'nun tüm yazılım kodları, arayüz tasarımları ve özgün marka varlıkları Taraftaro'ya aittir. Platformda yer alan kulüp logoları ve lig unvanları yalnızca bilgilendirme ve taraftar etkileşimi (Fair Use) amaçlıdır; ilgili kurumların tescilli mülkiyetindedir.
         </p>
 
-        <h2>6. Yürürlük</h2>
+        <h2>7. Sözleşmenin Feshi ve Hesap Kapatma</h2>
         <p>
-          Kullanıcının üyelik kaydını tamamlaması veya platformu kullanmaya başlaması, işbu Sözleşme'deki tüm maddeleri okuduğu ve kabul ettiği anlamına gelir.
+          Kullanıcı, dilediği zaman uygulama içi ayarlardan (<code>Profil &gt; Ayarlar &gt; Hesabımı Sil</code>) hesabını ve tüm verilerini kalıcı olarak silebilir. Taraftaro, kurallara aykırı hareket eden kullanıcıların sözleşmesini tek taraflı olarak feshetme ve erişimini engelleme hakkına sahiptir.
+        </p>
+
+        <h2>8. Uyuşmazlıkların Çözümü ve Yetkili Mahkeme</h2>
+        <p>
+          İşbu Sözleşme'nin yorumlanmasında ve uygulanmasında Türkiye Cumhuriyeti Kanunları geçerlidir. Taraflar arasındaki her türlü uyuşmazlıkta İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri münhasıran yetkilidir.
+        </p>
+
+        <h2>9. İletişim ve Yasal Bildirimler</h2>
+        <p>
+          Sözleşme ve yasal haklarınız ile ilgili her türlü soru ve bildirim için:
+        </p>
+        <p>
+          <strong>Resmi E-posta:</strong> <a href="mailto:info@taraftaro.com" style="color: var(--c-brand); font-weight: 700;">info@taraftaro.com</a><br />
+          <strong>Web Sitesi:</strong> <a href="https://taraftaro.com" style="color: var(--c-brand);">https://taraftaro.com</a>
         </p>
       </article>
 
@@ -145,7 +193,6 @@
     </main>
 
     <script>
-      // Automatically detect WebView mode via query parameter (?mode=webview)
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('mode') === 'webview') {
         document.body.classList.add('is-webview');

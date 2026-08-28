@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Gizlilik Politikası — Taraftaro</title>
-    <meta name="description" content="Taraftaro Gizlilik Politikası ve Kişisel Verilerin Korunması (KVKK/GDPR) Aydınlatma Metni." />
+    <title>Gizlilik Politikası ve KVKK Aydınlatma Metni — Taraftaro</title>
+    <meta name="description" content="Taraftaro Gizlilik Politikası, Çerez ve Kişisel Verilerin Korunması (KVKK/GDPR) Aydınlatma Metni." />
     
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,7 @@
         padding-block: 3rem;
       }
       .legal-container {
-        max-width: 52rem;
+        max-width: 54rem;
         margin-inline: auto;
         padding-inline: 1.5rem;
       }
@@ -63,6 +63,13 @@
         margin-bottom: 0.75rem;
         letter-spacing: -0.01em;
       }
+      .legal-content h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--c-brand);
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
       .legal-content p, .legal-content ul {
         color: var(--c-text-secondary);
         font-size: 0.975rem;
@@ -78,6 +85,18 @@
       .legal-content strong {
         color: var(--c-text);
       }
+      .alert-box {
+        background-color: rgba(249, 115, 22, 0.08);
+        border: 1px solid rgba(249, 115, 22, 0.25);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-block: 1.5rem;
+      }
+      .alert-box p {
+        margin-bottom: 0;
+        color: var(--c-text);
+        font-size: 0.925rem;
+      }
       .legal-footer {
         margin-top: 3.5rem;
         padding-top: 1.5rem;
@@ -86,7 +105,6 @@
         color: var(--c-text-muted);
         text-align: center;
       }
-      /* Hide navigation header in webview mode */
       body.is-webview .legal-back-btn {
         display: none;
       }
@@ -99,59 +117,99 @@
           <i class="fa-solid fa-arrow-left"></i>
           <span>Ana Sayfaya Dön</span>
         </a>
-        <h1 class="legal-title">Gizlilik Politikası</h1>
-        <p class="legal-updated">Son Güncelleme: 26 Temmuz 2026</p>
+        <h1 class="legal-title">Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
+        <p class="legal-updated">Son Güncelleme: 28 Ağustos 2026</p>
       </header>
 
       <article class="legal-content">
-        <h2>1. Giriş ve Genel İlkeler</h2>
+        <h2>1. Giriş ve Veri Sorumlusu</h2>
         <p>
-          Taraftaro ("Şirket", "Platform", "Biz") olarak, kullanıcılarımızın ("Kullanıcı", "Siz") kişisel verilerinin korunmasına ve gizliliğine azami önem veriyoruz. Bu Gizlilik Politikası, Taraftaro mobil uygulaması ve web sitesi üzerindeki veri işleme faaliyetlerimizi kapsar.
+          <strong>Taraftaro</strong> ("Şirket", "Platform", "Biz") olarak, kullanıcılarımızın ("Kullanıcı", "Siz", "Taraftar") kişisel verilerinin korunmasına, gizliliğine ve güvenliğine en üst düzeyde önem veriyoruz. 
+        </p>
+        <p>
+          İşbu Gizlilik Politikası ve Aydınlatma Metni; 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK"), Avrupa Birliği Genel Veri Koruma Tüzüğü ("GDPR"), Google Play Geliştirici Politikaları ve Apple App Store İnceleme Kılavuzları uyarınca, Taraftaro mobil uygulaması ve web sitesi üzerindeki veri işleme faaliyetlerini açıklamak amacıyla hazırlanmıştır.
         </p>
 
-        <h2>2. Toplanan Veriler</h2>
-        <p>Hizmetlerimizi sunabilmek amacıyla aşağıdaki verileri işleyebiliriz:</p>
+        <div class="alert-box">
+          <p><strong>🛡️ Fikri Mülkiyet ve Spor Verileri Feragatnamesi:</strong> Taraftaro, bağımsız bir taraftar topluluğu ve etkileşim platformudur. Platformda yer alan tüm kulüp logoları, takım isimleri, stadyum görselleri, lig ve federasyon unvanları (UEFA, FIFA, TFF, Premier League vb.) ilgili hak sahiplerinin mülkiyetindedir. Bu materyaller platformda yalnızca bilgilendirme, haber akışı ve taraftar topluluğu etkileşimi amacıyla adil kullanım (Fair Use) kapsamında yer almakta olup; Taraftaro'nun bu kurum veya kulüplerle herhangi bir resmi sponsorluk, ortaklık veya temsilcilik bağı bulunmamaktadır.</p>
+        </div>
+
+        <h2>2. Toplanan Kişisel Veriler ve Toplanma Yöntemleri</h2>
+        <p>Hizmetlerimizi sizlere kesintisiz sunabilmek amacıyla aşağıdaki veriler işlenmektedir:</p>
         <ul>
-          <li><strong>Hesap ve Kimlik Bilgileri:</strong> Ad Soyad, e-posta adresi, kullanıcı adı ve profil resmi.</li>
-          <li><strong>Kulüp ve Spor Tercihleri:</strong> Desteklenen ana kulüp, takip edilen branşlar ve spor varlıkları.</li>
-          <li><strong>Platform İçi Etkileşimler:</strong> Canlı tribün reaksiyonları, tahminler, oylamalar ve açılan konular (Topics).</li>
-          <li><strong>Cihaz ve Bağlantı Bilgileri:</strong> Cihaz modeli, işletim sistemi sürümü, IP adresi ve uygulama performans logları.</li>
+          <li><strong>Hesap ve Kimlik Bilgileri:</strong> Ad, soyad, e-posta adresi, kullanıcı adı, profil fotoğrafı ve biyografi.</li>
+          <li><strong>Giriş ve Doğrulama Bilgileri:</strong> Şifre (tek yönlü kriptografik hash ile saklanır), e-posta doğrulama durumu veya Sosyal Giriş (Google Sign-In, Apple ID) üzerinden sağlanan temel kimlik belirteçleri.</li>
+          <li><strong>Taraftar ve İlgi Alanı Tercihleri:</strong> Desteklenen ana kulüp, takip edilen branşlar, takımlar, ligler ve oyuncular.</li>
+          <li><strong>Platform İçi Etkileşimler:</strong> Canlı tribün reaksiyonları, maç kadro oylamaları, taraftar tahminleri, anket yanıtları, paylaşılan gönderiler, yorumlar ve beğeniler.</li>
+          <li><strong>Cihaz, Log ve Güvenlik Verileri:</strong> IP adresi, cihaz modeli, işletim sistemi sürümü, uygulama versiyonu, push bildirim token'ı (FCM/APNs), anonim kullanım istatistikleri ve hata raporları.</li>
         </ul>
 
-        <h2>3. Verilerin Kullanım Amaçları</h2>
-        <p>Toplanan kişisel veriler şu amaçlarla kullanılır:</p>
+        <h2>3. Mobil Cihaz İzinleri ve Kullanım Amaçları</h2>
+        <p>Taraftaro mobil uygulaması belirli özellikleri sunabilmek için cihazınızdan açık onayınızla şu izinleri talep edebilir:</p>
         <ul>
-          <li>Kullanıcıya özel kişiselleştirilmiş kulüp teması (ClubTheme) ve spor haber akışı sunmak.</li>
-          <li>Canlı tribün ve maç günü mikro-tahmin sistemini işletmek.</li>
-          <li>Topluluk güvenliğini sağlamak, bot ve trol hesapları engellemek.</li>
-          <li>Hizmet kalitesini ve uygulama performansını sürekli iyileştirmek.</li>
+          <li><strong>Kamera ve Galeri İzni (Fotoğraf/Medya):</strong> Sadece profil fotoğrafı güncellemek veya taraftar akışında görsel içerikli gönderi/yorum paylaşabilmeniz amacıyla kullanılır. Cihazınızdaki diğer fotoğraflara veya kişisel dosyalara asla erişilmez.</li>
+          <li><strong>Bildirim İzni (Push Notifications):</strong> Canlı maç skorları, gol alarmları, resmi kadro açıklamaları ve etkileşim bildirimlerini anlık olarak iletmek için kullanılır. İstediğiniz zaman cihaz ayarlarından kapatılabilir.</li>
         </ul>
 
-        <h2>4. Veri Güvenliği</h2>
-        <p>
-          Verileriniz, endüstri standardı TLS/SSL şifreleme protokolleri ile aktarılır ve güvenli bulut sunucularımızda saklanır. Yetkisiz erişimlere karşı sürekli güvenlik denetimleri uygulanır.
-        </p>
-
-        <h2>5. Kişisel Verilerin Paylaşımı</h2>
-        <p>
-          Taraftaro, kişisel verilerinizi hiçbir koşulda üçüncü taraflara satmaz veya kiralamaz. Verileriniz yalnızca yasal zorunluluk hallerinde veya hizmet sağlayıcılarımız (sunucu, analitik vb.) ile sınırlı olarak paylaşılabilir.
-        </p>
-
-        <h2>6. KVKK ve GDPR Kapsamındaki Haklarınız</h2>
-        <p>Veri sahibi olarak aşağıdaki haklara sahipsiniz:</p>
+        <h2>4. Kişisel Verilerin İşlenme Amaçları</h2>
+        <p>Toplanan kişisel verileriniz şu amaçlarla işlenir:</p>
         <ul>
-          <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme ve bilgi talep etme,</li>
-          <li>Yanlış veya eksik işlenen verilerin düzeltilmesini isteme,</li>
-          <li>Verilerinizin silinmesini veya yok edilmesini talep etme (Hesap Silme),</li>
-          <li>Veri işleme faaliyetlerine itiraz etme.</li>
+          <li>Desteklediğiniz kulübe özel renkler ve içeriklerle kişiselleştirilmiş bir taraftar deneyimi (ClubTheme) sunmak,</li>
+          <li>Canlı maç günü dijital tribün ve mikro-tahmin sistemini yönetmek,</li>
+          <li>Topluluk güvenliğini sağlamak; bot, spam, hakaret ve troll faaliyetlerini engellemek,</li>
+          <li>Hesap güvenliğinizi sağlamak ve yetkisiz erişimleri tespit etmek,</li>
+          <li>Uygulama performansını optimize etmek ve teknik arızaları gidermek.</li>
         </ul>
 
-        <h2>7. İletişim</h2>
+        <h2>5. Kişisel Verilerin Paylaşımı ve Üçüncü Taraflar</h2>
         <p>
-          Gizlilik politikamız veya veri haklarınızla ilgili her türlü soru için bizimle iletişime geçebilirsiniz:
+          <strong>Taraftaro, kişisel verilerinizi hiçbir koşulda ticari amaçla üçüncü taraflara satmaz, kiralamaz veya pazarlamaz.</strong> Verileriniz yalnızca aşağıdaki teknik servis sağlayıcılarla ve yasal zorunluluklarla sınırlı olarak paylaşılır:
+        </p>
+        <ul>
+          <li><strong>Altyapı ve Sunucu Sağlayıcıları:</strong> Güvenli bulut ve veritabanı altyapısı (Hetzner, Docker).</li>
+          <li><strong>Anlık İletişim ve Bildirimler:</strong> Anlık maç WebSocket servisleri (Centrifugo) ve bildirim sağlayıcıları (Firebase Cloud Messaging, Apple APNs).</li>
+          <li><strong>Yasal Yükümlülükler:</strong> Yetkili adli veya idari makamlarca mevzuata uygun olarak talep edilmesi durumunda yürürlükteki kanunlar çerçevesinde.</li>
+        </ul>
+
+        <h2>6. Veri Güvenliği Önlemleri</h2>
+        <p>
+          Verileriniz; TLS/SSL şifreli iletişim kanalları, HMAC request imzalama protokolleri, şifrelenmiş veritabanı mimarisi ve güvenlik duvarları (Cloudflare WAF) ile korunmaktadır. Sunucularımızda düzenli güvenlik taramaları yapılmaktadır.
+        </p>
+
+        <h2>7. Hesap Silme ve Veri İmha Politikası (Account Deletion)</h2>
+        <p>
+          Kullanıcılarımız diledikleri zaman hesaplarını ve platformdaki tüm kişisel verilerini kalıcı olarak silme hakkına sahiptir.
+        </p>
+        <ul>
+          <li><strong>Uygulama İçinden Silme:</strong> <code>Profil &gt; Ayarlar &gt; Hesabımı Sil</code> adımlarını takip ederek hesabınızı anında silebilirsiniz.</li>
+          <li><strong>Web Üzerinden Talep:</strong> <a href="delete-account.html" style="color: var(--c-brand); font-weight: 700;">Hesap Silme Sayfamız</a> üzerinden e-posta adresinizi girerek veya <a href="mailto:info@taraftaro.com" style="color: var(--c-brand);">info@taraftaro.com</a> adresine e-posta göndererek silme talebinde bulunabilirsiniz.</li>
+        </ul>
+        <p>
+          Hesabınız silindiğinde profil bilgileriniz, kimlik verileriniz ve etkileşim geçmişiniz veritabanımızdan kalıcı olarak silinir veya anonim hale getirilir.
+        </p>
+
+        <h2>8. Çocukların Gizliliği (COPPA Uyumluluğu)</h2>
+        <p>
+          Taraftaro platformu 13 yaşın (veya ikamet edilen ülkedeki yasal sınırın) altındaki çocuklara yönelik değildir. 13 yaşından küçük bir çocuğun kişisel verilerinin sistemimize kaydedildiğini tespit etmemiz halinde bu veriler derhal imha edilir.
+        </p>
+
+        <h2>9. KVKK ve GDPR Kapsamındaki Yasal Haklarınız</h2>
+        <p>Veri sahibi olarak Veri Sorumlusuna başvurarak aşağıdaki haklarınızı kullanabilirsiniz:</p>
+        <ul>
+          <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme ve işlenmişse buna ilişkin bilgi talep etme,</li>
+          <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+          <li>Eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme,</li>
+          <li>KVKK 7. maddesi uyarınca verilerin silinmesini veya yok edilmesini talep etme,</li>
+          <li>Verilerinizin taşınabilirliğini talep etme (GDPR).</li>
+        </ul>
+
+        <h2>10. İletişim ve Veri Talepleri</h2>
+        <p>
+          Gizlilik politikamız, veri haklarınız veya hesap işlemleriniz ile ilgili her türlü soru ve talebiniz için resmi iletişim kanalımız:
         </p>
         <p>
-          <strong>E-posta:</strong> <a href="mailto:info@taraftaro.com" style="color: var(--c-brand);">privacy@taraftaro.com</a>
+          <strong>Resmi E-posta:</strong> <a href="mailto:info@taraftaro.com" style="color: var(--c-brand); font-weight: 700;">info@taraftaro.com</a><br />
+          <strong>Web Sitesi:</strong> <a href="https://taraftaro.com" style="color: var(--c-brand);">https://taraftaro.com</a>
         </p>
       </article>
 
@@ -161,7 +219,6 @@
     </main>
 
     <script>
-      // Automatically detect WebView mode via query parameter (?mode=webview)
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('mode') === 'webview') {
         document.body.classList.add('is-webview');
