@@ -1,9 +1,10 @@
-name: Deploy to Production
+name: Deploy Landing Page
 
 on:
   push:
     branches:
       - prod
+      - main
   workflow_dispatch:
 
 jobs:
@@ -13,18 +14,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
       - name: Deploy to Server
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -33,37 +22,13 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT || 22 }}
           script: |
+            # Klasör yoksa oluştur ve repoyu çek
+            if [ ! -d "/var/www/taraftaro-landing-page" ]; then
+              sudo mkdir -p /var/www/taraftaro-landing-page
+              git clone ${{ github.event.repository.ssh_url }} /var/www/taraftaro-landing-page
+            fi
+
             cd /var/www/taraftaro-landing-page
-            git pull origin prod
-            npm ci
-            npm run build
-
-      - name: Telegram - Deploy Success
-        if: success()
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          format: markdown
-          message: |
-            ✅ *Landing Page Deploy Successful!*
-            
-            📦 *Repo:* `${{ github.repository }}`
-            🌿 *Branch:* `${{ github.ref_name }}`
-            👤 *Deployed by:* ${{ github.actor }}
-            🔗 [View Commit](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
-
-      - name: Telegram - Deploy Failed
-        if: failure()
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          format: markdown
-          message: |
-            ❌ *Landing Page Deploy Failed!*
-            
-            📦 *Repo:* `${{ github.repository }}`
-            🌿 *Branch:* `${{ github.ref_name }}`
-            👤 *Deployed by:* ${{ github.actor }}
-            🔗 [View Workflow Logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            git fetch origin ${{ github.ref_name }}
+            git reset --hard origin/${{ github.ref_name }}
+            git clean -fd
