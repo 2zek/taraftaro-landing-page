@@ -22,10 +22,10 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT || 22 }}
           script: |
-            # Klasör yoksa oluştur ve repoyu çek
-            if [ ! -d "/var/www/taraftaro-landing-page" ]; then
-              sudo mkdir -p /var/www/taraftaro-landing-page
-              git clone ${{ github.event.repository.ssh_url }} /var/www/taraftaro-landing-page
+            # .git klasörü yoksa klasörü temizle ve repoyu klonla
+            if [ ! -d "/var/www/taraftaro-landing-page/.git" ]; then
+              rm -rf /var/www/taraftaro-landing-page
+              git clone git@github.com:2zek/taraftaro-landing-page.git /var/www/taraftaro-landing-page
             fi
 
             cd /var/www/taraftaro-landing-page
