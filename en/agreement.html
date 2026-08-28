@@ -209,10 +209,17 @@
       </footer>
     </main>
 
-    <script>
+        <script>
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('mode') === 'webview') {
         document.body.classList.add('is-webview');
+        document.querySelectorAll('a').forEach(link => {
+          const href = link.getAttribute('href');
+          if (href && (href.startsWith('/') || (!href.includes('://') && !href.startsWith('#'))) && !href.startsWith('mailto:')) {
+            const separator = href.includes('?') ? '&' : '?';
+            link.setAttribute('href', href + separator + 'mode=webview');
+          }
+        });
       }
     </script>
   </body>
