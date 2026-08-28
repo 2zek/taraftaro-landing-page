@@ -6,65 +6,96 @@
     <title>Kullanıcı Üyelik ve Hizmet Sözleşmesi — Taraftaro</title>
     <meta name="description" content="Taraftaro Kullanıcı Üyelik ve Hizmet Sözleşmesi, Yer Sağlayıcı Bildirimi ve Topluluk Kuralları." />
     
+    <!-- Alternate Language Links for SEO -->
+    <link rel="alternate" hreflang="tr" href="https://taraftaro.com/agreement" />
+    <link rel="alternate" hreflang="en" href="https://taraftaro.com/en/agreement" />
+
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playpen+Sans:wght@700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <link rel="stylesheet" href="public/css/app.css" />
+    <link rel="stylesheet" href="/public/css/app.css" />
     <style>
       body {
-        background-color: var(--c-bg);
-        color: var(--c-text);
-        font-family: var(--font);
+        background-color: var(--c-bg, #141416);
+        color: var(--c-text, #F4F4F5);
+        font-family: var(--font, 'Inter', -apple-system, sans-serif);
         line-height: 1.75;
         padding-block: 3rem;
       }
       .legal-container {
-        max-width: 54rem;
+        max-width: 52rem;
         margin-inline: auto;
         padding-inline: 1.5rem;
       }
-      .legal-header {
-        margin-bottom: 2.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid var(--c-border);
+      .legal-top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
       }
       .legal-back-btn {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        color: var(--c-brand);
+        color: var(--c-brand, #F97316);
         font-weight: 700;
         font-size: 0.9rem;
         text-decoration: none;
-        margin-bottom: 1.5rem;
-        transition: var(--ease-spring);
+        transition: transform 0.2s ease;
       }
       .legal-back-btn:hover {
         transform: translateX(-4px);
+      }
+      .legal-lang-switch {
+        display: flex;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        padding: 3px;
+        gap: 4px;
+      }
+      .legal-lang-link {
+        color: #A1A1AA;
+        font-size: 0.825rem;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 999px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .legal-lang-link.active {
+        background: var(--c-brand, #F97316);
+        color: #FFFFFF;
+      }
+      .legal-header {
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       }
       .legal-title {
         font-size: 2.25rem;
         font-weight: 900;
         letter-spacing: -0.03em;
         margin-bottom: 0.5rem;
+        color: #FFFFFF;
       }
       .legal-updated {
         font-size: 0.85rem;
-        color: var(--c-text-muted);
+        color: #A1A1AA;
       }
       .legal-content h2 {
         font-size: 1.25rem;
         font-weight: 800;
-        color: var(--c-text);
-        margin-top: 2rem;
+        color: #FFFFFF;
+        margin-top: 2.25rem;
         margin-bottom: 0.75rem;
         letter-spacing: -0.01em;
       }
       .legal-content p, .legal-content ul {
-        color: var(--c-text-secondary);
+        color: #D4D4D8;
         font-size: 0.975rem;
         margin-bottom: 1rem;
       }
@@ -76,7 +107,7 @@
         margin-bottom: 0.5rem;
       }
       .legal-content strong {
-        color: var(--c-text);
+        color: #FFFFFF;
       }
       .alert-box {
         background-color: rgba(249, 115, 22, 0.08);
@@ -87,29 +118,41 @@
       }
       .alert-box p {
         margin-bottom: 0;
-        color: var(--c-text);
+        color: #F4F4F5;
         font-size: 0.925rem;
       }
       .legal-footer {
         margin-top: 3.5rem;
         padding-top: 1.5rem;
-        border-top: 1px solid var(--c-border);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         font-size: 0.85rem;
-        color: var(--c-text-muted);
+        color: #71717A;
         text-align: center;
       }
-      body.is-webview .legal-back-btn {
-        display: none;
+      /* WebView Mode Clean Styling */
+      body.is-webview {
+        padding-block: 1.5rem;
+      }
+      body.is-webview .legal-top-bar,
+      body.is-webview .legal-footer {
+        display: none !important;
       }
     </style>
   </head>
   <body>
     <main class="legal-container">
-      <header class="legal-header">
-        <a href="index.html" class="legal-back-btn">
+      <div class="legal-top-bar">
+        <a href="/" class="legal-back-btn">
           <i class="fa-solid fa-arrow-left"></i>
           <span>Ana Sayfaya Dön</span>
         </a>
+        <div class="legal-lang-switch">
+          <span class="legal-lang-link active">🇹🇷 TR</span>
+          <a href="/en/agreement" class="legal-lang-link">🇬🇧 EN</a>
+        </div>
+      </div>
+
+      <header class="legal-header">
         <h1 class="legal-title">Kullanıcı Üyelik ve Hizmet Sözleşmesi</h1>
         <p class="legal-updated">Son Güncelleme: 28 Ağustos 2026</p>
       </header>
@@ -117,73 +160,47 @@
       <article class="legal-content">
         <h2>1. Taraflar ve Sözleşmenin Kapsamı</h2>
         <p>
-          İşbu Kullanıcı Üyelik ve Hizmet Sözleşmesi ("Sözleşme"), <strong>Taraftaro</strong> ("Platform", "Şirket") ile mobil uygulama veya web sitesi üzerinden kayıt olan gerçek kişi ("Kullanıcı", "Üye", "Taraftar") arasında akdedilmiştir.
+          İşbu Kullanıcı Üyelik ve Hizmet Sözleşmesi ("Sözleşme"), <strong>Taraftaro</strong> ("Platform", "Şirket") ile kayıt olan kullanıcı ("Kullanıcı", "Üye", "Taraftar") arasında akdedilmiştir.
         </p>
 
         <div class="alert-box">
-          <p><strong>🏛️ 5651 Sayılı Kanun Uyarınca Yer Sağlayıcı Bildirimi:</strong> Taraftaro, 5651 sayılı "İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanun" kapsamında <strong>Yer Sağlayıcı (Hosting Provider)</strong> statüsündedir. Kullanıcıların platformda paylaştığı içeriklerin hukuka uygunluğunu önceden denetleme yükümlülüğü bulunmamaktadır. Taraftaro, "Uyar-Kaldır" (Notice and Take Down) prensibiyle çalışmakta olup, telif veya kişilik hakkı ihlali bildirimleri <a href="mailto:info@taraftaro.com" style="color: var(--c-brand); font-weight: 700;">info@taraftaro.com</a> üzerinden derhal işleme alınır.</p>
+          <p><strong>5651 Sayılı Kanun Uyarınca Yer Sağlayıcı Bildirimi:</strong> Taraftaro, 5651 sayılı Kanun kapsamında <strong>Yer Sağlayıcı (Hosting Provider)</strong> statüsündedir. Kullanıcıların paylaştığı içerikleri önceden denetleme yükümlülüğü bulunmamaktadır. "Uyar-Kaldır" (Notice and Take Down) prensibiyle çalışmakta olup, telif veya kişilik hakkı ihlali bildirimleri <a href="mailto:info@taraftaro.com" style="color: var(--c-brand, #F97316); font-weight: 700;">info@taraftaro.com</a> üzerinden derhal işleme alınır.</p>
         </div>
 
         <h2>2. Hizmet Tanımı ve Taraftar Deneyimi</h2>
-        <p>Taraftaro, spor severlerin kendi renktaşlarıyla buluştuğu, kulüplerine destek verdiği ve dijital tribün heyecanını yaşadığı sosyal bir spor platformudur. Sunulan temel hizmetler:</p>
+        <p>Taraftaro, spor severlerin kendi renktaşlarıyla buluştuğu sosyal bir spor platformudur. Temel hizmetler:</p>
         <ul>
-          <li>Desteklenen spor kulübüne göre kişiselleştirilmiş kulüp temaları (ClubTheme),</li>
-          <li>Canlı maç anında dijital tribün reaksiyonları, tezahüratlar ve taraftar nabzı,</li>
+          <li>Desteklenen kulübe özel kişiselleştirilmiş kulüp temaları (ClubTheme),</li>
+          <li>Canlı maç günü dijital tribün reaksiyonları ve tezahürat etkileşimi,</li>
           <li>Resmi fikstür, canlı skorlar, maç kadroları ve hakem istatistikleri,</li>
           <li>Taraftar kadro kurma sistemi ve topluluk oylamaları,</li>
-          <li>Doğrulanmış taraftar topluluğu tartışmaları (Topics) ve oyunlaştırılmış mikro-tahminler.</li>
+          <li>Doğrulanmış taraftar tartışmaları (Topics) ve oyunlaştırılmış mikro-tahminler.</li>
         </ul>
 
         <h2>3. Kullanıcının Hak ve Yükümlülükleri</h2>
         <ul>
-          <li><strong>Doğru Bilgi Beyanı:</strong> Üye olurken girilen e-posta ve kimlik bilgilerinin doğru ve güncel olması zorunludur.</li>
-          <li><strong>Hesap Güvenliği:</strong> Kullanıcı, şifresinin gizliliğinden ve hesabından yapılan tüm eylemlerden bizzat sorumludur.</li>
-          <li><strong>Kişisel ve Ticari Olmayan Kullanım:</strong> Hesaplar bireysel kullanım içindir; üçüncü kişilere devredilemez, satılamaz veya kiralanamaz.</li>
-          <li><strong>Yaş Sınırı:</strong> Platform 13 yaşından büyük kullanıcılar içindir.</li>
+          <li>Üye olurken girilen bilgilerin doğru ve güncel olması zorunludur.</li>
+          <li>Hesap şifresinin gizliliğinden ve hesabından yapılan tüm işlemlerden kullanıcı bizzat sorumludur.</li>
+          <li>Hesaplar bireysel kullanım içindir; devredilemez veya satılamaz.</li>
         </ul>
 
-        <h2>4. Yasaklı Eylemler ve İçerik Standartları</h2>
-        <p>Aşağıdaki faaliyetler kesinlikle yasaktır ve tespit edildiğinde hesabın derhal kalıcı olarak kapatılmasına yol açar:</p>
-        <ul>
-          <li>Spor ahlakına aykırı, şiddeti ve holiganizmi teşvik eden paylaşımlar yapmak,</li>
-          <li>Kulüplere, sporculara, hakemlere veya diğer üyelere yönelik küfür, hakaret, tehdit, taciz ve ayrımcılık içeren ifadeler,</li>
-          <li>Yasa dışı bahis, kumar reklamı veya yönlendirmesi yapmak, kupon satışı vaadinde bulunmak,</li>
-          <li>Telif hakkı içeren maç yayın linkleri (IPTV, kaçak yayın vb.) paylaşmak veya dağıtmak,</li>
-          <li>Platform güvenliğini tehdit eden bot, crawler veya manipülatif scriptler çalıştırmak.</li>
-        </ul>
-
-        <h2>5. Oyunlaştırma, Ödüller, XP ve TOT Puanları</h2>
+        <h2>4. Oyunlaştırma, Ödüller, XP ve TOT Puanları</h2>
         <p>
-          Platformda kazanılan Deneyim Puanları (XP), Rozetler ve Taraftaro Puanları (TOT); yalnızca platform içi seviye atlama, taraftar liderliği ve dijital koleksiyonlar için kullanılan sanal itibar öğeleridir.
+          Platformda kazanılan Deneyim Puanları (XP), Rozetler ve Taraftaro Puanları (TOT); yalnızca platform içi sanal itibar öğeleridir.
         </p>
         <ul>
           <li>Bu puanların <strong>hiçbir maddi/parasal karşılığı yoktur</strong>.</li>
           <li>Gerçek paraya dönüştürülemez, satılamaz veya platform dışına transfer edilemez.</li>
-          <li>Taraftaro, oyunlaştırma kurallarını ve puanlama katsayılarını dilediği zaman güncelleme hakkını saklı tutar.</li>
         </ul>
 
-        <h2>6. Fikri Mülkiyet ve Marka Hakları</h2>
+        <h2>5. Uyuşmazlıkların Çözümü ve Yetkili Mahkeme</h2>
         <p>
-          Taraftaro'nun tüm yazılım kodları, arayüz tasarımları ve özgün marka varlıkları Taraftaro'ya aittir. Platformda yer alan kulüp logoları ve lig unvanları yalnızca bilgilendirme ve taraftar etkileşimi (Fair Use) amaçlıdır; ilgili kurumların tescilli mülkiyetindedir.
+          İşbu Sözleşme'nin yorumlanmasında ve uygulanmasında Türkiye Cumhuriyeti Kanunları geçerlidir. İstanbul Mahkemeleri ve İcra Daireleri yetkilidir.
         </p>
 
-        <h2>7. Sözleşmenin Feshi ve Hesap Kapatma</h2>
+        <h2>6. İletişim</h2>
         <p>
-          Kullanıcı, dilediği zaman uygulama içi ayarlardan (<code>Profil &gt; Ayarlar &gt; Hesabımı Sil</code>) hesabını ve tüm verilerini kalıcı olarak silebilir. Taraftaro, kurallara aykırı hareket eden kullanıcıların sözleşmesini tek taraflı olarak feshetme ve erişimini engelleme hakkına sahiptir.
-        </p>
-
-        <h2>8. Uyuşmazlıkların Çözümü ve Yetkili Mahkeme</h2>
-        <p>
-          İşbu Sözleşme'nin yorumlanmasında ve uygulanmasında Türkiye Cumhuriyeti Kanunları geçerlidir. Taraflar arasındaki her türlü uyuşmazlıkta İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri münhasıran yetkilidir.
-        </p>
-
-        <h2>9. İletişim ve Yasal Bildirimler</h2>
-        <p>
-          Sözleşme ve yasal haklarınız ile ilgili her türlü soru ve bildirim için:
-        </p>
-        <p>
-          <strong>Resmi E-posta:</strong> <a href="mailto:info@taraftaro.com" style="color: var(--c-brand); font-weight: 700;">info@taraftaro.com</a><br />
-          <strong>Web Sitesi:</strong> <a href="https://taraftaro.com" style="color: var(--c-brand);">https://taraftaro.com</a>
+          <strong>E-posta:</strong> <a href="mailto:info@taraftaro.com" style="color: var(--c-brand, #F97316); font-weight: 700;">info@taraftaro.com</a>
         </p>
       </article>
 
