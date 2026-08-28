@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="tr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Hesap Silme ve Veri İmha Talebi — Taraftaro</title>
+    <meta name="description" content="Taraftaro hesap ve ilişkili kişisel verilerin silinmesi talebi bilgilendirme sayfası." />
+    
+    <!-- Alternate Language Links for SEO -->
+    <link rel="alternate" hreflang="tr" href="https://taraftaro.com/delete-account" />
+    <link rel="alternate" hreflang="en" href="https://taraftaro.com/en/delete-account" />
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="/public/css/app.css" />
+    <style>
+      body {
+        background-color: var(--c-bg, #141416);
+        color: var(--c-text, #F4F4F5);
+        font-family: var(--font, 'Inter', -apple-system, sans-serif);
+        line-height: 1.75;
+        padding-block: 3rem;
+      }
+      .legal-container {
+        max-width: 52rem;
+        margin-inline: auto;
+        padding-inline: 1.5rem;
+      }
+      .legal-top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+      }
+      .legal-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--c-brand, #F97316);
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+      }
+      .legal-back-btn:hover {
+        transform: translateX(-4px);
+      }
+      .legal-lang-switch {
+        display: flex;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        padding: 3px;
+        gap: 4px;
+      }
+      .legal-lang-link {
+        color: #A1A1AA;
+        font-size: 0.825rem;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 999px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .legal-lang-link.active {
+        background: var(--c-brand, #F97316);
+        color: #FFFFFF;
+      }
+      .legal-header {
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .legal-title {
+        font-size: 2.25rem;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+        color: #FFFFFF;
+      }
+      .legal-updated {
+        font-size: 0.85rem;
+        color: #A1A1AA;
+      }
+      .legal-content h2 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #FFFFFF;
+        margin-top: 2.25rem;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.01em;
+      }
+      .legal-content p, .legal-content ul {
+        color: #D4D4D8;
+        font-size: 0.975rem;
+        margin-bottom: 1rem;
+      }
+      .legal-content ul {
+        padding-left: 1.5rem;
+        list-style-type: disc;
+      }
+      .legal-content li {
+        margin-bottom: 0.5rem;
+      }
+      .legal-content strong {
+        color: #FFFFFF;
+      }
+      .deletion-box {
+        background: rgba(239, 68, 68, 0.08);
+        border: 1px solid rgba(239, 68, 68, 0.25);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-block: 1.5rem;
+      }
+      .step-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .step-box h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--c-brand, #F97316);
+        margin-bottom: 0.5rem;
+      }
+      .step-box p {
+        margin-bottom: 0;
+      }
+      .legal-footer {
+        margin-top: 3.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.85rem;
+        color: #71717A;
+        text-align: center;
+      }
+      body.is-webview {
+        padding-block: 1.5rem;
+      }
+      body.is-webview .legal-top-bar,
+      body.is-webview .legal-footer {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="legal-container">
+      <div class="legal-top-bar">
+        <a href="/" class="legal-back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Ana Sayfaya Dön</span>
+        </a>
+        <div class="legal-lang-switch">
+          <span class="legal-lang-link active">🇹🇷 TR</span>
+          <a href="/en/delete-account" class="legal-lang-link">🇬🇧 EN</a>
+        </div>
+      </div>
+
+      <header class="legal-header">
+        <h1 class="legal-title">Hesap Silme ve Veri İmha Politikası</h1>
+        <p class="legal-updated">Son Güncelleme: 28 Ağustos 2026</p>
+      </header>
+
+      <article class="legal-content">
+        <p>
+          Taraftaro olarak kullanıcılarımızın gizliliğine ve veri sahipliği haklarına saygı duyuyoruz. 
+          Kullanıcılarımız diledikleri zaman hesaplarını ve ilişkili tüm kişisel verilerini kalıcı olarak silme hakkına sahiptir.
+        </p>
+
+        <div class="deletion-box">
+          <p style="color: #FCA5A5; font-weight: 700; margin-bottom: 0.5rem;">⚠️ Dikkat: Bu İşlem Geri Alınamaz</p>
+          <p style="color: #E4E4E7; font-size: 0.925rem; margin-bottom: 0;">
+            Hesabınız silindiğinde profil bilgileriniz, tahmin geçmişiniz, kazanılan XP/TOT rozetleriniz ve tüm kişisel verileriniz sistemlerimizden kalıcı olarak silinir.
+          </p>
+        </div>
+
+        <h2>Hesap Silme Yöntemleri</h2>
+
+        <div class="step-box">
+          <h3>Yöntem 1: Mobil Uygulama İçinden Anında Silme (Önerilen)</h3>
+          <p>
+            Taraftaro mobil uygulamasını açın ve sırasıyla <strong>Profil &gt; Ayarlar &gt; Hesabımı Sil</strong> adımlarını takip edin. Onay verdikten sonra hesabınız ve tüm verileriniz anında kalıcı olarak silinecektir.
+          </p>
+        </div>
+
+        <div class="step-box">
+          <h3>Yöntem 2: E-posta ile Silme Talebi İletme</h3>
+          <p>
+            Uygulamaya erişiminiz yoksa veya uygulamanızı kaldırdıysanız; kayıtlı e-posta adresinizden <a href="mailto:info@taraftaro.com?subject=Hesap%20Silme%20Talebi" style="color: var(--c-brand, #F97316); font-weight: 700;">info@taraftaro.com</a> adresine <strong>"Hesap Silme Talebi"</strong> konulu bir e-posta göndererek hesabınızın silinmesini talep edebilirsiniz. Talebiniz en geç 24 saat içinde işleme alınacaktır.
+          </p>
+        </div>
+
+        <h2>Silinen Veri Türleri</h2>
+        <ul>
+          <li><strong>Kimlik ve Profil Verileri:</strong> Ad, soyad, kullanıcı adı, e-posta adresi, profil fotoğrafı ve biyografi.</li>
+          <li><strong>Etkileşim ve Taraftar Verileri:</strong> Desteklenen kulüp bilgisi, takip edilen takımlar/oyuncular, tahmin ve anket geçmişi.</li>
+          <li><strong>Cihaz Tanımlayıcıları:</strong> Push bildirim token'ları (FCM/APNs) ve cihaz logları.</li>
+        </ul>
+
+        <h2>Veri Saklama ve İmha Süresi</h2>
+        <p>
+          Hesap silme işlemi onaylandığı anda veritabanından anlık olarak silinir. Sistem yedeklerindeki kalıntılar ise en geç 30 gün içerisinde otomatik olarak tamamen imha edilir.
+        </p>
+
+        <h2>İletişim</h2>
+        <p>
+          Hesap silme veya kişisel verileriniz ile ilgili sorularınız için:
+        </p>
+        <p>
+          <strong>E-posta:</strong> <a href="mailto:info@taraftaro.com" style="color: var(--c-brand, #F97316); font-weight: 700;">info@taraftaro.com</a><br />
+          <strong>Web Sitesi:</strong> <a href="https://taraftaro.com" style="color: var(--c-brand, #F97316);">https://taraftaro.com</a>
+        </p>
+      </article>
+
+      <footer class="legal-footer">
+        &copy; 2026 Taraftaro. Tüm hakları saklıdır.
+      </footer>
+    </main>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('mode') === 'webview') {
+        document.body.classList.add('is-webview');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Account Deletion &amp; Data Erasure — Taraftaro</title>
+    <meta name="description" content="Taraftaro account deletion and personal data erasure request information page." />
+    
+    <!-- Alternate Language Links for SEO -->
+    <link rel="alternate" hreflang="tr" href="https://taraftaro.com/delete-account" />
+    <link rel="alternate" hreflang="en" href="https://taraftaro.com/en/delete-account" />
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="/public/css/app.css" />
+    <style>
+      body {
+        background-color: var(--c-bg, #141416);
+        color: var(--c-text, #F4F4F5);
+        font-family: var(--font, 'Inter', -apple-system, sans-serif);
+        line-height: 1.75;
+        padding-block: 3rem;
+      }
+      .legal-container {
+        max-width: 52rem;
+        margin-inline: auto;
+        padding-inline: 1.5rem;
+      }
+      .legal-top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+      }
+      .legal-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--c-brand, #F97316);
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+      }
+      .legal-back-btn:hover {
+        transform: translateX(-4px);
+      }
+      .legal-lang-switch {
+        display: flex;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+        padding: 3px;
+        gap: 4px;
+      }
+      .legal-lang-link {
+        color: #A1A1AA;
+        font-size: 0.825rem;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 999px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .legal-lang-link.active {
+        background: var(--c-brand, #F97316);
+        color: #FFFFFF;
+      }
+      .legal-header {
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .legal-title {
+        font-size: 2.25rem;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+        color: #FFFFFF;
+      }
+      .legal-updated {
+        font-size: 0.85rem;
+        color: #A1A1AA;
+      }
+      .legal-content h2 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #FFFFFF;
+        margin-top: 2.25rem;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.01em;
+      }
+      .legal-content p, .legal-content ul {
+        color: #D4D4D8;
+        font-size: 0.975rem;
+        margin-bottom: 1rem;
+      }
+      .legal-content ul {
+        padding-left: 1.5rem;
+        list-style-type: disc;
+      }
+      .legal-content li {
+        margin-bottom: 0.5rem;
+      }
+      .legal-content strong {
+        color: #FFFFFF;
+      }
+      .deletion-box {
+        background: rgba(239, 68, 68, 0.08);
+        border: 1px solid rgba(239, 68, 68, 0.25);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-block: 1.5rem;
+      }
+      .step-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .step-box h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--c-brand, #F97316);
+        margin-bottom: 0.5rem;
+      }
+      .step-box p {
+        margin-bottom: 0;
+      }
+      .legal-footer {
+        margin-top: 3.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.85rem;
+        color: #71717A;
+        text-align: center;
+      }
+      body.is-webview {
+        padding-block: 1.5rem;
+      }
+      body.is-webview .legal-top-bar,
+      body.is-webview .legal-footer {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="legal-container">
+      <div class="legal-top-bar">
+        <a href="/" class="legal-back-btn">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Back to Home</span>
+        </a>
+        <div class="legal-lang-switch">
+          <a href="/delete-account" class="legal-lang-link">🇹🇷 TR</a>
+          <span class="legal-lang-link active">🇬🇧 EN</span>
+        </div>
+      </div>
+
+      <header class="legal-header">
+        <h1 class="legal-title">Account Deletion &amp; Data Erasure Policy</h1>
+        <p class="legal-updated">Last Updated: August 28, 2026</p>
+      </header>
+
+      <article class="legal-content">
+        <p>
+          At Taraftaro, we respect your privacy and data ownership rights. You have the right to permanently delete your account and all associated personal data at any time.
+        </p>
+
+        <div class="deletion-box">
+          <p style="color: #FCA5A5; font-weight: 700; margin-bottom: 0.5rem;">⚠️ Warning: This Action is Permanent</p>
+          <p style="color: #E4E4E7; font-size: 0.925rem; margin-bottom: 0;">
+            Once your account is deleted, your profile data, prediction history, badges, and all associated personal records will be permanently erased.
+          </p>
+        </div>
+
+        <h2>How to Delete Your Account</h2>
+
+        <div class="step-box">
+          <h3>Option 1: Instant In-App Deletion (Recommended)</h3>
+          <p>
+            Open the Taraftaro mobile app and navigate to <strong>Profile &gt; Settings &gt; Delete Account</strong>. Follow the confirmation prompt to immediately and permanently erase your account.
+          </p>
+        </div>
+
+        <div class="step-box">
+          <h3>Option 2: Email Deletion Request</h3>
+          <p>
+            If you no longer have access to the app or have uninstalled it, send an email from your registered email address to <a href="mailto:info@taraftaro.com?subject=Account%20Deletion%20Request" style="color: var(--c-brand, #F97316); font-weight: 700;">info@taraftaro.com</a> with the subject line <strong>"Account Deletion Request"</strong>. Your request will be processed within 24 hours.
+          </p>
+        </div>
+
+        <h2>Data Types Erased</h2>
+        <ul>
+          <li><strong>Identity &amp; Profile Data:</strong> Full name, username, email address, profile picture, and bio.</li>
+          <li><strong>Fan &amp; Interaction Data:</strong> Followed clubs/players, matchday predictions, and poll voting history.</li>
+          <li><strong>Device Identifiers:</strong> Push notification tokens (FCM/APNs) and access logs.</li>
+        </ul>
+
+        <h2>Data Retention &amp; Erasure Timeline</h2>
+        <p>
+          Account records are deleted from our active database instantly upon request. Data retained in secure backups is purged automatically within a maximum of 30 days.
+        </p>
+
+        <h2>Contact Us</h2>
+        <p>
+          For any data protection inquiries or deletion assistance:
+        </p>
+        <p>
+          <strong>Official Email:</strong> <a href="mailto:info@taraftaro.com" style="color: var(--c-brand, #F97316); font-weight: 700;">info@taraftaro.com</a><br />
+          <strong>Website:</strong> <a href="https://taraftaro.com" style="color: var(--c-brand, #F97316);">https://taraftaro.com</a>
+        </p>
+      </article>
+
+      <footer class="legal-footer">
+        &copy; 2026 Taraftaro. All rights reserved.
+      </footer>
+    </main>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('mode') === 'webview') {
+        document.body.classList.add('is-webview');
+      }
+    </script>
+  </body>
+</html>
